@@ -1382,7 +1382,7 @@ class OrderambassadricecustomsRepository implements OrderambassadricecustomsInte
       }
             
         
-          dd('succes_martial');
+          
           // recuperer les status refunded ou cancelled .
            // insert dans table
             DB::table('code_fidelites_use')->insert($array_fidelite);
