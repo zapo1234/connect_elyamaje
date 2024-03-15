@@ -193,7 +193,7 @@ class AmbassadriceCustoms
       // methode recupérer des data wooocomerce qui ont un code promo amabassadrice..
        public function getDataorder(): array
        {
-            dd('zapo');
+             dd($this->getdonneesall());
             // FIXER LES Période de données
 	          // traiter les données venant de woocomerce..
 	          //$date_after ="2023-04-01T09:01:00";
