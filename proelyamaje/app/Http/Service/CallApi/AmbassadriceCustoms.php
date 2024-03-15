@@ -366,8 +366,6 @@ class AmbassadriceCustoms
 
                                   foreach($donnees_orders as $kl => $values){
                                       
-                                      dd($values);
-
                                       $retrait = array_sum($somme_deduit);// sommes des index du tableau.....
                                       $somme = $values['total']-$retrait-$values['total_tax']-$values['shipping_total'];
                                       if($somme > 0) {
@@ -426,7 +424,7 @@ class AmbassadriceCustoms
               $array_datas = array_unique(array_column($coupons, 'id_commande'));
               $array_data_uniques = array_intersect_key($coupons, $array_datas);
 
-              
+              dd($array_data_uniques);
              
               return $array_data_uniques;
     } 
