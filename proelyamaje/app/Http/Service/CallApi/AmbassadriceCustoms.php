@@ -269,7 +269,7 @@ class AmbassadriceCustoms
            $donnees = $this->getdonneesall();// recupérer les data venant de wooocomerce.
           // $donnees = $this->getorderambassadrice();
          
-
+          dd($donnees);
            foreach($donnees as $donns){
                 
                 foreach($donns as $donnes){
@@ -366,16 +366,6 @@ class AmbassadriceCustoms
 
                                   foreach($donnees_orders as $kl => $values){
                                       
-                                     // verfiier l'existence des bon cadeaux
-                                    /* if(count($values['pw_gift_cards_redeemed'])!=0){
-                                        // recupérer les montant gifet_card.
-                                        $montant_gift_card[] = $values['pw_gift_cards_redeemed']['amount'];
-                                         
-                                       }
-
-                                     $somme_gift_card = array_sum($montant_gift_card);// le montant si les bons d'achat sont détecte dans la commande
-                                     
-                                    */
 
                                       $retrait = array_sum($somme_deduit);// sommes des index du tableau.....
                                       $somme = $values['total']-$retrait-$values['total_tax']-$values['shipping_total'];
@@ -435,7 +425,7 @@ class AmbassadriceCustoms
               $array_datas = array_unique(array_column($coupons, 'id_commande'));
               $array_data_uniques = array_intersect_key($coupons, $array_datas);
 
-              dd($array_data_uniques);
+              
              
               return $array_data_uniques;
     } 
