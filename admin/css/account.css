@@ -1,0 +1,191 @@
+
+#cards{display:none;} .h3{color:black;font-family:arial;font-size:16px;text-transform:uppercase;font-weight:300;margin-left:3%;}
+#account_body{width:150%;margin:2%;height:900px;margin-top:-10px;overflow-y:scroll;}
+.m{font-size:18px;height:35px;border-color:#eee;text-align:center;
+font-family:Nunito,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-weight:300;
+color:black;} #forms_account,#forms_accounts{width:70%;margin-left:15%;}
+
+#forms_edit{width:70%;margin-left:15%;}
+
+Label{font-family: Nunito,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-size: 18px;
+    font-weight: 300;
+    color: black;} #submit_account,#submit_account_edit{margin-left:50%;width:240px;background-color:black;color:white;text-transform:uppercase;font-size:14px;font-weight:bold;height:45px;
+    border-radius:15px; border-color:black;
+    }
+    
+    .form{margin-top:5px;} 
+    #pak{position:fixed;top:0;left:0;width:100%;height:100%;background-color:black;z-index:2;opacity:0.8;} #search_origine{width:250px;border:2px solid grey;}
+    
+    .links{margin-left:70%;}  #table_vente{position:absolute;left:70%;top:120px;background-color:white;box-shadow:2px 2px 2px black;} .n2{display:none;} .cx4{display:none;}
+    
+    .fact4{display:none;} #live4{display:none;} #codecss1{display:none;} .ambassadrice{color:blue;} .ax00{display:none;}  .cx14{display:none;} .cx22{display:none;}
+    
+    .validerbon{background-color:#364064;color:white;border-radius:5px;width:150px;height:45px;border:2px solid #364064;font-weight:bold;}
+     .validerbonim{background-color:#364064;color:white;border-radius:5px;width:150px;height:45px;border:2px solid #364064;font-weight:bold;}
+    .validerbonpay{display:none;} .cx44{display:none;} .cx34{display:none;} .cx32{display:none;}
+
+/*............................................account list css*/
+  th,td{color:black;font-size:16px;font-weight:300;text-align:center;} 
+ .bloque{display:none;} .SuperAdmin{color:green;font-weight:bold;} .Ambassadrice{color:#8A2BE2;font-weight:bold;}
+ .actif{background:#006400;color:white;border:2px solid #006400;border-radius:15px;width:22px;height:22px;} #actif1{display:none} .recher{padding-left:20%;}
+ 
+ .inactif{background:red;color:white;border:2px solid red;border-radius:15px;width:22px;height:22px;} #actif1{display:none} .recher{padding-left:20%;}
+ 
+ #cards{display:none;} .btnc,.btns{display:none;} .account1{display:none;} .derno{display:none;}  .dsno{display:none;} .dscom{font-weight:800;color:#000;}
+ 
+ .no{} .no{border-radius:50%;background-color:#DCDCDC;width:25px;height:25px;} .com,.letter{border-radius:50%;background-color:red;width:25px;height:25px;}
+ .utilisateurs2{display:block;} .utilisateurs3,.utilisateurs11{display:none;} .im{font-size:18px;color:red;} .df2,.df3,.df11{display:none;} .df1{display:block;}
+ .accounts2{display:none;} .accounts1{display:block;} .accountss1{display:none;} .accountss2{display:block;} .accountssc2{display:none;} .accountssc1{display:none;}
+ .paimentim{width:100px;color:white;cursor:pointer;padding:1%;background-color:green;text-align:center;border:2px solid green;border-radius:5px;}
+ .imgim{display:none;} .imgpay{display:block;} .annulerfpay{background-color:red;width:100px;border:2px solid #eee;color:red;padding:1%;text-align:center;color:white;border-radius:15px;display:none;}
+ .derh2{display:none;}
+ 
+ #creates_customer_amba{display:none;} .spiner{display:none;position:absolute;top:200px;left:30%;z-index:4} .fact2{display:none;}
+ #alert1{border:2px solid red;width:320px;height:40px;text-align:center;margin-left:10%;} #noneno{display:none;}
+ .form_add{position:absolute;top:100px;left:30%;width:25%;z-index:4;height:590px;background-color:white;} #no{display:none;}
+ .statusok{width:25px;height:25px;background-color:green;border-radius:50%;} .statusno{width:25px;height:25px;background-color:#BA012E;border-radius:50%;}
+ .statusp{width:25px;height:25px;background-color:#F74E0A;border-radius:50%;}  #statusok{ color:green;font-weight:bold;font-size:18px;font-weight:bold;} .xxxx{display:none;}
+ 
+  .form_validateactive{background-color:white;border:2px solid white;border-radius:10px;position:fixed;z-index:5;width:20%;height:250px;padding:2%;top:200px;left:35%;
+     font-size:16px;color:black;}
+     .form_addcodeeleve{background-color:white;border:2px solid white;border-radius:10px;position:fixed;z-index:5;width:20%;height:250px;padding:2%;top:200px;left:35%;
+     font-size:16px;color:black}
+     
+     
+     
+ .form_verifycodes{background-color:white;border:2px solid white;border-radius:10px;position:fixed;z-index:5;width:25%;height:180px;padding:2%;top:200px;left:12%;
+     font-size:16px;color:black;margin-left:20%;}
+     
+     .h31{margin-left:2%;color:black;font-size:18px;font-weight:bold;text-transform:uppercase;} #search_dates{width:250px;height:30px;margin-left:2%;}
+     
+     .buttoncom{display:none;} .cx2,.cx3{display:none;} .fact2{display:none;} .accounts2,.accounts4{display:none;} .aa00{display:none;} #live4,#lives4{display:none;}
+     .commandeproduit{background-color:green;border-radius:50%; width:25px; height:25px;}
+     .pcommandeproduit{}
+/*------------------------------------------------------------------
+[ Responsive ]*/
+
+@media (max-width: 760.98px) {
+#cards{display:block} h1{display:none;} 
+#account_body{display:none;} #cards a{color:black;}
+
+.list{color:black;font-size:13px;}
+.dercom{display:none;}
+#card_mobile{border-left:2px solid white;height:100px;padding:0.2%;width:100;}
+#card_mobile1{width:150;height:20px;border-left:2px solid white;margin-left:-20%;margin-top:-15px;cursor:pointer;}
+
+#forms_ambassadrice_edits{width:70%;margin-left:15%;}
+
+#cards_mobile12{width:100%;height:390px;background-color:white;margin-left:-2%;}
+
+.info2{padding-left:50%;cursor:pointer;}
+.info1{padding-left:50%;cursor:pointer;}
+
+#cards_mobile12{display:none;width:100%;height:390px;background-color:white;margin-left:3%;}
+
+ .m{color:black;font-weight:bold;}
+ 
+   #submits_customer_accounts {margin-left: 2%;
+    width: 450px;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    height: 50px;
+    border-radius: 15px;
+    border-color: black;
+    margin-top:580px;
+   }
+   
+   
+  #mobile_menu a, .content1 a, .content2 a{font-family:arial;font-size:16px;color:white;}
+  
+  .conts,.conts1{border:1px solid black;border-radius:10px;padding-top:2%;margin-left:4%;text-align:center;margin-top:4px;width:30%;height:60px;} 
+  
+    .content1,.content2{display:block;} .content2{margin-top:3px;}
+  
+  .conc,.concs{border:1px solid black;border-radius:10px;text-align:center;padding-top:2%;margin-left:4%;margin-top:4px; width:30%;height:60px;}
+
+
+#pak{top:0;left:0;width:100%;height:100%;background-color:black;z-index:2;}
+
+.btns,.btnc{border-color:white;background-color:white;color:black;}
+
+.btns{display:block;} .accountssc2{display:block;} .accountss2{display:none;}   #creates_customer_amba{display:block;}
+ .derh2{display:block;} .spiner{display:none;position:absolute;top:200px;left:10%;z-index:4}
+ 
+ #alert1{border:2px solid red;width:280px;height:40px;text-align:center}
+ .form_add{position:absolute;top:50px;left:5%;width:85%;z-index:4;height:700px;background-color:white;}
+ 
+ .form_validatecode{background-color:white;border:2px solid white;border-radius:10px;position:fixed;z-index:5;width:60%;height:250px;padding:2%;top:200px;left:10%;
+     font-size:16px;color:black;}
+     
+     .form_validateactive{ background-color:white;border:2px solid white;border-radius:10px;position:fixed;z-index:5;width:60%;height:250px;padding:2%;top:200px;left:10%;
+     font-size:16px;color:black; }
+     
+     
+      .form_addcodeeleve,.form_verifycodes{background-color:white;border:2px solid white;border-radius:10px;position:fixed;z-index:5;width:70%;height:180px;padding:2%;top:200px;left:12%;
+     font-size:16px;color:black} 
+    
+   .h32{margin-left:15%;color:black;font-size:18px;font-weight:bold;text-transform:uppercase;} #search_dates{width:250px;height:30px;margin-left:2%;}
+   #livet4{display:none;}
+ 
+}
+
+@media (min-width: 800px) and (max-width: 1092px) {
+  #cards{display:none}  .btns{display:block;}
+
+  #mobile_menu a, .content1 a, .content2 a{font-family:arial;font-size:16px;color:white;}
+  
+  .conts,.conts1{border:1px solid black;border-radius:10px;padding-top:2%;margin-left:4%;text-align:center;margin-top:4px;width:30%;height:60px;} 
+  
+    .content1,.content2{display:block;} .content2{margin-top:3px;}
+  
+  .conc,.concs{border:1px solid black;border-radius:10px;text-align:center;padding-top:2%;margin-left:4%;margin-top:4px; width:30%;height:60px;}
+  
+  #accordionSidebar{display:none;} h1{font-size:33px;} 
+  
+  .form_add_live{margin-left:-30%;}
+  
+  .form_add_live{margin-left:-30%;}  #account_body{padding-left:-50%;width:1000px;overflow-x:scroll;}
+    .adresse,.numero{display:none;} .remove{display:block;}
+    #livet4{display:none;}
+    
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+     #cards{display:none}  .btns{display:block;}
+
+  #mobile_menu a, .content1 a, .content2 a{font-family:arial;font-size:16px;color:white;}
+  
+  .conts,.conts1{border:1px solid black;border-radius:10px;padding-top:2%;margin-left:4%;text-align:center;margin-top:4px;width:30%;height:60px;} 
+  
+    .content1,.content2{display:block;} .content2{margin-top:3px;}
+  
+  .conc,.concs{border:1px solid black;border-radius:10px;text-align:center;padding-top:2%;margin-left:4%;margin-top:4px; width:30%;height:60px;}
+  
+  #accordionSidebar{display:none;} h1{font-size:33px;}
+    
+    .form_add_live{margin-left:-30%;}  #account_body{padding-left:-50%;width:1000px;overflow-x:scroll;}
+    .adresse,.numero{display:none;} .remove{display:block;}
+}
+
+
+
+@media (min-width: 1668px) and (max-width: 2388px) {
+    
+     #cards{display:none}  .btns{display:block;}
+
+  #mobile_menu a, .content1 a, .content2 a{font-family:arial;font-size:16px;color:white;}
+  
+  .conts,.conts1{border:1px solid black;border-radius:10px;padding-top:2%;margin-left:4%;text-align:center;margin-top:4px;width:30%;height:60px;} 
+  
+    .content1,.content2{display:block;} .content2{margin-top:3px;}
+  
+  .conc,.concs{border:1px solid black;border-radius:10px;text-align:center;padding-top:2%;margin-left:4%;margin-top:4px; width:30%;height:60px;}
+  
+  
+    
+    
+}

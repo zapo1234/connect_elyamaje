@@ -1,0 +1,88 @@
+.button_mobile{display:none;}
+#add_customer{color:white;background-color:black;font-size:15px;border:2px solid black;}
+.btnc,.btns{display:none;}
+#pak{position:fixed;top:0;left:0;width:100%;height:100%;background-color:black;z-index:2;opacity:0.6;} 
+.code a,.letter {color:#000;} .no{color:grey;}
+.h5{margin-left:43%;margin-top:15px;color:#000;font-weight:800;font-size:32px;} .h6{margin-left:43%;margin-top:15px;font-size:32px;
+    font-weight:bold;} .code1 a, .letter {color:#000;}  .non{display:none;}  #noneno{display:none;}
+
+.nxactivecode2{border-radius:50%;background-color:red;width: 20px;height: 20px;position:absolute;top:170px;}
+.nvgreen2{cursor:pointer;width:270px;text-align:center;background-color:#00ff00;color:black;margin-left:3%;border-radius:15px;display:block;padding:1%;margin-bottom:10px;border:2px solid #00ff00;padding:1%;}
+.nvlivereel2{margin-left:2%; margin-top: 15px; color: #000; font-weight: 800;font-size: 18px; margin-bottom:20px;}
+.nvactivecode2{margin-left:2%; margin-top: 15px; color: #000; font-weight: 800;font-size: 20px;}
+
+
+.nxactivecode4,.nxlivereel4,.nvactivecode4,.nvgreen4{display:none;} #live4{display:none;} #lives4{display:none;}
+.Aambassadrice{color:#8A2BE2;font-weight:bold;} #livet4{display:none;} .nullcard{display:none;} .cards_gift{color:black;margin:10px;margin-left:40px;font-size:14px;}
+/*------------------------------------------------------------------
+[ Responsive ]*/
+
+@media (max-width: 760.98px) {
+.button_mobile{display:block;margin-left:7%;}
+
+#mobile_menu a, .content1 a, .content2 a{font-family:arial;font-size:16px;color:white;}
+  
+  .conts,.conts1{border:1px solid black;border-radius:10px;padding-top:2%;margin-left:4%;text-align:center;margin-top:4px;width:30%;height:60px;} 
+  
+    .content1,.content2{display:block;} .content2{margin-top:3px;}
+  
+  .conc,.concs{border:1px solid black;border-radius:10px;text-align:center;padding-top:2%;margin-left:4%;margin-top:4px; width:30%;height:60px;}
+
+
+.btns,.btnc{border-color:white;background-color:white;color:black;} .no a{color:#eee;font-weight:bold;font-size:30px;}
+
+.btns{display:block;} 
+h1{font-size:14px;margin-left:3%;} .text{font-size:20px;color:green;} .h5{margin-left:43%;margin-top:15px;color:#000;font-weight:800;font-size:32px;} .h6{margin-left:43%;margin-top:15px;font-size:32px;
+    font-weight:bold;} .code1 a, .letter {color:#000;} #noneno{display:none;}
+    
+     .nvgreen{width:350px;text-align:center;background-color:#00ff00;color:black;margin-left:5%;border-radius:15px;display:block;margin-bottom:5px;font-size:18px;border:2px solid #00ff00;padding:2%;}
+ .nvactivecode{margin-left:1%; margin-top: 15px; color: #000; font-weight: 700;font-size: 18px;}
+ 
+ .nxactivecode2{border-radius:50%;background-color:red;width: 15px;height: 15px;font-weight:bold;font-size:16px;position:absolute;left:4%;top:112px;}
+ .nvactivecode2{margin-left:2%; margin-top: 15px; color: #000; font-weight: 800;font-size: 16px;padding-left:5%;}
+ .cards_gift{color:black;margin:10px;}
+}
+
+@media (min-width: 800px) and (max-width: 1092px) {
+ 
+ .button_mobile{display:block;}
+  #cards{display:none}  .btns{display:block;}
+
+  #mobile_menu a, .content1 a, .content2 a{font-family:arial;font-size:16px;color:white;}
+  
+  .conts,.conts1{border:1px solid black;border-radius:10px;padding-top:2%;margin-left:4%;text-align:center;margin-top:4px;width:30%;height:60px;} 
+  
+    .content1,.content2{display:block;} .content2{margin-top:3px;}
+  
+  .conc,.concs{border:1px solid black;border-radius:10px;text-align:center;padding-top:2%;margin-left:4%;margin-top:4px; width:30%;height:60px;}
+  
+  #accordionSidebar{display:none;} h1{font-size:33px;}
+ 
+ 
+    
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+ #cards{display:none}  .btns{display:block;}
+
+  #mobile_menu a, .content1 a, .content2 a{font-family:arial;font-size:16px;color:white;}
+  
+  .conts,.conts1{border:1px solid black;border-radius:10px;padding-top:2%;margin-left:4%;text-align:center;margin-top:4px;width:30%;height:60px;} 
+  
+    .content1,.content2{display:block;} .content2{margin-top:3px;}
+  
+  .conc,.concs{border:1px solid black;border-radius:10px;text-align:center;padding-top:2%;margin-left:4%;margin-top:4px; width:30%;height:60px;}
+  
+  #accordionSidebar{display:none;} h1{font-size:33px;}
+    
+}
+
+
+@media (min-width: 1668px) and (max-width: 2388px) {
+    
+    
+    
+    
+}

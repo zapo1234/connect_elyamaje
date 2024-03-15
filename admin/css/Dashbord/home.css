@@ -1,0 +1,47 @@
+#cards{display:none;}
+#cards{display:none;} .btnc,.btns{display:none;} .account1{display:none;}
+.form_validatecode{background-color:white;border:2px solid white;border-radius:10px;position:absolute;z-index:5;width:20%;height:250px;padding:2%;top:200px;left:35%;
+     font-size:16px;color:black;}
+     
+     .activecode{border-radius: 50%;background-color: #00ff00; width: 20px; height: 20px;}
+     
+      .form_validateactive{background-color:white;border:2px solid white;border-radius:10px;position:fixed;z-index:5;width:20%;height:250px;padding:2%;top:200px;left:35%;
+     font-size:16px;color:black;} #div_vente{height:700px;}
+     
+     .Ambassadrice{color:#8A2BE2;font-weight:bold;}
+/*------------------------------------------------------------------
+[ Responsive ]*/
+
+@media (max-width: 760.98px) {
+
+ #cards{display:block;}
+  #mobile_menu a, .content1 a, .content2 a{font-family:arial;font-size:16px;color:white;}
+  
+  .conts,.conts1{border:1px solid black;border-radius:10px;padding-top:2%;margin-left:4%;text-align:center;margin-top:4px;width:30%;height:60px;} 
+  
+    .content1,.content2{display:block;} .content2{margin-top:3px;}
+  
+  .conc,.concs{border:1px solid black;border-radius:10px;text-align:center;padding-top:2%;margin-left:4%;margin-top:4px; width:30%;height:60px;}
+
+
+#pak{top:0;left:0;width:100%;height:100%;background-color:black;z-index:2;}
+
+.btns,.btnc{border-color:white;background-color:white;color:black;}
+
+.btns{display:block;}
+
+
+#pak{top:0;left:0;width:100%;height:100%;background-color:black;z-index:2;}
+
+.btns,.btnc{border-color:white;background-color:white;color:black;}
+
+.btns{display:block;}
+ 
+ .form_validatecode{background-color:white;border:2px solid white;border-radius:10px;position:fixed;z-index:5;width:60%;height:250px;padding:2%;top:200px;left:25%;
+     font-size:16px;color:black;}
+     
+     .form_validateactive{ background-color:white;border:2px solid white;border-radius:10px;position:fixed;z-index:5;width:60%;height:250px;padding:2%;top:200px;left:25%;
+     font-size:16px;color:black; }
+   
+  #div_vente{height:700px;} #performence{display:none;}
+}

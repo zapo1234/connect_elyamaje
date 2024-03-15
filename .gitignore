@@ -1,0 +1,21 @@
+.htaccess
+index.php
+# -----------
+proelyamaje/public/hot
+proelyamaje/node_modules/
+proelyamaje/public/storage
+proelyamaje/storage/*.key
+proelyamaje/vendor
+proelyamaje/.env
+proelyamaje/.env.backup
+proelyamaje/.phpunit.result.cache
+proelyamaje/docker-compose.override.yml
+proelyamaje/Homestead.json
+proelyamaje/Homestead.yaml
+proelyamaje/npm-debug.log
+proelyamaje/yarn-error.log
+proelyamaje/.idea
+proelyamaje/.vscode
+admin/uploads/
+admin/Upload/
+proelyamaje/composer.lock
