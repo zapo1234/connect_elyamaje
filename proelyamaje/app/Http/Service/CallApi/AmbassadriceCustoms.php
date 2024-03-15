@@ -269,7 +269,7 @@ class AmbassadriceCustoms
            $donnees = $this->getdonneesall();// recupérer les data venant de wooocomerce.
           // $donnees = $this->getorderambassadrice();
          
-          dd($donnees);
+          
            foreach($donnees as $donns){
                 
                 foreach($donns as $donnes){
@@ -366,6 +366,7 @@ class AmbassadriceCustoms
 
                                   foreach($donnees_orders as $kl => $values){
                                       
+                                      dd($values);
 
                                       $retrait = array_sum($somme_deduit);// sommes des index du tableau.....
                                       $somme = $values['total']-$retrait-$values['total_tax']-$values['shipping_total'];
