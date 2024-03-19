@@ -122,7 +122,8 @@ class AmbassadriceCustoms
    }
 
    public function getdonneesall(){
-      
+            
+      dd('zapo');
           // FIXER LES Période de données
 	        // traiter les données venant de woocomerce..
 	         //$date_after ="2024-01-01T07:01:00";
@@ -193,7 +194,7 @@ class AmbassadriceCustoms
       // methode recupérer des data wooocomerce qui ont un code promo amabassadrice..
        public function getDataorder(): array
        {
-            
+             
             // FIXER LES Période de données
 	          // traiter les données venant de woocomerce..
 	          //$date_after ="2023-04-01T09:01:00";
@@ -269,7 +270,7 @@ class AmbassadriceCustoms
            $donnees = $this->getdonneesall();// recupérer les data venant de wooocomerce.
           // $donnees = $this->getorderambassadrice();
          
-
+          
            foreach($donnees as $donns){
                 
                 foreach($donns as $donnes){
@@ -366,17 +367,6 @@ class AmbassadriceCustoms
 
                                   foreach($donnees_orders as $kl => $values){
                                       
-                                     // verfiier l'existence des bon cadeaux
-                                    /* if(count($values['pw_gift_cards_redeemed'])!=0){
-                                        // recupérer les montant gifet_card.
-                                        $montant_gift_card[] = $values['pw_gift_cards_redeemed']['amount'];
-                                         
-                                       }
-
-                                     $somme_gift_card = array_sum($montant_gift_card);// le montant si les bons d'achat sont détecte dans la commande
-                                     
-                                    */
-
                                       $retrait = array_sum($somme_deduit);// sommes des index du tableau.....
                                       $somme = $values['total']-$retrait-$values['total_tax']-$values['shipping_total'];
                                       if($somme > 0) {
