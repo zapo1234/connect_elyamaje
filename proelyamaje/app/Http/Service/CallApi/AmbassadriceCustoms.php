@@ -123,7 +123,6 @@ class AmbassadriceCustoms
 
    public function getdonneesall(){
             
-      dd('zapo');
           // FIXER LES Période de données
 	        // traiter les données venant de woocomerce..
 	         //$date_after ="2024-01-01T07:01:00";
