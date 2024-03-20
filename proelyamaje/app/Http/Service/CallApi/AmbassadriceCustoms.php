@@ -230,7 +230,7 @@ class AmbassadriceCustoms
                    }
              }
 
-          // recupérer la data et créer un tableau associative pour code élève
+          // recupérer la data et créer un tableau associative pour code élève.
           $chaine_arr =[];
            foreach($data as $k => $value){
                    foreach($value as $v => $kl){
