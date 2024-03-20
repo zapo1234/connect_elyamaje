@@ -991,12 +991,15 @@ class AmbassadriceController extends Controller
                    }
                     // recupérer les emails et code promo créer dans un array associative..
                    if(!in_array($email[$keys], $dones)){
+                        if($email[$keys]!="" && $name!=""){
                           $email_array[] = ['code_promo' =>$code_promof,
                                  'email' => $emails[$keys],
                                  'libelle'=>$libelle,
                                  'nom_ambassadrice'=>$nom,
                                  'nom_eleve' =>$name[$keys]
-                             ];
+                                 
+                               ];
+                        }
                     }
             
                       // verifier l'existence du code promo en base
