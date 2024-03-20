@@ -295,7 +295,7 @@ class PalierLive
                                'id_live'=>$val['id_live'],
                                'code_live'=>$val['code_live'],
                                'id_coupons'=>$val['id_coupons'],
-                               'date_live'=>$date_days,
+                               'date_live'=>$val['date_live'],
                               'token_data' => explode(',',$val['token_datas'])
                                 
                             ];
@@ -304,7 +304,7 @@ class PalierLive
                                 $panier = new HistoriquePanierLive();
                                 $panier->id_live = $val['id_live'];
                                 $panier->code_live = $val['code_live'];
-                                $panier->date_live = $val['date_live'];
+                                $panier->date_live = $date_days;
                                  $panier->token_datas = $val['token_datas'];
                                  // insert....... !-----
                                  $panier->save(); 
@@ -482,7 +482,7 @@ class PalierLive
             ->where('code_live', $code_live)
             ->update(array('actif' => $actif,
                            'date_fix_live'=>$date_true,
-                           'date_live'=>$date_days,
+                           'date_live'=>$date_true,
                            'ext'=>$pseudo_id_live
                          
              ));
