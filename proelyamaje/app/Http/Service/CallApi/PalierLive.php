@@ -53,6 +53,7 @@ class PalierLive
         $donnes_token =[]; // recupérer le champs token dans un array de données.
         $date_x ="";
         $pseudo_id_live="";
+        $date_days = date('Y-m-d H:i:s');
         foreach($list as $val)  {
             if($val['actif']==1){
                 $donnes_recoive[] = $val;
@@ -286,7 +287,7 @@ class PalierLive
          // traiter les données quand le champ actif est égale a 1...........
          $donnes_recoive =[];
          $donnes_token =[]; // recupérer le champs token dans un array de données......
-        
+        $date_days = date('Y-m-d H:i:s');
         foreach($list as $val){
             if($val['actif']==1) {
                 $donnes_recoive[] = $val;
@@ -294,7 +295,7 @@ class PalierLive
                                'id_live'=>$val['id_live'],
                                'code_live'=>$val['code_live'],
                                'id_coupons'=>$val['id_coupons'],
-                               'date_live'=>$val['date_live'],
+                               'date_live'=>$date_days,
                               'token_data' => explode(',',$val['token_datas'])
                                 
                             ];
@@ -481,6 +482,7 @@ class PalierLive
             ->where('code_live', $code_live)
             ->update(array('actif' => $actif,
                            'date_fix_live'=>$date_true,
+                           'date_live'=>$date_days,
                            'ext'=>$pseudo_id_live
                          
              ));
