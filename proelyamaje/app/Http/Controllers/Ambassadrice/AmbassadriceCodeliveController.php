@@ -435,8 +435,7 @@ class AmbassadriceCodeliveController extends Controller
                   $currens = $current1->addHours(2);
                   $current2 = \Carbon\Carbon::createFromFormat('Y-m-d H:i:s',$currens)->format('Y-m-d\TH:i:s',$currens);
                  
-                  
-                   // faire un upadate de la date id_coipons
+                    // faire un upadate de la date id_coipons
                   $data_donnes = [
                    'date_expires' => $current2,
                   ];
@@ -527,17 +526,15 @@ class AmbassadriceCodeliveController extends Controller
              
                   // recupérer la date courant et ajouter 2 
                   // modifier les date d'expiration dans l'api wwocomerce put expire
-                   $current = Carbon::now();
-                   // ajouter un intervale plus un jour !
-                          $current1 = $current->addDays(1);
-                          $currens = $current1->addHours(2);
-                          $current2 = \Carbon\Carbon::createFromFormat('Y-m-d H:i:s',$currens)->format('Y-m-d\TH:i:s',$currens);
-                      // faire un upadate de la date id_coipons
-                      // $date_x = $date_live;
-                     // dd($cur);
-                    //  $curr = Carbon::createFromFormat('Y-m-d H:i:s', $date_x)->format('Y-m-d H:i:s');
+                    $current = Carbon::now();
+                  // ajouter un intervale plus un jour !
+                    $current1 = $current->addDays(1);
+                    $currens = $current1->addHours(2);
+                    $current2 = \Carbon\Carbon::createFromFormat('Y-m-d H:i:s',$currens)->format('Y-m-d\TH:i:s',$currens);
+                 
+                     
 
-                      $data_donnes = [
+                         $data_donnes = [
                         'date_expires' => $current2,
                         ];
                             
