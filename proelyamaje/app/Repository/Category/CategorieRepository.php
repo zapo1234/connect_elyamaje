@@ -498,7 +498,7 @@ class CategorieRepository implements CategorieInterface
        {
            $dolaapikey = env('KEY_API_DOLIBAR_PROD'); // clé Api.
           // recupérer les wharehouse de l'activité
-           $url = "https://www.poserp.elyamaje.com/api/index.php/warehouses?sortfield=t.rowid&sortorder=ASC&limit=10";
+           $url = "https://www.poserp.elyamaje.com/api/index.php/warehouses?sortfield=t.rowid&sortorder=ASC&limit=20";
          
           $curls = curl_init();
           $httpheader = ['DOLAPIKEY: '.$dolaapikey];
@@ -605,6 +605,7 @@ class CategorieRepository implements CategorieInterface
            $fk_entrepot1 = 6; //malpasse
           $entrepot_malpasse =[];
           $entrepot_autre =[];
+          $entrepot_malpasses =[];
            foreach($table_product as $key => $vm){
               if($key==6){
                   $entrepot_malpasse = $vm;
