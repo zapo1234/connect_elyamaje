@@ -1386,8 +1386,7 @@ class OrderambassadricecustomsRepository implements OrderambassadricecustomsInte
           // recuperer les status refunded ou cancelled .
            // insert dans table
             DB::table('code_fidelites_use')->insert($array_fidelite);
-
-            
+           
 
             return true;
         
