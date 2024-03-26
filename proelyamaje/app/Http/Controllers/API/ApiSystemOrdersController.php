@@ -596,6 +596,9 @@ class ApiSystemOrdersController extends Controller
               $data = ['name' => 'import_order_ambassadrice_woocommerce', 'origin' => 'connect', 'error' => is_bool($response) ? 0 : 1,
               'message' => is_bool($response) ? null : $response, 'code' => null, 'from_cron' => 1];
                 $this->api->insertCronRequest($data,false);
+
+                 // renvoi un retour de la tache cron.
+                 return json_encode(["succes" => true, "date"=> date('Y-m-d H:i:s'),"origin_action" => "tache_cron"]);
             });
           } else{
               dd('echec de la requete');
