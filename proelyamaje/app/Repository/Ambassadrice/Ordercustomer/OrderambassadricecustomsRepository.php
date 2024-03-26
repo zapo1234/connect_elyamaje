@@ -1387,6 +1387,8 @@ class OrderambassadricecustomsRepository implements OrderambassadricecustomsInte
            // insert dans table
             DB::table('code_fidelites_use')->insert($array_fidelite);
 
+            
+
             return true;
         
       } catch (Exception $e) {
