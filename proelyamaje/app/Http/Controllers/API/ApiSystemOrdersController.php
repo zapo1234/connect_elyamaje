@@ -591,17 +591,18 @@ class ApiSystemOrdersController extends Controller
      
       public function datactioncron($user)
       {
-         dd('zapo');
+        
          if($user =="67934854968e6ee06568847ead22132f608bf4ec1997265491df0efb"){
             DB::transaction(function () {
               $response =  $this->orders->insert();
               $data = ['name' => 'import_order_ambassadrice_woocommerce', 'origin' => 'connect', 'error' => is_bool($response) ? 0 : 1,
               'message' => is_bool($response) ? null : $response, 'code' => null, 'from_cron' => 1];
                 $this->api->insertCronRequest($data,false);
+               });
 
                  // renvoi un retour de la tache cron.
                  return json_encode(["succes" => true, "date"=> date('Y-m-d H:i:s'),"origin_action" => "tache_cron"]);
-            });
+
           } else{
               dd('echec de la requete');
           }
