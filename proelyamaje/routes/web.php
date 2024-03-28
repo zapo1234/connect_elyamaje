@@ -951,6 +951,9 @@ Route::get('/api/panier/choix/live', [PanierLiveController::class, 'getpanierliv
 // tache cron succes change status orders boutique customer
 Route::get('/order/cron/prepared/{user}', [ApiSystemOrdersController::class, 'datacronorder'])->name('api.dataapiordercron');
 
+// tache cron pour les colliship dolibarr...
+Route::get('/data/colliship/{token}', [ApiSystemOrdersController::class, 'datacollishp'])->name('api.datacollishp');
+
 // tache cron pour recupérer les codes fidélité et les désactivez dans l'api utilisé en boutique.
 Route::get('/order/fidelite/code/boutique/{user}', [UtilisateursController::class, 'postfem'])->name('api.datafem');
 

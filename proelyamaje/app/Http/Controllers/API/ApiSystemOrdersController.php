@@ -652,6 +652,14 @@ class ApiSystemOrdersController extends Controller
           }
 
       }
+
+      public function datacollishp($token){
+        // colliship
+        if($token =="67934854968e6ee06568847ead22132f608bf4ec1997265491df0efb"){
+            $this->colliship->getcolliship();
+        }
+
+      }
       
       
       
