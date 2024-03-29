@@ -666,7 +666,9 @@ class CategorieRepository implements CategorieInterface
             $data_ids =  array_unique($array_data_product_exist);
             // recupérer tous les produits qui sont à zero
             $product_diff = array_diff($list_details,$entrepot_malpasse);
-             $array_product_null =[];
+
+
+              $array_product_null =[];
 
               foreach($product_diff as $valc){
 
@@ -694,18 +696,26 @@ class CategorieRepository implements CategorieInterface
               }
 
         
-             $x = array_merge($data_x,$array_data);
-             $data_result = array_merge($array_data,$array_product_null);
-             $this->csv->csvcreateentrepot($data_result);
-             // créer un tableau associative entre le libelle et leur id......
-             // recupérer les different stocks dans les entrepot
-            // recupérer les stocks souhaite
-            // information de la cle api recupérer les produits
-             $urls = $this->geturlapi();
             
-            // recupération des données de l'api dolibar
-            $curl = curl_init();
-            $httpheader = ['DOLAPIKEY: '.$dolaapikey];
+          
+           $x = array_merge($data_x,$array_data);
+          
+            $data_result = array_merge($array_data,$array_product_null);
+
+           $this->csv->csvcreateentrepot($data_result);
+
+           
+      
+           // créer un tableau associative entre le libelle et leur id......
+           // recupérer les different stocks dans les entrepot
+            // recupérer les stocks souhaite
+           // information de la cle api recupérer les produits
+        
+           $urls = $this->geturlapi();
+            
+           // recupération des données de l'api dolibar
+          $curl = curl_init();
+          $httpheader = ['DOLAPIKEY: '.$dolaapikey];
      
           curl_setopt($curl, CURLOPT_URL, $urls);
           curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
@@ -718,18 +728,21 @@ class CategorieRepository implements CategorieInterface
            $id_product_api =[];
             // créer un tableau de ligne une 1 ère ligne du tableau
              $array_line [] =[
-             'id_product'=> 'id_product',
+              
+              'id_product'=> 'id_product',
               'quantite'=> 'quantite',
               'entrepot' =>'entrepot',
               'ref_product'=>'ref_product',
               'details'=>'details'
               
-             ];
+              
+              ];
               
             $data_ref = []; // reference 
            foreach($data as $kl=>$vli) {
                $id_product_api[] = $vli['id'];
-                $chaine = $vli['ref'].'-'.$vli['id'];
+               
+               $chaine = $vli['ref'].'-'.$vli['id'];
                $data_ref[$chaine] = $vli['id'];
            }
             
@@ -743,15 +756,17 @@ class CategorieRepository implements CategorieInterface
                  curl_setopt($cur, CURLOPT_HTTPHEADER, $httpheader);
                  $resuls = curl_exec($cur);
                  curl_close($cur);
-                // transformer en array les données
+              
+                 // transformer en array les données
                 $data_list[$valc] =  json_decode($resuls,true);
               
              }
 
-             // filter l'array.
+         // filter l'array.
               foreach($data_list as $lm => $values_array) {
                  if(count($values_array)==1){
                      foreach($values_array as $kj =>$vla){
+                         
                          foreach($vla as $kn => $vlue) {
                               // recupérer le libéllé de l'entrepot
                              $libelle_l = array_search($kn,$list_wharehouse);
@@ -765,9 +780,10 @@ class CategorieRepository implements CategorieInterface
                 }
              }
              
-            // dd($data_list1);
-            $list_details = $this->datalistcat($id_categoris);
-            $data_result_entrepot =[];
+           // dd($data_list1);
+           $list_details = $this->datalistcat($id_categoris);
+
+             $data_result_entrepot =[];
              foreach($data_list1 as $kyes => $valo) {
                   // recupérer les relation avec id categories
                    if(isset($list_details[$valo])==true){
@@ -776,8 +792,10 @@ class CategorieRepository implements CategorieInterface
                }
             }
             
+        
             // faire un jeu de données avec entrepot
             $array_donnes = array('Entrepôt Homebox Marseille','Entrepôt Préparation','Boutique Nice','Elyamaje boutique');
+            
              foreach($data_result_entrepot as $value){
                      $chaine = explode(',',$value);
 
@@ -789,9 +807,12 @@ class CategorieRepository implements CategorieInterface
 
                 ];
                 
-                  //$details[] = $chaine[0].','.$chaine[2].','.$chaine[1].','.$chaine[3];
+                 
+                 //$details[] = $chaine[0].','.$chaine[2].','.$chaine[1].','.$chaine[3];
              }
-              $this->csv->csvcreateentrepot($array_data_csv);
+             
+
+             $this->csv->csvcreateentrepot($array_data_csv);
              dd('succees');
              $details =[];
                      // tirer le csv 
