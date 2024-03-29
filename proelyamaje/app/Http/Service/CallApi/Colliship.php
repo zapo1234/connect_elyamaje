@@ -34,7 +34,7 @@ class Colliship
             $data = json_decode($datas,true);
             $ids_fact =[];
 
-
+            dd($data);
             foreach($data as $valu){
                  $ids_fact[] = $valu['rowid'];
             }
