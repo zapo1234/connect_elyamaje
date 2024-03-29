@@ -423,8 +423,6 @@ class AmbassadriceCustoms
              
               $array_datas = array_unique(array_column($coupons, 'id_commande'));
               $array_data_uniques = array_intersect_key($coupons, $array_datas);
-
-              dd($array_data_uniques);
              
               return $array_data_uniques;
     } 
