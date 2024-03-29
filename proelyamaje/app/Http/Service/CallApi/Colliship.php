@@ -43,7 +43,8 @@ class Colliship
             // recupérer ...
              $ids_f = implode(',',$ids_fact);
              
-             DB::connection('mysql2')->select("UPDATE llxyq_facture_extrafields SET col=1 WHERE fk_object IN (".$ids_f.")");
+             //DB::connection('mysql2')->select("UPDATE llxyq_facture_extrafields SET col=1 WHERE fk_object IN (".$ids_f.")");
+             DB::connection('mysql2')->update("UPDATE llxyq_facture_extrafields SET col=1 WHERE fk_object IN (".$ids_f.")");
              
              dd('succes');
      }
