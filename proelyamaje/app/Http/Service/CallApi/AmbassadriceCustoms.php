@@ -194,7 +194,7 @@ class AmbassadriceCustoms
        public function getDataorder(): array
        {
              dd('zapo');
-            // FIXER LES Période de données
+            // FIXER LES Période de données.
 	          // traiter les données venant de woocomerce..
 	          //$date_after ="2023-04-01T09:01:00";
             // recupére les données qui on un code pro existant
