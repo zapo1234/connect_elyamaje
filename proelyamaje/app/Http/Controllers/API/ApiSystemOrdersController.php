@@ -15,6 +15,7 @@ use App\Http\Service\CallApi\TransferOrder;
 use App\Repository\Coupon\CouponRepository;
 use App\Http\Service\CallApi\GetDataCoupons;
 use App\Http\Service\CallApi\Distributedorders;
+use App\Http\Service\CallApi\Colliship;
 use App\Repository\Customer\CustomerRepository;
 use App\Repository\Category\CategorieRepository;
 use App\Repository\Cardsgift\CardsgiftRepository;
@@ -32,6 +33,7 @@ class ApiSystemOrdersController extends Controller
        private $coupons;
        private $refunded;
        private $category;
+       private $colliship;
 
       public function __construct(Apicall $api, CustomerRepository $repo, 
       OrderambassadricecustomsRepository $orders,
@@ -43,6 +45,7 @@ class ApiSystemOrdersController extends Controller
       OrderrefundedRepository $refunded,
       DistributeurRepository $distributed,
       TransferOrder $apiorders,
+      Colliship $colliship,
       TransferOrderdistributeurs $ordersd,
       Distributedorders $orderb,
       BoutiqueorderRepository $orderboutique)
@@ -61,6 +64,7 @@ class ApiSystemOrdersController extends Controller
          $this->ordersd = $ordersd;
          $this->orderb = $orderb;
          $this->orderboutique = $orderboutique;
+         $this->colliship = $colliship;
       }
       
       
