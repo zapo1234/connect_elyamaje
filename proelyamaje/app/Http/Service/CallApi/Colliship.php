@@ -57,9 +57,21 @@ class Colliship
                // faire un update dans la table llxyq_facture_extrafields
                 // recupérer ...
 
-            // recupérer la difference des 
-             $resut_data_diff = array_diff($ids_fact,$json_true);
-            dd($result_data_diff);
+               // recupérer la difference des 
+              $resut_data_diff = array_diff($ids_fact,$result_data);
+
+              dd($result_data_diff);
+             // faire des insert ici pour .
+              // faire un insert d'ecriture de paiement facture du montant en espéce.
+              foreach($result_data_diff as $vl){
+                  DB::connection('mysql2')->table(' llxyq_facture_extrafields')->insert([
+                   'tms' => date('Y-m-d H:i:s'),
+                   'fk_object' =>$vl,
+                   'col' => 1,
+                  // Ajoutez d'autres colonnes et valeurs selon votre besoin
+                ]);
+
+             }    
 
              $ids_f = implode(',',$ids_fact);
 
