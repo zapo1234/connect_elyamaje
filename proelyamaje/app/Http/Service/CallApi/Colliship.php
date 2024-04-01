@@ -50,9 +50,9 @@ class Colliship
                 // faire un update dans la table llxyq_facture_extrafields
                 // recupérer ...
                  $ids_f = implode(',',$ids_fact);
-                 $response = DB::connection('mysql2')->select("UPDATE llxyq_facture_extrafields SET col=1 WHERE fk_object IN ('.$ids_f.')");
-               //$reponse = DB::connection('mysql2')->update("UPDATE llxyq_facture_extrafields SET col=1 WHERE fk_object IN ('.$ids_f.')");
-                var_dump($response);
+                 //$response = DB::connection('mysql2')->select("UPDATE llxyq_facture_extrafields SET col=1 WHERE fk_object IN ('.$ids_f.')");
+                 $reponse = DB::connection('mysql2')->update("UPDATE llxyq_facture_extrafields SET col=1 WHERE fk_object IN ('.$ids_f.')");
+                var_dump($reponse);
              }  catch (\Illuminate\Database\QueryException $e) {
               // Capture de l'erreur et affichage du message
                dd($e->getMessage());
