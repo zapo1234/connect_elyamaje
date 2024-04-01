@@ -35,7 +35,13 @@ class Colliship
                 $data = json_decode($datas,true);
                 $ids_fact =[];
 
+                // faire un select 
+                $datas_factures = DB::connection('mysql2')->select("SELECT rowid ,datec FROM lxyq_facture_extrafields");
+                $json = json_encode($datas_factures);
+                $json_true = json_decode($datas,true);
+                
                 dump($data);
+                dump($json_true);
 
                 foreach($data as $valu){
                   $ids_fact[] = $valu['rowid'];
