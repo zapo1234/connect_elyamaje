@@ -56,7 +56,7 @@ class Colliship
              // $reponse = DB::connection('mysql2')->select("UPDATE llxyq_facture_extrafields SET col=1 WHERE fk_object IN ('.$ids_f.')");
 
              DB::connection('mysql2')
-              ->table(' llxyq_facture_extrafields')
+              ->table('llxyq_facture_extrafields')
               ->whereIn('fk_object', $ids_fact)
               ->update(['col' => $col]);
           
