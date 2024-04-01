@@ -39,7 +39,7 @@ class Colliship
               
                 dump($data);
                 // faire un select 
-                $datas_factures = DB::connection('mysql2')->select("SELECT rowid ,datec FROM   tms > '$date_true'");
+                $datas_factures = DB::connection('mysql2')->select("SELECT rowid ,datec FROM llxyq_facture_extrafields WHERE  tms > '$date_true'");
                 $json = json_encode($datas_factures);
                 $json_true = json_decode($json,true);
                 
