@@ -25,7 +25,7 @@ class Colliship
             // recupérer les commande  en colliship dolibar et cocher dynamiquement.
             $date = new DateTime();
             // Soustrait un jour à la date actuelle
-            $date->modify('-20 day');
+            $date->modify('-5 day');
             $date_true = $date->format('Y-m-d');
             $array_montant =  array('59.60','55.62','55.60');
             $array_montants = implode(',',$array_montant);
@@ -44,7 +44,7 @@ class Colliship
              $ids_f = implode(',',$ids_fact);
 
               DB::enableQueryLog();
-           DB::connection('mysql2')->select("UPDATE llxyq_facture_extrafields SET col=1 WHERE fk_object IN ('.$ids_f.')");
+             DB::connection('mysql2')->select("UPDATE llxyq_facture_extrafields SET col=1 WHERE fk_object IN ('.$ids_f.')");
                //$reponse = DB::connection('mysql2')->update("UPDATE llxyq_facture_extrafields SET col=1 WHERE fk_object IN ('.$ids_f.')");
                dd(DB::getQueryLog());
              dd('reponse_true');
