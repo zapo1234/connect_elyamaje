@@ -23,7 +23,7 @@ class Colliship
       public function getcolliship()
       {
             // recupérer les commande  en colliship dolibar et cocher dynamiquement.
-          try{
+          
                 $date = new DateTime();
                 // Soustrait un jour à la date actuelle
                 $date->modify('-10 day');
@@ -61,7 +61,7 @@ class Colliship
               ->update(['col' => $col]);
           
               dd('reponse_true');
-     }
+     
       
     }
 }
