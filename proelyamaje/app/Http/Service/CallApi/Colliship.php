@@ -39,21 +39,28 @@ class Colliship
               
                 dump($data);
                 // faire un select 
-                $datas_factures = DB::connection('mysql2')->select("SELECT rowid ,datec FROM llxyq_facture_extrafields WHERE  tms > '$date_true'");
+                $datas_factures = DB::connection('mysql2')->select("SELECT  fk_object FROM llxyq_facture_extrafields WHERE  tms > '$date_true'");
                 $json = json_encode($datas_factures);
                 $json_true = json_decode($json,true);
+                $result_data =[];
+
+                foreach($json_true as $val){
+                    $result_data[] = $val['fk_object'];
+                }
                 
                 dump($json_true);
 
-                dd('sucess');
+                    foreach($data as $valu){
+                    $ids_fact[] = $valu['rowid'];
+                 }
+               // recupérer les fk_facture
+               // faire un update dans la table llxyq_facture_extrafields
+                // recupérer ...
 
+            // recupérer la difference des 
+             $resut_data_diff = array_diff($ids_fact,$json_true);
+            dd($result_data_diff);
 
-            foreach($data as $valu){
-                 $ids_fact[] = $valu['rowid'];
-            }
-             // recupérer les fk_facture
-            // faire un update dans la table llxyq_facture_extrafields
-            // recupérer ...
              $ids_f = implode(',',$ids_fact);
 
               $col =1;
