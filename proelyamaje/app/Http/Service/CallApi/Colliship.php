@@ -34,13 +34,13 @@ class Colliship
                 $datas = json_encode($datas_facture);
                 $data = json_decode($datas,true);
                 $ids_fact =[];
-
+              
+                dump($data);
                 // faire un select 
                 $datas_factures = DB::connection('mysql2')->select("SELECT rowid ,fk_object FROM llxyq_facture_extrafields");
                 $json = json_encode($datas_factures);
                 $json_true = json_decode($json,true);
                 
-                dump($data);
                 dump($json_true);
 
                 foreach($data as $valu){
