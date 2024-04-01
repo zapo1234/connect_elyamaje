@@ -57,7 +57,7 @@ class Colliship
 
              DB::connection('mysql2')
               ->table(' llxyq_facture_extrafields')
-              ->whereIn('fk_object', $ids_f)
+              ->whereIn('fk_object', $ids_fact)
               ->update(['col' => $col]);
           
               dd('reponse_true');
