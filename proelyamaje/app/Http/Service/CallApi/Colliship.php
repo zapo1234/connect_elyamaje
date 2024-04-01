@@ -61,29 +61,32 @@ class Colliship
                dd($result_data_diff);
                // faire des insert ici pour .
                // faire un insert d'ecriture de paiement facture du montant en espéce.
+               $col =1;
+              $point_fidelite= 0.00;
+
               foreach($result_data_diff as $vl){
                   DB::connection('mysql2')->table(' llxyq_facture_extrafields')->insert([
                    'tms' => date('Y-m-d H:i:s'),
                    'fk_object' =>$vl,
+                   'fid' => $col,
+                   'point_fidelite'=>0.00,
                    'col' => 1,
-                  // Ajoutez d'autres colonnes et valeurs selon votre besoin
+                    // Ajoutez d'autres colonnes et valeurs selon votre besoin
                 ]);
 
-             }    
+             }
+             
+             dd('succees_true_true');
 
              $ids_f = implode(',',$ids_fact);
 
-              $col =1;
-              $point_fidelite= 0.00;
-              $fid=1;
+             
              // $reponse = DB::connection('mysql2')->select("UPDATE llxyq_facture_extrafields SET col=1 WHERE fk_object IN ('.$ids_f.')");
 
              DB::connection('mysql2')
               ->table('llxyq_facture_extrafields')
               ->whereIn('fk_object', $ids_fact)
               ->update(['col' => $col,
-                        'fid' => $fid,
-                        'point_fidelite'=>$point_fidelite
                        ]);
           
               dd('reponse_true');
