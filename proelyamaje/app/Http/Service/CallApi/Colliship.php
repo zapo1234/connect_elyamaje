@@ -74,12 +74,17 @@ class Colliship
              $ids_f = implode(',',$ids_fact);
 
               $col =1;
+              $point_fidelite= 0.00;
+              $fid=1;
              // $reponse = DB::connection('mysql2')->select("UPDATE llxyq_facture_extrafields SET col=1 WHERE fk_object IN ('.$ids_f.')");
 
              DB::connection('mysql2')
               ->table('llxyq_facture_extrafields')
               ->whereIn('fk_object', $ids_fact)
-              ->update(['col' => $col]);
+              ->update(['col' => $col,
+                        'fid' => $fid,
+                        'point_fidelite'=>$point_fidelite
+                       ]);
           
               dd('reponse_true');
      
