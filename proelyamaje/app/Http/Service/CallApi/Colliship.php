@@ -28,6 +28,7 @@ class Colliship
                 // Soustrait un jour à la date actuelle
                 $date->modify('-5 day');
                 $date_true = $date->format('Y-m-d');
+                $date_trues = $date->format('Y-m-d H:i:s');
                 $array_montant =  array('59.60','55.62','55.60');
                 $array_montants = implode(',',$array_montant);
                 $datas_facture = DB::connection('mysql2')->select("SELECT rowid ,datec FROM llxyq_facture WHERE total_ttc IN (".$array_montants.") AND  datef > '$date_true' AND fk_mode_reglement=54  AND paye=1");
@@ -38,7 +39,7 @@ class Colliship
               
                 dump($data);
                 // recupérer des données de la table facture_extrafiels pour un tri
-                $datas_factures = DB::connection('mysql2')->select("SELECT  fk_object FROM llxyq_facture_extrafields WHERE  tms > '$date_true'");
+                $datas_factures = DB::connection('mysql2')->select("SELECT  fk_object FROM llxyq_facture_extrafields WHERE  tms > '$date_trues'");
                 $json = json_encode($datas_factures);
                 $json_true = json_decode($json,true);
 
