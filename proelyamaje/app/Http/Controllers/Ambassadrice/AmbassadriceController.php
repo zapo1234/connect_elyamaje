@@ -207,13 +207,23 @@ class AmbassadriceController extends Controller
            $css_action="nullcard";
           $code_number="";
           $somme_cards =0;
+          $somme_api = "";
          }
          else{
             
               $somme_card =  $this->gift->getamountcard($cox);
+              if($somme_card!="no"){
               $css_action="cards_bon";
-             $somme_cards = $somme_card[0]['balance'];
-             $code_number = $cox;
+              $somme_cards = $somme_card[0]['balance'];
+              $code_number = $cox;
+              $somme_api = number_format($somme_cards, 2, ',', '');// convertir le monant avec une virgule. somme api.
+
+            }else{
+              $css_action="cards_bon";
+              $somme_cards = 0;
+              $code_number = $cox;
+              $somme_api = "pas disponible";
+            }
              
           }
 
