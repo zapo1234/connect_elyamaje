@@ -249,34 +249,33 @@ class CreateAccountController
 
                       }
                          
-                        $mois = date('m');
-                         $id_mois = (int)$mois;
-                         $date_jour ='';
-                         $date_annee = date('Y');
-                         $name = $data['account_name'].''.$data['account_username'];
-                         $type_compte = $data['account_type'];
-                         $account_societe = $data['account_societe'];
-                         $email =  $data['account_email'];
-                         $array_societe = array('EI');
-                          $array_societe1 = array('SAS','SARL','SASU');
+                      $mois = date('m');
+                      $id_mois = (int)$mois;
+                      $date_jour ='';
+                      $date_annee = date('Y');
+                      $name = $data['account_name'].' '.$data['account_username'];
+                      $type_compte = $data['account_type'];
+                      $account_societe = $data['account_societe'];
+                      $email =  $data['account_email'];
+                      $array_societe = array('EI');
+                       $array_societe1 = array('SAS','SARL','SASU');
 
-                          if(in_array($account_societe,$array_societe)){
-                             $tva =0;
-                          }
-                          elseif(in_array($account_societe,$array_societe1)){
-                             $tva =20;
-                          }else{
-                             $tva =0;
-                          }
-                        // insert dans la table pointbilan et bilandate...
-                        if($role==2 OR $role==4){
-                           $this->bilan->insertdata($id_ambassadrice,$id_mois,$date_jour,$date_annee);
-
-                          $this->point->insertpoint($id_ambassadrice,$is_admin,$account_societe,$tva,$email,$name,$type_compte);
-                        }
-                       // redirect list account..
-                       // envoi du mail pour initilisation du mot de pass !
-                       // send email
+                       if(in_array($account_societe,$array_societe)){
+                          $tva =0;
+                       }
+                       elseif(in_array($account_societe,$array_societe1)){
+                          $tva =20;
+                       }else{
+                          $tva =0;
+                       }
+                     // insert dans la table pointbilan et bilandate...
+                     if($role==2 OR $role==4){
+                        $this->bilan->insertdata($id_ambassadrice,$id_mois,$date_jour,$date_annee);
+                        $this->point->insertpoint($id_ambassadrice,$is_admin,$account_societe,$tva,$email,$name,$type_compte);
+                     }
+                      // redirect list account..
+                      // envoi du mail pour initilisation du mot de pass !
+                      // send email
                         $sql = $request;
                         $email = $request->get('account_email');
                         $name = $request->get('account_name');

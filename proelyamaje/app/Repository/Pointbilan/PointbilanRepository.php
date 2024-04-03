@@ -186,46 +186,49 @@ class PointbilanRepository implements PointbilanInterface
 
    public function insertpoint($id_ambassadrice,$is_admin,$account_societe,$tva,$email,$name,$type_compte){
          
-         $index_mois = (int)date('m');
+       $index_mois = (int)date('m');
 
-         if($index_mois ==1){
-             $id_mois =12;
-             $mois = "Décembre";
-         }
-         if( $index_mois >1){
-            $id_mois = $index_mois-1;
-            $mois="";
-         }
-      
-       $array_point[] =[
-      
-         'id_ambassadrice'=>$id_ambassadrice,
-         'is_admin'=>$is_admin,
-         'account_societe'=> $account_societe,
-          'tva'=>$tva,
-          'email'=>$email,
-          'name'=>$name,
-          'id_mois'=> $id_mois,
-          'mois' => $mois,
-          'annee'=>date('Y'),
-          'somme'=>0,
-          'ligne_note'=>'',
-          'status'=>'non payée',
-          'type_compte'=>$type_compte,
-          'nbrslive'=>0,
-          'code_create'=>0,
-          'nbrseleve'=>0,
-          'content'=>'valider la facture',
-          'button'=>'paiment',
-          'css'=>'im',
-          'csss'=>'inactifpay',
-          'status_paiement'=>'',
+       if($index_mois ==1){
+          $id_mois =12;
+          $mois = "Décembre";
+       }
+       if( $index_mois >1){
+         $id_mois = $index_mois-1;
+         $mois="";
+       }
+   
+      $array_point[] =[
+   
+      'id_ambassadrice'=>$id_ambassadrice,
+      'is_admin'=>$is_admin,
+      'account_societe'=> $account_societe,
+       'tva'=>$tva,
+       'email'=>$email,
+       'name'=>$name,
+       'id_mois'=> $id_mois,
+       'mois' => $mois,
+       'annee'=>date('Y'),
+       'somme'=>0,
+       'ligne_note'=>'',
+       'status'=>'non payée',
+       'type_compte'=>$type_compte,
+       'nbrslive'=>0,
+       'nbrseleve'=>0,
+       'code_create'=>0,
+       'nbrsfois'=>0,
+       'somme_live'=>0,
+       'somme_eleve'=>0,
+       'content'=>'valider la facture',
+       'button'=>'paiment',
+       'css'=>'im',
+       'csss'=>'inactifpay',
+       'status_paiement'=>'non payée',
 
-        ];
+     ];
 
-        DB::table('pointbilans')->insert($array_point);
+     DB::table('pointbilans')->insert($array_point);
 
-     }
+  }
 
    public function getidsim($id)
    {
