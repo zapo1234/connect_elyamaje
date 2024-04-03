@@ -54,21 +54,23 @@ class Colliship
                 // faire un update dans la table llxyq_facture_extrafields
                 // recupérer ...
                  // recupérer la difference des 
-               $result_data_diff = array_diff($ids_fact,$result_data);
-              // faire des insert ici pour .
-               // faire un insert d'ecriture de paiement facture du montant en espéce.
-               $col =1;
-               $point_fidelite= 0.00;
+                 $result_data_diff = array_diff($ids_fact,$result_data);
 
-              foreach($result_data_diff as $vl){
-                  DB::connection('mysql2')->table('llxyq_facture_extrafields')->insert([
-                   'tms' => date('Y-m-d H:i:s'),
-                   'fk_object' =>$vl,
-                   'fid' => $col,
-                   'point_fidelite'=>0.00,
+                dd($result_data_diff);
+                // faire des insert ici pour .
+                // faire un insert d'ecriture de paiement facture du montant en espéce.
+                $col =1;
+                $point_fidelite= 0.00;
+
+               foreach($result_data_diff as $vl){
+                   DB::connection('mysql2')->table('llxyq_facture_extrafields')->insert([
+                    'tms' => date('Y-m-d H:i:s'),
+                    'fk_object' =>$vl,
+                    'fid' => $col,
+                     'point_fidelite'=>0.00,
                    'col' => 1,
                     // Ajoutez d'autres colonnes et valeurs selon votre besoin
-                ]);
+                  ]);
 
              }
              
@@ -76,7 +78,6 @@ class Colliship
 
              $ids_f = implode(',',$ids_fact);
 
-             
              // $reponse = DB::connection('mysql2')->select("UPDATE llxyq_facture_extrafields SET col=1 WHERE fk_object IN ('.$ids_f.')");
 
              DB::connection('mysql2')
