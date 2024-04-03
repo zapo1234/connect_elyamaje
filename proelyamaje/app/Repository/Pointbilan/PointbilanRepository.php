@@ -542,7 +542,7 @@ class PointbilanRepository implements PointbilanInterface
               // recupérer les email de la table user valide
                $infos =false; 
                $montant_ht =500;// pour le lot de note pour les ambassadrice.
-               $montant_hts =3000;// spécialement les partenaire.(bon cadeaux.)
+               $montant_hts =3000;// spécialement les partenaire.(le cumul)
                $array_montant =[];
                $libelle=[];
 

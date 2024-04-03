@@ -23,41 +23,75 @@ class Colliship
       public function getcolliship()
       {
             // recupérer les commande  en colliship dolibar et cocher dynamiquement.
-          try{
+          
                 $date = new DateTime();
                 // Soustrait un jour à la date actuelle
-                $date->modify('-10 day');
+                $date->modify('-5 day');
                 $date_true = $date->format('Y-m-d');
+                $date_trues = $date->format('Y-m-d H:i:s');
                 $array_montant =  array('59.60','55.62','55.60');
                 $array_montants = implode(',',$array_montant);
                 $datas_facture = DB::connection('mysql2')->select("SELECT rowid ,datec FROM llxyq_facture WHERE total_ttc IN (".$array_montants.") AND  datef > '$date_true' AND fk_mode_reglement=54  AND paye=1");
                 $datas = json_encode($datas_facture);
                 $data = json_decode($datas,true);
                 $ids_fact =[];
+
               
-                //dump($data);
-                // faire un select 
-                $datas_factures = DB::connection('mysql2')->select("SELECT rowid ,fk_object FROM llxyq_facture_extrafields");
+                dump($data);
+                // recupérer des données de la table facture_extrafiels pour un tri
+                $datas_factures = DB::connection('mysql2')->select("SELECT  fk_object FROM llxyq_facture_extrafields WHERE  tms > '$date_trues'");
                 $json = json_encode($datas_factures);
                 $json_true = json_decode($json,true);
-                
-                //dump($json_true);
 
-                foreach($data as $valu){
-                  $ids_fact[] = $valu['rowid'];
+                dump($json_true);
+                $result_data =[];
+
+                foreach($json_true as $val){
+                    $result_data[] = $val['fk_object'];
                 }
+                
+
+                    foreach($data as $valu){
+                    $ids_fact[] = $valu['rowid'];
+                 }
                 // recupérer les fk_facture
                 // faire un update dans la table llxyq_facture_extrafields
                 // recupérer ...
-                 $ids_f = implode(',',$ids_fact);
-                 //$response = DB::connection('mysql2')->select("UPDATE llxyq_facture_extrafields SET col=1 WHERE fk_object IN ('.$ids_f.')");
-                 $reponse = DB::connection('mysql2')->update("UPDATE llxyq_facture_extrafields SET col=1 WHERE fk_object IN ('.$ids_f.')");
-                var_dump($reponse);
-             }  catch (\Illuminate\Database\QueryException $e) {
-              // Capture de l'erreur et affichage du message
-               dd($e->getMessage());
-              echo "Une erreur s'est produite : " . $e->getMessage();
-       }
+                 // recupérer la difference des 
+                 $result_data_diff = array_diff($ids_fact,$result_data);
+
+                dd($result_data_diff);
+                // faire des insert ici pour .
+                // faire un insert d'ecriture de paiement facture du montant en espéce.
+                $col =1;
+                $point_fidelite= 0.00;
+
+               foreach($result_data_diff as $vl){
+                   DB::connection('mysql2')->table('llxyq_facture_extrafields')->insert([
+                    'tms' => date('Y-m-d H:i:s'),
+                    'fk_object' =>$vl,
+                    'fid' => $col,
+                     'point_fidelite'=>0.00,
+                   'col' => 1,
+                    // Ajoutez d'autres colonnes et valeurs selon votre besoin
+                  ]);
+
+             }
+             
+             dd('succees_true_true');
+
+             $ids_f = implode(',',$ids_fact);
+
+             // $reponse = DB::connection('mysql2')->select("UPDATE llxyq_facture_extrafields SET col=1 WHERE fk_object IN ('.$ids_f.')");
+
+             DB::connection('mysql2')
+              ->table('llxyq_facture_extrafields')
+              ->whereIn('fk_object', $ids_fact)
+              ->update(['col' => $col,
+                       ]);
+          
+              dd('reponse_true');
+     
       
     }
 }
