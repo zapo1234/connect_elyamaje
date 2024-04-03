@@ -26,7 +26,7 @@ class Colliship
           
                 $date = new DateTime();
                 // Soustrait un jour à la date actuelle
-                $date->modify('-10 day');
+                $date->modify('-5 day');
                 $date_true = $date->format('Y-m-d');
                 $array_montant =  array('59.60','55.62','55.60');
                 $array_montants = implode(',',$array_montant);
@@ -36,10 +36,13 @@ class Colliship
                 $ids_fact =[];
 
               
+                dump($data);
                 // recupérer des données de la table facture_extrafiels pour un tri
                 $datas_factures = DB::connection('mysql2')->select("SELECT  fk_object FROM llxyq_facture_extrafields WHERE  tms > '$date_true'");
                 $json = json_encode($datas_factures);
                 $json_true = json_decode($json,true);
+
+                dump($json_true);
                 $result_data =[];
 
                 foreach($json_true as $val){
