@@ -45,8 +45,8 @@ class GiftcardsRepository implements GiftcardsInterface
       $urlss ="https://www.elyamaje.com/wp-json/wc-pimwick/v1/pw-gift-cards?number=$code";
       $dones = $this->api->getDataApiWoocommerce($urlss);
 
-      if(isset($dones['0']['message'])){
-          $message_error ="false";
+      if(!isset($dones['0']['number'])){
+          $message_error ="no";
       }else{
          
          $message_error =  $dones;
