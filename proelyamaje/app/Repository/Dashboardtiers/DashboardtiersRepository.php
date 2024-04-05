@@ -212,6 +212,64 @@ class DashboardtiersRepository implements DashboardtiersInterface
         return $nombre_tiers;
     }
 
+    public function getnewcustomers()
+    {
+        
+        $dateActuelle = new DateTime();
+        // Soustraire un jour à la date actuelle
+        $dateMoins = date('Y-m-d');
+        $dtx ="00:00:00";
+        $dates = $dateMoins.' '.$dtx;
+        $nombre = DB::connection('mysql3')->select("SELECT code_client FROM prepa_tiers WHERE created_at > '$dates'");
+         $response = json_encode($nombre);
+         $resp = json_decode($response,true);
+
+         
+         
+         $prefix_boutique="BOU";// client susceptible d'arriver en boutique..
+         $prefix_internet ="WC";// client prevenant du site
+         $customers_new =[];
+         $customers_new_boutique =[];// client isus de la boutique...
+          foreach($resp as $values){
+            
+            if(strpos($values['code_client'],$prefix_internet)!==false) {
+               $customers_new[] = $values['code_client'];
+           }
+            
+           if(strpos($values['code_client'],$prefix_boutique)!==false) {
+              $customers_new_boutique[] = $values['code_client'];
+
+           }
+        }
+
+          $customs = count($customers_new);
+          $customs_marseille = count($customers_new_boutique);
+          $mois = date('m');
+          $annee =date('Y');
+          $number = $customs;
+          $nombre_marseille = $customs_marseille;
+          $number_marseille = $customs_marseille;
+          $number_internet = $customs;
+          $number_nice = 0;
+          $nombre_nice=0;
+          $nombre_internet = $customs;
+          $jour = date('d');
+          $date = date('Y-m-d');
+          // si date renvoi un tableau vide
+           $nombre_data = count($this->getalldate($date));
+           if($nombre_data==0){
+              // insert dans la table suivant.
+               $this->Insert($date,$mois,$annee,$number,$nombre_marseille,$nombre_nice,$nombre_internet,$jour);
+               // recupérer
+          }else{
+               // sil il existe modifier les données.
+               $this->updatenumber($date,$number,$number_marseille,$number_nice,$number_internet);
+           }
+             $this->setDatac($customs_marseille);
+         return $customs;
+    }
+
+
 
     public function getcustomerall()
     {

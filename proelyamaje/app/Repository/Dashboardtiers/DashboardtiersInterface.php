@@ -17,9 +17,10 @@ interface DashboardtiersInterface
     public function getcountiers();
 
     public function getcustomerall();// recupérer les clients tiers
+
+    public function getnewcustomers();// recupérer les nouveaux client par jours.
     
         
 
 
 }
-

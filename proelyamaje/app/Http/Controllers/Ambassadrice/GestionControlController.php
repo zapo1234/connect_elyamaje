@@ -261,15 +261,22 @@ class GestionControlController extends Controller
                    // nombre de client total
                    $nombre_customs =  $this->dash->getcountiers();
 
+                      // nombre de nouveau client venu du site
+                      $customer_internet = $this->dash->getnewcustomers();// actualiser les news client
+                      // recupérer les nouveaux clients venant de la boutique
+                      $customer_boutique = $this->dash->getdatac();
+                      // recupérer le nombre clients total..
+                      $nombre_customs =  $this->dash->getcountiers();
+
                    // recupérer les recette engendrés par les partenaire et ambassadrice sur le mois en cours
-                  $date = date('Y-m-d');
-                  $annee = date('Y');
-                  $mois = date('m');
-                  $mois_true = (int)$mois;
+                    $date = date('Y-m-d');
+                   $annee = date('Y');
+                   $mois = date('m');
+                   $mois_true = (int)$mois;
 
                   $montant_activite = $this->orders->getchiffreamba($mois_true,$annee);// recupérer le montant généré par l'activité
 
-               foreach($statistique as $kl => $valis){
+                foreach($statistique as $kl => $valis){
                    $nombre_marseille = $valis['nombre_marseille'];
                    $nombre_nice = $valis['nombre_nice'];
                    $nombre_internet = $valis['nombre_internet'];
@@ -388,13 +395,13 @@ class GestionControlController extends Controller
 
              
             
-               return view('gestion.home',['message'=>$message,'messages'=>$messages,'messagess'=>$messagess,'mois'=>$mois,'annee'=>$annee, 'max_new_customer' => $max_new_customer,
-              'css'=>$css,'percent_nice' => $percent_nice, 'percent_internet' => $percent_internet,'percent_marseille' => $percent_marseille,'nombre_marseille'=>$nombre_marseille,'nombre_nice'=>$nombre_nice, 'nombre_internet'=>$nombre_internet,
-              'nombre_last_marseille'=>$nombre_last_marseille,'nombre_last_nice'=>$nombre_last_nice, 'nombre_last_internet'=>$nombre_last_internet,'nombre_customs'=>$nombre_customs,
-               'somme_recette'=>$somme_recette,'somme_recettes'=>$somme_recettes,'somme_recette_marseille'=>$somme_recette_marseille,'somme_recette_marseilles'=>$somme_recette_marseilles,'somme_recette_internet'=>$somme_recette_internet,'somme_recette_internets'=>$somme_recette_internets,'date_cours'=>$date_cours,'date_courss'=>$date_courss,'nombre_commande'=>$nombre_commande,'nombre_line_product'=>$nombre_line_product,
-               'nombre_count_orders'=>$nombre_count_orders,'kpi_product'=>$kpi_product,'nombre_count_ordr'=>$nombre_count_ordr,'montant_activite'=>$montant_activite])
-              ->with('jours',json_encode($jours,JSON_NUMERIC_CHECK))
-              ->with('nombre_client',json_encode($nombre_client,JSON_NUMERIC_CHECK));
+                 return view('gestion.home',['message'=>$message,'messages'=>$messages,'messagess'=>$messagess,'mois'=>$mois,'annee'=>$annee, 'max_new_customer' => $max_new_customer,
+                 'css'=>$css,'percent_nice' => $percent_nice, 'percent_internet' => $percent_internet,'percent_marseille' => $percent_marseille,'nombre_marseille'=>$nombre_marseille,'nombre_nice'=>$nombre_nice, 'nombre_internet'=>$nombre_internet,
+                 'nombre_last_marseille'=>$nombre_last_marseille,'nombre_last_nice'=>$nombre_last_nice, 'nombre_last_internet'=>$nombre_last_internet,'nombre_customs'=>$nombre_customs,'customer_internet'=>$customer_internet,'customer_boutique'=>$customer_boutique,
+                  'somme_recette'=>$somme_recette,'somme_recettes'=>$somme_recettes,'somme_recette_marseille'=>$somme_recette_marseille,'somme_recette_marseilles'=>$somme_recette_marseilles,'somme_recette_internet'=>$somme_recette_internet,'somme_recette_internets'=>$somme_recette_internets,'date_cours'=>$date_cours,'date_courss'=>$date_courss,'nombre_commande'=>$nombre_commande,'nombre_line_product'=>$nombre_line_product,
+                  'nombre_count_orders'=>$nombre_count_orders,'kpi_product'=>$kpi_product,'nombre_count_ordr'=>$nombre_count_ordr,'montant_activite'=>$montant_activite])
+                 ->with('jours',json_encode($jours,JSON_NUMERIC_CHECK))
+                 ->with('nombre_client',json_encode($nombre_client,JSON_NUMERIC_CHECK));
 
      }
 
