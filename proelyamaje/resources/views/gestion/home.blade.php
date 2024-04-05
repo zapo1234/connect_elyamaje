@@ -67,38 +67,27 @@ ul.winners li{
 							<div class="card-body">
 								<div class="revenue-by-channel">
 									<h6 class="mb-4 font-weight-bold">Nouveaux clients Elyamaje</h6>
+									<div> A l'instant</div>
 									<div class="progress-wrapper">
 										<div class="d-flex align-items-center">
-											<div class="text-secondary">Marseille</div>
-											<div class="ms-auto pe-4 font-18" style="font-weight: bold">{{  $nombre_marseille  }}</div>
-											<div style="min-width:90px" class="{{  $nombre_marseille < $nombre_last_marseille ? 'text-danger' : 'text-success'  }}">{{  $nombre_marseille < $nombre_last_marseille ? "-" : "+"  }} 
-											{{  $percent_marseille }}%</div>
+											<div class="text-secondary">Boutique</div>
+											<div class="ms-auto pe-4 font-18" style="font-weight: bold">{{  $customer_boutique  }}</div>
+											
 										</div>
 										<div class="progress mt-2" style="height:3px;">
 											<div class="progress-bar" role="progressbar" style="width: {{$nombre_marseille == $max_new_customer ? 100 : (100/ $max_new_customer) * ($nombre_marseille) }}%"></div>
 										</div>
 									</div>
 									<div class="progress-wrapper mt-2">
-										<div class="d-flex align-items-center">
-											<div class="text-secondary">Nice</div>
-											<div class="ms-auto pe-4 font-18" style="font-weight: bold">{{  $nombre_nice  }}</div>
-											<div style="min-width:90px" class="{{  $nombre_nice < $nombre_last_nice ? 'text-danger' : 'text-success'  }}">{{  $nombre_nice < $nombre_last_nice ? "-" : "+"  }} 
-											{{  $percent_nice  }}%</div>
-										</div>
-										<div class="progress mt-2" style="height:3px;">
-											<div class="progress-bar" role="progressbar"style="width: {{$nombre_nice == $max_new_customer ? 100 : (100/ $max_new_customer) * ($nombre_nice) }}%"></div>
-										</div>
+										
 									</div>
 									<div class="progress-wrapper mt-2">
 										<div class="d-flex align-items-center">
 											<div class="text-secondary">Internet</div>
-											<div class="ms-auto pe-4 font-18" style="font-weight: bold">{{  $nombre_internet  }}</div>
-											<div style="min-width:90px" class="{{  $nombre_internet < $nombre_last_internet ? 'text-danger' : 'text-success'  }}">{{  $nombre_internet < $nombre_last_internet ? "-" : "+"  }}
-											{{  $percent_internet }}%</div>
+											<div class="ms-auto pe-4 font-18" style="font-weight: bold">{{  $customer_internet  }}</div>
+											
 										</div>
-										<div class="progress mt-2" style="height:3px;">
-											<div class="progress-bar" role="progressbar" style="width: {{$nombre_internet == $max_new_customer ? 100 : (100/ $max_new_customer) * ($nombre_internet) }}%"></div>
-										</div>
+										
 									</div>
 								</div>
 							</div>
