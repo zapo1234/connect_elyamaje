@@ -12,6 +12,8 @@ class DashboardtiersRepository implements DashboardtiersInterface
 
    private $datas =[];
 
+   private $datac;
+
   public function __construct(Apicall $api)
   {
     $this->api = $api;
@@ -30,6 +32,20 @@ class DashboardtiersRepository implements DashboardtiersInterface
       $this->datas = $datas;
       return $this;
     }
+
+
+    public function getDatac()
+    {
+       return $this->datac;
+    }
+    
+    
+    public function setDatac($datac)
+    {
+      $this->datac = $datac;
+      return $this;
+    }
+
 
 
   
@@ -210,8 +226,11 @@ class DashboardtiersRepository implements DashboardtiersInterface
          $resp = json_decode($response,true);
          $nombre_tiers = $resp[0]['nbtiers'];
 
+
+
         return $nombre_tiers;
     }
+
 
     public function getnewcustomers()
     {
@@ -274,7 +293,7 @@ class DashboardtiersRepository implements DashboardtiersInterface
 
     public function getcustomerall()
     {
-       $lists = DB::connection('mysql3')->select("SELECT zip_code,email FROM prepa_tiers");
+       $lists = DB::connection('mysql3')->select("SELECT zip_code,email,code_client FROM prepa_tiers");
        $response = json_encode($lists);
        $resp = json_decode($response,true);
        $data =[];
