@@ -374,11 +374,6 @@ Route::get('ambasssadrice/panier/historique/', [AmbassadriceCodeliveController::
 // Historique des paliers live ambassadrice...
 Route::get('/ambasssadrice/palier/live/historique/{id}', [AmbassadriceCodeliveController::class, 'historiquelivepalier'])->name('ambassadrice.livehistorique');
 
-// Notifier les live qui n'ont été excutés
-Route::get('ambasssadrice/notif/live/', [NotificationController::class, 'notiflive'])->name('ambassadrice.notiflive');
-
-
-
 // superadmin  vue
 // Historique des paliers live ambassadrice...
 // Route::get('/ambasssadrice/palier/live/historique/{id}', [AmbassadriceCodeliveController::class, 'historiquelivepalier'])->name('ambassadrice.livehistorique');
@@ -947,6 +942,9 @@ Route::get('/data/doublons/fact/cron2/{token}', [SuiviController::class, 'datact
 Route::get('/api/panier/choix/live', [PanierLiveController::class, 'getpanierlive'])->name('api.getpanierlive');
 
 
+// Notifier les live qui n'ont été excutés 2h et lever les restriction...
+Route::get('/ambasssadrice/notif/lives/{user}', [NotificationController::class, 'notiflive'])->name('ambassadrice.notiflive');
+// construire des route pour des tache crons.
 
 // tache cron succes change status orders boutique customer
 Route::get('/order/cron/prepared/{user}', [ApiSystemOrdersController::class, 'datacronorder'])->name('api.dataapiordercron');

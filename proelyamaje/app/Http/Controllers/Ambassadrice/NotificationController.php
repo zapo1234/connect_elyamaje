@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Ambassadrice;
 
 use Illuminate\Http\Request;
-use App\Repository\Ambassadrice\HistoriquePanierLiveRepository;
 use App\Http\Service\CallApi\Apicall;
 use App\Http\Service\CallApi\NotificationLive;
 
@@ -21,23 +20,20 @@ use DateTime;
 
 class NotificationController 
 {
-     
-    private $historique;
-    private $notif;
+     private $notif;
 
-    public function __construct(HistoriquePanierLiveRepository $historique,
-    NotificationLive $notif){
-          
-        $this->historique = $historique;
-        $this->notif = $notif;
+    public function __construct(NotificationLive $notif){
+          $this->notif = $notif;
     }
 
 
     
-    public function notiflive(){
+    public function notiflive($user){
           
+    if($user=="67934854968e6ee06568847ead22132f608bf4ec1997265491df0efb"){
         $this->notif->getLives();
-         return view('livewire.calendars');
+         
+      }
     }
 
 
