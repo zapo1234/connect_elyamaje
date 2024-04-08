@@ -227,9 +227,10 @@ class UserAmbassadriceController
         
             $data = $this->point->getAllfactures();
 
-            dd($data);
+            dd($users);
             $lis = json_encode($data);
             $list = json_decode($data,true);
+            
             $result_data =[];
             foreach($list as $val){
                if($val['somme_live']!=0){
