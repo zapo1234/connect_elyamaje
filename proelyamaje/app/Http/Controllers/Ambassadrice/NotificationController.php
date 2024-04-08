@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Ambassadrice;
 
 use Illuminate\Http\Request;
 use App\Http\Service\CallApi\Apicall;
-use App\Http\Service\CallApi\NotificationLive;
+use App\Http\Service\CallApi\NotificationLiveservice;
 
 use Illuminate\Support\Facades\DB;
 
@@ -22,7 +22,7 @@ class NotificationController
 {
      private $notif;
 
-    public function __construct(NotificationLive $notif){
+    public function __construct(NotificationLiveservice $notif){
           $this->notif = $notif;
     }
 
