@@ -58,7 +58,7 @@ class Colliship
                  // recupérer la difference des 
                  $result_data_diff = array_diff($ids_fact,$result_data);
 
-                dd($result_data_diff);
+                //d($result_data_diff);
                 // faire des insert ici pour .
                 // faire un insert d'ecriture de paiement facture du montant en espéce.
                 $col =1;
