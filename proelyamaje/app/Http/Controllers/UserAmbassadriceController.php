@@ -251,7 +251,6 @@ class UserAmbassadriceController
                
             }
             
-           dd($result);
 
             return view('utilisateurs.suivicodeamb',['result'=>$result,'result_name'=>$result_name,'result_datas'=>$result_datas]);
 
