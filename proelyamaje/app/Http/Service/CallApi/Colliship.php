@@ -58,7 +58,7 @@ class Colliship
                  // recupérer la difference des 
                  $result_data_diff = array_diff($ids_fact,$result_data);
 
-                //d($result_data_diff);
+                dd($result_data_diff);
                 // faire des insert ici pour .
                 // faire un insert d'ecriture de paiement facture du montant en espéce.
                 $col =1;
@@ -70,7 +70,7 @@ class Colliship
                     'fk_object' =>$vl,
                     'fid' => $col,
                      'point_fidelite'=>0.00,
-                   'col' => 1,
+                     'col' => 1,
                     // Ajoutez d'autres colonnes et valeurs selon votre besoin
                   ]);
 
