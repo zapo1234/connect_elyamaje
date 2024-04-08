@@ -241,6 +241,7 @@ class UserAmbassadriceController
                    $name = explode(',',$chaine_name);
                    $result[] =[
                        'periode'=> $val['mois'].'  '.$val['annee'],
+                       'name' =>'Ambassadrice',
                        'nombre'=> $val['code_create'],
                        'use'=>$val['nbrseleve']
                
