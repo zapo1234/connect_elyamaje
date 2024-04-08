@@ -233,7 +233,7 @@ class UserAmbassadriceController
             
             $result_data =[];
             foreach($list as $val){
-               if($val['somme_live']!=0){
+               i
                   if($val['is_admin']==2){
                   // recupérer le nom de l'ambassadrice.
                    $chaine_name = array_search($val['id_ambassadrice'],$users);
@@ -246,9 +246,8 @@ class UserAmbassadriceController
                
                    ];
                   }
-               }
-               
-            }
+            
+             }
             
         
 
