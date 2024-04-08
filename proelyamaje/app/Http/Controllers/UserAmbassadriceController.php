@@ -230,19 +230,17 @@ class UserAmbassadriceController
             
             $lis = json_encode($data);
             $list = json_decode($data,true);
-
-            dd($list);
             
             $result_data =[];
             foreach($list as $val){
                if($val['somme_live']!=0){
                   if($val['is_admin']==2){
+                
                   // recupérer le nom de l'ambassadrice.
                    $chaine_name = array_search($val['id_ambassadrice'],$users);
                    $name = explode(',',$chaine_name);
                    $result[] =[
                        'periode'=> $val['mois'].'  '.$val['annee'],
-                       'name' =>$name[1],
                        'nombre'=> $val['code_create'],
                        'use'=>$val['nbrseleve']
                
