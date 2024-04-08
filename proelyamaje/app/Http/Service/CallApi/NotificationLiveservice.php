@@ -43,13 +43,13 @@ class NotificationLiveservice
             //
             $response = json_encode($donnees);
             $resp = json_decode($response,true);
-            dd($resp);
+            
             
             $id_lives =[];// recupérer les id de live moins de deux jours
             foreach($resp as $vl){
                $id_lives[] = $vl['id_live'];
             }
-            dd($resp);
+            
 
           // je veux cibler tous les live en cours dont l'ambassadrice n'a pas cliquer le bouton après 1h du live prévu
             $array_accept_condition =[];
@@ -66,7 +66,7 @@ class NotificationLiveservice
                 $heure_fixe = (int)$heure_chaine[0];
                 
                 // je veux la date sois celle aujour d'huit et l'heure sois 
-                if($date_live==$date && $date_heure - $heure_fixe >= 2){
+                if($date_live==$date && $date_heure - $heure_fixe >= 1){
                      // recupérer les id live et code live
                      // et léver la restriction souhaités à 6 jours
                      $code_live_notification[] = $values['id_live'];
@@ -74,7 +74,9 @@ class NotificationLiveservice
                   }
               }
 
-              dd($code_live_notification);// afficher le array lives.
+              dump($code_live_notification);// afficher le array lives.
+
+              dd('zapo');
 
               if(count($code_live_notification)!=0){
 
