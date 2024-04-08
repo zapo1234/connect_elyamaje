@@ -227,7 +227,7 @@ class UserAmbassadriceController
         
             $data = $this->point->getAllfactures();
 
-            dd($users);
+            
             $lis = json_encode($data);
             $list = json_decode($data,true);
             
