@@ -36,14 +36,12 @@ class Colliship
                 $data = json_decode($datas,true);
                 $ids_fact =[];
 
-              
-                dump($data);
                 // recupérer des données de la table facture_extrafiels pour un tri
                 $datas_factures = DB::connection('mysql2')->select("SELECT  fk_object FROM llxyq_facture_extrafields WHERE  tms > '$date_trues'");
                 $json = json_encode($datas_factures);
                 $json_true = json_decode($json,true);
 
-                dump($json_true);
+                
                 $result_data =[];
 
                 foreach($json_true as $val){
