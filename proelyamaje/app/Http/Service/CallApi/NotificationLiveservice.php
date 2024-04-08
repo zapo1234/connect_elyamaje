@@ -93,12 +93,15 @@ class NotificationLiveservice
                        $message->subject($subject);
     
                 });
+
+                dd('des live notifiés annulé');
            
               }
 
-              dd('succes');
-
             }
+
+
+            dd('pas de live notive');
          
       }
 
