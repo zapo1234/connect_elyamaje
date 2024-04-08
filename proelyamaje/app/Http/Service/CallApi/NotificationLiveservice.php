@@ -74,10 +74,6 @@ class NotificationLiveservice
                   }
               }
 
-              dump($code_live_notification);// afficher le array lives.
-
-              dd('zapo');
-
               if(count($code_live_notification)!=0){
 
                     $date ="2020-01-01 00:00:00";
