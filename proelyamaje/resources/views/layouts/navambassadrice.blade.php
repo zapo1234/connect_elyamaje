@@ -57,7 +57,7 @@
                         <div class="menu-title">Codes promos</div>
                     </a>
                     <ul>
-                        @if(Auth()->user()->id!=9 OR Auth()->user()->id!=38)
+                        @if(Auth()->user()->id!=38)
                             <li> <a href="{{ route('ambassadrice.account') }}"><i class="bx bx-right-arrow-alt"></i>Création de codes</a>
                             
                             </li>
@@ -107,7 +107,7 @@
                         <div class="menu-title">Factures </div>
                     </a>
                     <ul>
-                        <li> <a href="{{ route('ambassadrice.fact') }}"><i class="bx bx-right-arrow-alt"></i>Historique des factures</a>
+                        <li> <a href="{{ route('ambassadrice.fact') }}"><i class="bx bx-right-arrow-alt"></i>Historique des factures.</a>
                         </li>
                         
                     </ul>
@@ -125,7 +125,7 @@
                         <div class="menu-title">Lives</div>
                     </a>
                     <ul>
-                    @if(Auth()->user()->id!=9 OR Auth()->user()->id!=38)
+                    @if(Auth()->user()->id!=38)
                         <li class="vue{{ Auth()->user()->is_admin }}"> <a href="{{ route('ambassadrice.liveforms') }}"><i class="bx bx-right-arrow-alt"></i>Programmer un live</a>
                         </li>
 
