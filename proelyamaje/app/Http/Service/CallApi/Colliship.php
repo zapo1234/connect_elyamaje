@@ -28,7 +28,7 @@ class Colliship
                 $date1 = new DateTime();
                 // Soustrait un jour à la date actuelle
                 $date->modify('-10 day');
-                 $date1->date_modify('-180');
+                 $date1->modify('-180');
                 
                 $date_true = $date->format('Y-m-d');
                 $date_trues = $date->format('Y-m-d H:i:s');
