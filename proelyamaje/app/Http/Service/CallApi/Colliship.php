@@ -49,7 +49,7 @@ class Colliship
                 // aller cherche dans la base 
 
                  // recupérer des données de la table facture_extrafiels pour un tri
-                 $datas_factutet = DB::connection('mysql2')->select("SELECT  fk_object FROM llxyq_facture_extrafields WHERE  tms < '$date_tru'");
+                 $datas_factutet = DB::connection('mysql2')->select("SELECT  fk_object,col FROM llxyq_facture_extrafields WHERE  tms < '$date_tru'");
                  $jsons = json_encode($datas_factutet);
                  $json_trues = json_decode($jsons,true);
  
