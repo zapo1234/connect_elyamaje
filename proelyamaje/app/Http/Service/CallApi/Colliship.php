@@ -26,7 +26,7 @@ class Colliship
           
                 $date = new DateTime();
                 // Soustrait un jour à la date actuelle
-                $date->modify('-180 day');
+                $date->modify('-280 day');
                 $date_true = $date->format('Y-m-d');
                 $date_trues = $date->format('Y-m-d H:i:s');
                 $array_montant =  array('59.60','55.62','55.60');
@@ -76,9 +76,10 @@ class Colliship
 
              }
              
-             dd('succees_true_true');
+            
+           $ids_f = implode(',',$result_data_diff);
 
-             $ids_f = implode(',',$ids_fact);
+           dd($ids_f);
 
              // $reponse = DB::connection('mysql2')->select("UPDATE llxyq_facture_extrafields SET col=1 WHERE fk_object IN ('.$ids_f.')");
 
