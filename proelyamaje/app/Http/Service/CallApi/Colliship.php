@@ -26,7 +26,7 @@ class Colliship
           
                 $date = new DateTime();
                 // Soustrait un jour à la date actuelle
-                $date->modify('-5 day');
+                $date->modify('-10 day');
                 $date_true = $date->format('Y-m-d');
                 $date_trues = $date->format('Y-m-d H:i:s');
                 $array_montant =  array('59.60','55.62','55.60');
@@ -58,7 +58,6 @@ class Colliship
                  // recupérer la difference des 
                  $result_data_diff = array_diff($ids_fact,$result_data);
 
-                dd($result_data_diff);
                 // faire des insert ici pour .
                 // faire un insert d'ecriture de paiement facture du montant en espéce.
                 $col =1;
