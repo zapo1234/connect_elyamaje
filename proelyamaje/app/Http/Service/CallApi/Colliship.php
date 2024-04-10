@@ -25,10 +25,14 @@ class Colliship
             // recupérer les commande  en colliship dolibar et cocher dynamiquement.
           
                 $date = new DateTime();
+                $date1 = new DateTime();
                 // Soustrait un jour à la date actuelle
-                $date->modify('-280 day');
+                $date->modify('-10 day');
+                 $date1->date_modify('-180');
+                
                 $date_true = $date->format('Y-m-d');
                 $date_trues = $date->format('Y-m-d H:i:s');
+                $date_tru = $date1->format('Y-m-d H:i:s');
                 $array_montant =  array('59.60','55.62','55.60');
                 $array_montants = implode(',',$array_montant);
                 $datas_facture = DB::connection('mysql2')->select("SELECT rowid ,datec FROM llxyq_facture WHERE total_ttc IN (".$array_montants.") AND  datef > '$date_true' AND fk_mode_reglement=54  AND paye=1");
@@ -41,6 +45,15 @@ class Colliship
                 $json = json_encode($datas_factures);
                 $json_true = json_decode($json,true);
 
+
+                // aller cherche dans la base 
+
+                 // recupérer des données de la table facture_extrafiels pour un tri
+                 $datas_factutet = DB::connection('mysql2')->select("SELECT  fk_object FROM llxyq_facture_extrafields WHERE  tms < '$date_tru'");
+                 $jsons = json_encode($datas_factutet);
+                 $json_trues = json_decode($jsons,true);
+ 
+                 dd($json_trues);
                 
                 $result_data =[];
 
@@ -58,7 +71,7 @@ class Colliship
                  // recupérer la difference des 
                  $result_data_diff = array_diff($ids_fact,$result_data);
                 
-                 dd($result_data_diff);
+                 
                 // faire des insert ici pour .
                 // faire un insert d'ecriture de paiement facture du montant en espéce.
                 $col =1;
@@ -74,12 +87,11 @@ class Colliship
                     // Ajoutez d'autres colonnes et valeurs selon votre besoin
                   ]);
 
-             }
+              }
              
-            
-           $ids_f = implode(',',$result_data_diff);
+              dd('succees_true_true');
 
-           dd($ids_f);
+             $ids_f = implode(',',$ids_fact);
 
              // $reponse = DB::connection('mysql2')->select("UPDATE llxyq_facture_extrafields SET col=1 WHERE fk_object IN ('.$ids_f.')");
 
