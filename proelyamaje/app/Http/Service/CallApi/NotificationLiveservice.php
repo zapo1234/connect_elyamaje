@@ -65,7 +65,7 @@ class NotificationLiveservice
                 $heure_chaine = explode(':',$date_chaine[1]);
                 $heure_fixe = (int)$heure_chaine[0];
                 
-                // je veux la date sois celle aujour d'huit et l'heure sois 
+                // je veux descativé le live après 2h max.si l'ambassadrice n'a pas valider son live.
                 if($date_live==$date && $date_heure - $heure_fixe >= 2){
                      // recupérer les id live et code live
                      // et léver la restriction souhaités à 6 jours
