@@ -78,6 +78,7 @@ class NotificationLiveservice
 
                     $date ="2020-01-01 00:00:00";
                     $css="";
+                    $status="";
                     DB::table('choix_panier_lives')
                    ->whereIn('code_live', $code_live_notification)
                    ->update(array('date_live'=> $date));
@@ -89,6 +90,7 @@ class NotificationLiveservice
                    ->update(array('date_live'=> $date,
                                   'date_after'=>$date,
                                   'date_expire'=>$date,
+                                  'status'=>$status,
                                   'css'=>$css));
 
                    //envoi de mail
