@@ -77,9 +77,19 @@ class NotificationLiveservice
               if(count($code_live_notification)!=0){
 
                     $date ="2020-01-01 00:00:00";
+                    $css="";
                     DB::table('choix_panier_lives')
                    ->whereIn('code_live', $code_live_notification)
                    ->update(array('date_live'=> $date));
+
+
+                   // modifier aussi dans la table code lives.
+                   DB::table('codelives')
+                   ->whereIn('code_live', $code_live_notification)
+                   ->update(array('date_live'=> $date,
+                                  'date_after'=>$date,
+                                  'date_expire'=>$date,
+                                  'css'=>$css));
 
                    //envoi de mail
                    $list_email = array('zapomartial@yahoo.fr','mmajeri@elyamaje.com','live@elyamaje.fr');
