@@ -66,7 +66,7 @@ class NotificationLiveservice
                 $heure_fixe = (int)$heure_chaine[0];
                 
                 // je veux la date sois celle aujour d'huit et l'heure sois 
-                if($date_live==$date && $date_heure - $heure_fixe >= 1){
+                if($date_live==$date && $date_heure - $heure_fixe >= 2){
                      // recupérer les id live et code live
                      // et léver la restriction souhaités à 6 jours
                      $code_live_notification[] = $values['id_live'];
