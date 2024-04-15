@@ -73,7 +73,7 @@ class CustomerRepository implements CustomerInterface
            //$dolaapikey = "Q8Vu04WbYw5hBi77K1CwJT1roTe8pe6F";
            //$urls = "https://www.transfertx.elyamaje.com/api/index.php/thirdparties?sortfield=t.rowid&sortorder=ASC&limit=3045";
            
-           $dolaapikey ="VA05eq187SAKUm4h4I4x8sofCQ7jsHQd";
+           $dolaapikey ="305ZB714CPxxYqHgk5w7Ah1i1aTtOHFe";
             $urls ="https://www.poserp.elyamaje.com/api/index.php/thirdparties?sortfield=t.rowid&sortorder=ASC&limit=5000";
            
             // recupération des data
