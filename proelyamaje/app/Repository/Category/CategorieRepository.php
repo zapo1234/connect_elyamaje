@@ -507,7 +507,7 @@ class CategorieRepository implements CategorieInterface
           curl_setopt($curls, CURLOPT_RETURNTRANSFER, 1);
           curl_setopt($curls, CURLOPT_HTTPHEADER, $httpheader);
           $results = curl_exec($curls);
-          dd($results);
+          
            curl_close($curls);
           // transformer en array les données
            $data_wharehouse =  json_decode($results,true);
@@ -655,7 +655,7 @@ class CategorieRepository implements CategorieInterface
 
              $array_data[] =[
                 'id_product' =>$val['fk_product'],
-               'entrepot' => array_search($val['fk_entrepot'],$list),
+                'entrepot' => array_search($val['fk_entrepot'],$list),
                 'quantite' => $val['reel'],
                 'ref_product'=> array_search($val['fk_product'],$data_ref),
                 'categorie_name'=>$libelles
@@ -793,6 +793,7 @@ class CategorieRepository implements CategorieInterface
                }
             }
             
+            dd($data_result_entrepot);
         
             // faire un jeu de données avec entrepot
             $array_donnes = array('Entrepôt Homebox Marseille','Entrepôt Préparation','Boutique Nice','Elyamaje boutique');
