@@ -785,7 +785,7 @@ class CategorieRepository implements CategorieInterface
                 }
              }
              
-           // dd($data_list1);
+           
            $list_details = $this->datalistcat($id_categoris);
 
              $data_result_entrepot =[];
