@@ -511,6 +511,7 @@ class CategorieRepository implements CategorieInterface
            curl_close($curls);
           // transformer en array les données
            $data_wharehouse =  json_decode($results,true);
+           dd($data_wharehouse);
             $list_wharehouse = [];
             $libelle = [];// regrouper les entrepot.
           foreach($data_wharehouse as $ky => $vals){
