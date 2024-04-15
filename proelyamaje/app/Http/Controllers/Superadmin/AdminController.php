@@ -606,7 +606,7 @@ class AdminController extends Controller
              // recupérer les produits dans l'api
              // recuperer les données api dolibar copie projet tranfer x.
              $method = "GET";
-              $apiKey = "VA05eq187SAKUm4h4I4x8sofCQ7jsHQd";
+              $apiKey = "305ZB714CPxxYqHgk5w7Ah1i1aTtOHFe";
               $apiUrl = "https://www.poserp.elyamaje.com/api/index.php/";
                 //environement test local
                 //Recuperer les ref et id product dans un tableau
