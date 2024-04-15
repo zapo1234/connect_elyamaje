@@ -686,7 +686,7 @@ class CategorieRepository implements CategorieInterface
 
                    $array_product_null[] =[
                    'id_product' =>$valc,
-                   'entrepot' => 'Entrepôt Malpassé',
+                   'entrepot' => 'Entrepot Malpasse',
                    'quantite' => 0,
                    'ref_product'=> array_search($valc,$data_ref),
                    'categorie_name'=>$libelless
