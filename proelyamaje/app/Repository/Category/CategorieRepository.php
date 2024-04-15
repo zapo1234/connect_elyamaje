@@ -511,6 +511,7 @@ class CategorieRepository implements CategorieInterface
            curl_close($curls);
           // transformer en array les données
            $data_wharehouse =  json_decode($results,true);
+           dump($data_wharehouse);
             $list_wharehouse = [];
             $libelle = [];// regrouper les entrepot.
           foreach($data_wharehouse as $ky => $vals){
@@ -520,6 +521,8 @@ class CategorieRepository implements CategorieInterface
               $list[$vals['libelle']] = $vals['id'];
               $libelle[] = $vals['libelle'];
           }
+          
+          dd($list);
            
           arsort($list_wharehouse);
 
@@ -762,7 +765,8 @@ class CategorieRepository implements CategorieInterface
                 $data_list[$valc] =  json_decode($resuls,true);
               
              }
-
+            
+             
          // filter l'array.
               foreach($data_list as $lm => $values_array) {
                  if(count($values_array)==1){
@@ -793,7 +797,7 @@ class CategorieRepository implements CategorieInterface
                }
             }
             
-            dd($data_result_entrepot);
+            
         
             // faire un jeu de données avec entrepot
             $array_donnes = array('Entrepôt Homebox Marseille','Entrepôt Préparation','Boutique Nice','Elyamaje boutique');
