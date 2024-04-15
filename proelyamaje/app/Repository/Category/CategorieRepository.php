@@ -507,6 +507,7 @@ class CategorieRepository implements CategorieInterface
           curl_setopt($curls, CURLOPT_RETURNTRANSFER, 1);
           curl_setopt($curls, CURLOPT_HTTPHEADER, $httpheader);
           $results = curl_exec($curls);
+          dd($results);
            curl_close($curls);
           // transformer en array les données
            $data_wharehouse =  json_decode($results,true);
