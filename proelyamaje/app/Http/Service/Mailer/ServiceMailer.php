@@ -62,14 +62,14 @@ class ServiceMailer
           //Server settings
            $mail->isSMTP();         //Enable verbose debug output
                                     //Send using SMTP
-           $mail->Host       = 'mail.elyamaje.fr';                     //Set the SMTP server to send through
+           $mail->Host       = 'smtp.mandrillapp.com';                     //Set the SMTP server to send through
            $mail->SMTPAuth   =    true;                                   //Enable SMTP authentication
-           $mail->Username   = 'mail@elyamaje.fr';                     //SMTP username
-           $mail->Password   = 'ch6S3vWU(Cg#';                     //SMTP password
+           $mail->Username   = 'emilie@elyamaje.com';                     //SMTP username
+           $mail->Password   = 'md-Z0Gnw-6IFPNoR-MTKy593w';                     //SMTP password
            //SMTP password
-	       $mail->SMTPSecure = 'ssl';
+	          $mail->SMTPSecure = 'ssl';
            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            
-           $mail->Port       = 465;   
+           $mail->Port       = 587;   
            //encode Utf 8
            $mail->CharSet = 'UTF-8';                               
            //Recipients
