@@ -65,8 +65,8 @@
                         <option value="2022">2022</option>
                         <option value="2023">2023</option>
                         <option value="2024">2024</option>
-                        <option value="2023">2025</option>
-                        <option value="2024">2026</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
                      </select>
 
                      <button type="submit" id="validercharts" value="Appliquer" style="margin-left:1%;width:120px;height:38px;border-radius:5px;color:white;border:2px solid #0E5AAF;border-color:#0E5AAF;background-color:#0E5AAF">Télécharger</button>
