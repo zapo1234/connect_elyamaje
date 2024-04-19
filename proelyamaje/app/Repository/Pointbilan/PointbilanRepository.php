@@ -361,7 +361,11 @@ class PointbilanRepository implements PointbilanInterface
                    if($vb['tva']==0) {
                     $somme=200;
                    }
-                    if($vb['total_montant'] > $somme){
+                    if($vb['total_montant'] > $somme ){
+                      $user_notif[] = $vb;
+                    }
+
+                    if($vb['montant_line'] > $somme){
                       $user_notif[] = $vb;
                     }
 
