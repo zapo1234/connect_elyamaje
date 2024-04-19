@@ -22,7 +22,7 @@ class ServiceMailer
            $mail->Host       = 'mail.elyamaje.com';                     //Set the SMTP server to send through
            $mail->SMTPAuth   =    true;                                   //Enable SMTP authentication
            $mail->Username   = 'connect@elyamaje.com';                     //SMTP username
-           $mail->Password   = '7vfsLE3D*7eO';                     //SMTP password
+           $mail->Password   = '7vfsLE3D*7eO';                    //SMTP password
            //SMTP password
 	       $mail->SMTPSecure = 'ssl';
            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            
