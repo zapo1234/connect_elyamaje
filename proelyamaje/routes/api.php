@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\API\ApiElearningController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+// creer une route api pour e-learning pour aller chercher les produits de woocomerce pour les flush dans mongo db.
+// Route api pour retourner les produits dansla table prepa product
+Route::get('/products/appi-elearning', [ApiController::class, 'productApi']);

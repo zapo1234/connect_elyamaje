@@ -22,17 +22,17 @@ class Diffproduct
            // boucle sur le nombre de paginations trouvées
            //$customer_key = env('API_KEY_PUBLIC_WOOCOMERCE');
           // $customer_secret = env('API_KEY_PRIVATE_WOOCOMERCE');
+ 
+            $customer_key = $this->api->getApikeywopublic();
+            $customer_secret =$this->api->getApikeysecret();
 
-           $customer_key = $this->api->getApikeywopublic();
-           $customer_secret =$this->api->getApikeysecret();
-
-          for($i=1; $i<8; $i++){
+             for($i=1; $i<8; $i++){
               
-             $urls="https://www.elyamaje.com/wp-json/wc/v3/products?consumer_key=$customer_key&consumer_secret=$customer_secret&page=$i&per_page=100";
-              // recupérer des donnees orders de woocomerce depuis api
-              $donnes = $this->api->getDataApiWoocommerce($urls);
-             $donnees[] = array_merge($donnes);
-           }
+               $urls="https://www.elyamaje.com/wp-json/wc/v3/products?consumer_key=$customer_key&consumer_secret=$customer_secret&page=$i&per_page=100";
+               // recupérer des donnees orders de woocomerce depuis api
+               $donnes = $this->api->getDataApiWoocommerce($urls);
+               $donnees[] = array_merge($donnes);
+             }
            
            // recuperer les produit (name et les sku  de ces produits)
            $product_list = [];
