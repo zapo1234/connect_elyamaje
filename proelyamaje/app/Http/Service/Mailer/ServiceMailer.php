@@ -5,7 +5,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 use Illuminate\Http\Request;
-
+use Mail;
 class ServiceMailer
 {
    public function SendMail(string $email, string $from, string $subject, string $message)
@@ -50,8 +50,23 @@ class ServiceMailer
    
    public function SendMails(array $data, string $from, string $subject,$message)
    {
-        
-      foreach($data as $value){
+       
+    foreach($data as $value){
+      $code = $value['code_promo'];
+      $libelle = $value['libelle'];
+      $name= $value['nom_ambassadrice'];
+      $email =$value['email'];
+      $from = 'no-reply@elyamaje.com';
+      $subject='Création code promo Elyamaje';
+       Mail::send('email.codeenvoi', ['code'=>$code,'libelle'=>$libelle,'ambassadrice'=>$name,'email'=>$email,'from'=>$from,'subject'=>$subject], function($message) use($code,$libelle,$name,$email,$from,$subject){
+       $message->to($email);
+       $message->from($from);
+       $message->subject($subject);
+     });
+    }
+    
+    
+     /* foreach($data as $value){
           
         if($value['email']!="") {
           //Load Composer's autoloader
@@ -93,6 +108,8 @@ class ServiceMailer
               $mail->send();
        }   
            // send Mail
+
+          */
           
       }    
          

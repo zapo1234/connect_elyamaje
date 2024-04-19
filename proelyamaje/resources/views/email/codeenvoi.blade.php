@@ -13,7 +13,7 @@
                             <img i src="{{ asset('admin/img/Logo_elyamaje.png')}}" width="95px"; height="auto"; style="margin-top:20px;";>
                         </a>       
                         vous a attribué un code promotionnel. Grâce à ce code, vous avez accès à 10% de reduction sur tous les produits du site <a href="elyamaje.com">elyamaje.com</a>.<br/><br/>
-                      Voici votre code élève <strong>'.$value['code_promo'].'</strong> pour effectuer vos achats. <br><br>
+                      Voici votre code élève <strong>{{ $code }}</strong> pour effectuer vos achats. <br><br>
                       Ce code est valable une seule fois lors de votre première commande.<br><br>
                     </td>
                 </tr>

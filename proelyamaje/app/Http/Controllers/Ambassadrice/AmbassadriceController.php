@@ -1203,9 +1203,9 @@ class AmbassadriceController extends Controller
                  // envoi de mailXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX via phpmailer
                     $subject = "Création code promo Elyamaje";
                     $from = 'no-reply@elyamaje.com';
-                    $message="zapo";
+                    $message="connect";
                    $data = $lists;
-                  // $this->mailer->SendMails($data,$from,$subject,$message);//envoyer.
+                    $this->mailer->SendMails($data,$from,$subject,$message);//envoyer.
                   // traiter le retour de réponse des codes validés ou nom
                   // renvoyer des tableau unique
                    $array_emailc = array_unique($array_email);// email à valider pour un second compte promo.
