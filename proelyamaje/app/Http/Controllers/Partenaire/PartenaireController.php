@@ -275,8 +275,8 @@ class PartenaireController extends Controller
            }
              // transformer en tableau 
              // destinaire mourad.
-            $array_destinataire = array('martial@elyamaje.com','paiement-ambassadrice@elyamaje.com');// AMBASSADRICE..
-            $array_destinataire2 =  array('martial@elyamaje.com','paiement-partenaire@elyamaje.com'); // PARTENAIRE....
+            $array_destinataire = array('martial@elyamaje.com','paiement-ambassadrice@elyamaje.com','comptabilite@elyamaje.com');// AMBASSADRICE..
+            $array_destinataire2 =  array('martial@elyamaje.com','paiement-partenaire@elyamaje.com','comptabilite@elyamaje.com'); // PARTENAIRE....
           
             if(count($list_token)!=0){
                 // recupérer le nom du partenaire et l'email de l'ambassadrice
