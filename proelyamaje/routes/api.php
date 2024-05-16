@@ -22,3 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // creer une route api pour e-learning pour aller chercher les produits de woocomerce pour les flush dans mongo db.
 // Route api pour retourner les produits dansla table prepa product
 Route::get('/products/appi-elearning', [ApiController::class, 'productApi']);
+
+// ROUTE 
