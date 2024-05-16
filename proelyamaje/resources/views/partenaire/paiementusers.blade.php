@@ -25,10 +25,6 @@
 	<link href="{{ asset('admin/assets/assets/plugins/metismenu/css/metisMenu.min.css') }}" rel="stylesheet" />
 
 	<!-- loader-->
-	
-	<link href="{{ asset('admin/assets/assets/css/pace.min.css') }}" rel="stylesheet" />
-
-	<script src="{{ asset('admin/assets/assets/js/pace.min.js') }}"></script>
 
 	<!-- Bootstrap CSS -->
 

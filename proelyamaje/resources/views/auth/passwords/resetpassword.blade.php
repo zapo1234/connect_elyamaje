@@ -7,9 +7,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--favicon-->
 	<link rel="icon" href="admin/assets/assets/images/favicon-32x32.png" type="image/png" />
-	<!-- loader-->
-	<link href="/admin/assets/assets/css/pace.min.css" rel="stylesheet" />
-	<script src="assets/js/pace.min.js"></script>
 	<!-- Bootstrap CSS -->
 	<link href="/admin/assets/assets/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/admin/assets/assets/css/bootstrap-extended.css" rel="stylesheet">
