@@ -22,11 +22,11 @@
 
 				<div class="page-breadcrumb d-sm-flex align-items-center mb-2" style="margin-top:10px">
 
-				<div class="breadcrumb-title pe-3">Codes promos</div>
+				<div class="breadcrumb-title pe-3">Commissions</div>
 				<div class="ps-3">
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb mb-0 pe-3">
-							<li class="breadcrumb-item active" aria-current="page">Achats code élève</li>
+							<li class="breadcrumb-item active" aria-current="page">codes élèves</li>
 						</ol>
 					</nav>
 				</div>
