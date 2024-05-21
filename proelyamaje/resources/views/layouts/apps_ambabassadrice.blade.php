@@ -154,10 +154,10 @@
       </script>
       
       <script src="{{asset('admin/js/demo/chart-area-demo.js')}}"></script>
-    <script src="{{asset('admin/js/demo/chart-pie-demo.js')}}"></script>
-    <script src="{{asset('admin/js/account.js')}}"></script>
-     <script src="{{asset('admin/js/orders.js')}}"></script>
-     <script src="{{asset('admin/js/ambassadrice/customeramba.js')}}"></script>
+      <script src="{{asset('admin/js/demo/chart-pie-demo.js')}}"></script>
+      <script src="{{asset('admin/js/account.js')}}"></script>
+      <script src="{{asset('admin/js/orders.js')}}"></script>
+      <script src="{{asset('admin/js/ambassadrice/customeramba.js')}}"></script>
       <script src="{{asset('admin/js/ambassadrice/formspanier.js')}}"></script>
       <script src="{{asset('admin/js/ambassadrice/ordercode.js')}}"></script>
       <script src="{{asset('admin/js/ambassadrice/chartjs.js')}}"></script>

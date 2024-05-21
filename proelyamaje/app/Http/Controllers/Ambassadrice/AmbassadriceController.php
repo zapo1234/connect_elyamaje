@@ -1694,7 +1694,7 @@ class AmbassadriceController extends Controller
             }
 
              // envoyer l'email aux utilisateur.
-                $destinaire= array('zapomartial@yahoo.fr','mmajeri@elyamaje.com','martial@elyamaje.com');
+                $destinaire= array('zapomartial@yahoo.fr','martial@elyamaje.com');
               $subject = $demande;
               $ambassadrice = Auth()->user()->name;
               $phone = Auth()->user()->telephone;
