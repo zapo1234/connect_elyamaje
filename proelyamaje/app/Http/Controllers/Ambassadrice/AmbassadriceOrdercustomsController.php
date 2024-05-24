@@ -994,6 +994,18 @@ class AmbassadriceOrdercustomsController extends Controller
                    // recupérer le montant  à passer
                    // recupérer l'id amabssadrice
                    $id_ambassadrice = $request->get('id_ambassadrices');
+
+                   $data  = $this->user->getUserId($id_ambassadrice);
+                   $status_societe = $data->account_societe;
+                    // recupérer le type de compte
+                   $array_societe = array('SASU','SARL','SAS');
+                   $array_societe1 = array('EI',null);
+           
+                    if(in_array($status_societe,$array_societe)){
+                    $tva = 20;
+                      }else{
+                      $tva = 0;
+                    }
                   // recupérer le bon d'achat le code
                    //$data_cards = $this->gift->getIdcards($id_ambassadrice);
                    // $code_numbers = $data_cards[0]['code_number'];
@@ -1001,8 +1013,10 @@ class AmbassadriceOrdercustomsController extends Controller
                    $name = $request->get('name_users');
                   // recupérer l'email du recepient...
                   $email_user = $request->get('email_users');
+
+                  $montants = $montant+$montant*$tva/100;
                
-                  $somme = number_format($montant, 2, ',', '');
+                  $somme = number_format($montants, 2, ',', '');
                    // $sommes = explode(',',$montant);
                   // insert dans base de données gift cards.
                   $code_number = $name.'-'.$this->str_generator();
