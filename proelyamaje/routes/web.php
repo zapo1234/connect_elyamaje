@@ -181,7 +181,7 @@ Route::get('ambassadrice/add/codepromo', [AmbassadriceController::class, 'addcod
 Route::get('ambassadrice/add/bon/achat', [AmbassadriceController::class, 'bongift'])->name('ambassadrice.bongift');
 
 // Route pour ajax  choix paiement
-Route::get('ambassadrice/add/choix', [AmbassadriceController::class, 'choixpaie'])->name('ambassadrice.choixpaie');hjhjj
+Route::get('ambassadrice/add/choix', [AmbassadriceController::class, 'choixpaie'])->name('ambassadrice.choixpaie');
 
 // route superadmin dashboard
 
