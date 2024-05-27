@@ -978,7 +978,7 @@ class AmbassadriceController extends Controller
              $xs=[];// renvoyer les arrays via api si y'a création.
              
            if($id==37){
-               $limit_create_code = 80;// exception charlen Amba 70 code par mois......
+               $limit_create_code = 81;// exception charlen Amba 80 code par mois......
             }else{
                $limit_create_code= 50;
             }
