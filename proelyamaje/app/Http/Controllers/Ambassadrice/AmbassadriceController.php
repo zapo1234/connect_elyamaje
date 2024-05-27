@@ -976,7 +976,14 @@ class AmbassadriceController extends Controller
             // recupérer les données pour insert
              $email_array =[];// recupérer la liste des email pour envoi mail
              $xs=[];// renvoyer les arrays via api si y'a création.
-            if($donnes <50) {
+             
+           if($id==37){
+               $limit_create_code = 70;// exception charlen Amba 70 code par mois......
+            }else{
+               $limit_create_code= 50;
+            }
+
+            if($donnes < $limit_create_code) {
                foreach($emails as $keys => $insert) {
                     // création d'un tableau associatives......
                     $code_nom = substr($nom,0,7);
