@@ -1321,7 +1321,7 @@ class AmbassadriceController extends Controller
                 
             // afficher les reponses
              else{
-                 return redirect()->route('ambassadrice.account')->with('errors', 'Désolé vous avez atteint le qouata de 50 codes promo ce mois!');
+                 return redirect()->route('ambassadrice.account')->with('errors', 'Désolé vous avez atteint le qouata de  codes promo ce mois!');
             }
              dd('zapo elyamaje');
              // new script//
