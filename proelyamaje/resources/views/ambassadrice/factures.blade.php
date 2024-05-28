@@ -84,7 +84,7 @@
 					<div class="card-body">
 
                   <div class="d-flex justify-content-center w-100 loading"> 
-                    
+                     <div class="spinner-border text-dark" role="status"> <span class="visually-hidden">Loading...</span></div>
                   </div>
 
                   <div class="table-responsive">
