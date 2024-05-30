@@ -114,14 +114,14 @@ class OrderutilisateurRepository implements OrderutilisateurInterface
       
             $som=(int)$somme*(int)$commissions/100;
             $notification = "commande N° $ref . $som €";
-            $email1="melisa@elyamaje.com";
+            $email1="meli@elyamaje.com";
             $email2="kenza@elyamaje.com";
             $email21 ="manon.a@elyamaje.com";
              $email3="pamela@elyamaje.com";
           
              $type = Auth()->user()->account_societe;
              // type user
-             $array_user_marseille = array('melisa@elyamaje.com','anissa@elyamaje.com','marina@elyamaje.com','deborah@elyamaje.com','ella@elyamaje.com');// utilisteur marseille.
+             $array_user_marseille = array('meli@elyamaje.com','anissa@elyamaje.com','marina@elyamaje.com','deborah@elyamaje.com','ella@elyamaje.com');// utilisteur marseille.
              $array_user_nice = array('pamela@elyamaje.com');
               // list 
               if($type=="User-marseille"){
