@@ -366,8 +366,8 @@ class AmbassadriceCustoms
 
                                   foreach($donnees_orders as $kl => $values){
                                       
-                                      $retrait = array_sum($somme_deduit);// sommes des index du tableau.....
-                                      $somme = $values['total']-$retrait-$values['total_tax']-$values['shipping_total'];
+                                      //$retrait = array_sum($somme_deduit);// sommes des index du tableau.....
+                                      $somme = $values['total']-$values['total_tax']-$values['shipping_total'];
                                       if($somme > 0) {
                                     
                                         $somm = ($somme*$commission)/100;
