@@ -125,7 +125,7 @@
                         <div class="menu-title">Lives</div>
                     </a>
                     <ul>
-                    @if(Auth()->user()->id!=38  && Auth()->user()->id!=9)
+                    @if(Auth()->user()->id!=38  && Auth()->user()->id!=3)
                         <li class="vue{{ Auth()->user()->is_admin }}"> <a href="{{ route('ambassadrice.liveforms') }}"><i class="bx bx-right-arrow-alt"></i>Programmer un live</a>
                         </li>
 
