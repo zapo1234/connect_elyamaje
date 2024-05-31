@@ -1240,6 +1240,8 @@ class OrderambassadricecustomsRepository implements OrderambassadricecustomsInte
               $counns = json_decode($datas_fidelite,true);
               $array_tab = [];
               $array_commande_restriction =[];
+
+              dd($data_restriction);
  
               foreach($counns as $kc => $valus){
                 $array_tab[$valus['code']] =$kc;
@@ -1331,7 +1333,7 @@ class OrderambassadricecustomsRepository implements OrderambassadricecustomsInte
       }
       
       
-      // recupérer lles commande bloquer pendant les lives du mardi...
+      // recupérer les commande lorsque les 600 euro sont atteint...
        foreach($array_commande_restriction as $values){
 
          if(isset($donss[$values['id_commande']]) == false) {
