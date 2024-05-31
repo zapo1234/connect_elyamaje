@@ -1240,8 +1240,6 @@ class OrderambassadricecustomsRepository implements OrderambassadricecustomsInte
               $counns = json_decode($datas_fidelite,true);
               $array_tab = [];
               $array_commande_restriction =[];
-
-              dd($data_restriction);
  
               foreach($counns as $kc => $valus){
                 $array_tab[$valus['code']] =$kc;
