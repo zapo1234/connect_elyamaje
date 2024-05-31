@@ -161,9 +161,6 @@
                                           <th scope="col">Nom</th>
 
                                           <th scope="col">E-mail</th>
-
-                                          <th scope="col"> Téléphone</th>
-
                                           <th scope="col"> code_promo</th>
 
                                           <th scope="col"> Commission </th>
@@ -189,8 +186,6 @@
                                       <td data-label="Nom">{{ $resultat->customer }}  {{ $resultat->username  }}</td>
 
                                      <td data-label="E-mail">{{ $resultat->email }}</td>
-
-                                    <td data-label="Téléphone">{{ $resultat->telephone }}</td>
 
                                      <td data-label="Code Promo">{{ $resultat->code_promo }}</td>
 
