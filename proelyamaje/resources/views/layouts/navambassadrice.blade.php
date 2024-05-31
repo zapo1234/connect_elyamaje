@@ -118,7 +118,7 @@
             
             
                 
-                <li id="vues{{ Auth()->user()->is_admin  }}">
+                <li class="vue{{ Auth()->user()->is_admin}}">
                     <a href="javascript:;" class="has-arrow">
                         <div class="parent-icon"><i class="bx bx-video-recording"></i>
                         </div>
