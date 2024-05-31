@@ -122,14 +122,14 @@
                     <a href="javascript:;" class="has-arrow">
                         <div class="parent-icon"><i class="bx bx-video-recording"></i>
                         </div>
-                        <div class="menu-title">Lives</div>
+                        <div class="menu-title"><span class="vue{{ Auth()->user()->is_admin }}">Lives</span></div>
                     </a>
                     <ul>
                     @if(Auth()->user()->id!=38  && Auth()->user()->id!=3)
                         <li class="vue{{ Auth()->user()->is_admin }}"> <a href="{{ route('ambassadrice.liveforms') }}"><i class="bx bx-right-arrow-alt"></i>Programmer un live</a>
                         </li>
 
-                        <li> <a href="{{ route('ambassadrice.gestionlive') }}"><i class="bx bx-right-arrow-alt"></i>Gérer vos lives</a>
+                        <li i class="vue{{ Auth()->user()->is_admin }}"> <a href="{{ route('ambassadrice.gestionlive') }}"><i class="bx bx-right-arrow-alt"></i>Gérer vos lives</a>
                         </li>
                         
                     </ul>
