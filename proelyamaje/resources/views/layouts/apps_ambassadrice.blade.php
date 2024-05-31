@@ -26,6 +26,9 @@
     <link rel="stylesheet" href="{{ asset('admin/assets/assets/css/semi-dark.css') }}" />
     <link rel="stylesheet" href="{{ asset('admin/assets/assets/css/header-colors.css') }}" />
     <title>Elyamaje Logiciel ERP en mode Saas</title>
+    <style type="text/css">
+     .vue4{display:none}
+    </style>
 </head>
 
 <body>
