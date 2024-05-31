@@ -159,7 +159,7 @@ class AmbassadriceCustoms
 
             */
 
-             for($i=0; $i<4; $i++){
+             for($i=1; $i<4; $i++){
                 $urls="https://www.elyamaje.com/wp-json/wc/v3/orders?orderby=date&order=desc&after=$date_after&before=$date_before&consumer_key=$public_key&consumer_secret=$secret_key&page=$i&per_page=100";
                 // recupérer des donnees orders de woocomerce depuis api......
                 $donnes = $this->api->getDataApiWoocommerce($urls);
