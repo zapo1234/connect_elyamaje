@@ -98,9 +98,7 @@
                     </ul>
                 </li>
                 
-            
-                
-                <li>
+               <li>
                     <a href="javascript:;" class="has-arrow">
                         <div class="parent-icon"><i class="fadeIn animated bx bx-file"></i>
                         </div>
@@ -113,17 +111,12 @@
                     </ul>
                 </li>
                
-                
-            
-            
-            
-                
-                <li class="vue{{ Auth()->user()->is_admin}}">
-                    <a href="javascript:;" class="has-arrow">
+                 <li class="vue{{ Auth()->user()->is_admin}}">
+                    <span class="vue{{ Auth()->user()->is_admin}}"><a href="javascript:;" class="has-arrow">
                         <div class="parent-icon"><i class="bx bx-video-recording"></i>
                         </div>
                         <div class="menu-title"><span class="vue{{ Auth()->user()->is_admin }}">Lives</span></div>
-                    </a>
+                    </a></span>
                     <ul>
                     @if(Auth()->user()->id!=38  && Auth()->user()->id!=3)
                         <li class="vue{{ Auth()->user()->is_admin }}"> <a href="{{ route('ambassadrice.liveforms') }}"><i class="bx bx-right-arrow-alt"></i>Programmer un live</a>
