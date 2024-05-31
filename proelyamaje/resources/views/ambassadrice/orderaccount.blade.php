@@ -159,8 +159,6 @@
 										  <th scope="col" style="color:black;font-size:16px;font-weight:300"><i class="fa fa-calendar" aria-hidden="true"></i> Date d'achat</th>
 
                                           <th scope="col">Nom</th>
-
-                                          <th scope="col">E-mail</th>
                                           <th scope="col"> code_promo</th>
 
                                           <th scope="col"> Commission </th>
@@ -184,8 +182,6 @@
                                     <td data-label="Date d'achat">Achat réalisé le <br/>{{ $resultat->datet }}</td>
 
                                       <td data-label="Nom">{{ $resultat->customer }}  {{ $resultat->username  }}</td>
-
-                                     <td data-label="E-mail">{{ $resultat->email }}</td>
 
                                      <td data-label="Code Promo">{{ $resultat->code_promo }}</td>
 
