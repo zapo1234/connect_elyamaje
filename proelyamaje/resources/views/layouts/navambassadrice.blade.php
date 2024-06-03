@@ -115,7 +115,7 @@
                     <span class="vue{{ Auth()->user()->is_admin}}"><a href="javascript:;" class="has-arrow">
                         <div class="parent-icon"><i class="bx bx-video-recording"></i>
                         </div>
-                        <div class="menu-title"><span class="vue{{ Auth()->user()->is_admin }}">Lives</span></div>
+                        <div class="menu-title">Lives</div>
                     </a></span>
                     <ul>
                     @if(Auth()->user()->id!=38  && Auth()->user()->id!=3)
