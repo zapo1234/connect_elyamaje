@@ -57,7 +57,7 @@
                         <div class="menu-title">Codes promos</div>
                     </a>
                     <ul>
-                        @if(Auth()->user()->id!=38  && Auth()->user()->id!=3 && Auth()->user()->id!=82 && Auth()->user()->id!=111)
+                        @if(Auth()->user()->id!=38  && Auth()->user()->id!=132 && Auth()->user()->id!=82 && Auth()->user()->id!=111)
                             <li> <a href="{{ route('ambassadrice.account') }}"><i class="bx bx-right-arrow-alt"></i>Création de codes</a>
                             
                             </li>
