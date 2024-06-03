@@ -1092,6 +1092,7 @@ class AmbassadriceController extends Controller
                                'usage_limit' => '1',
                                 'exclude_sale_items' =>true,
                                'individual_use' => true,
+                               'exclude_product_ids' => [160265],
                              ];
                           } 
                        
