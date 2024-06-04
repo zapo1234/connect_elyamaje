@@ -35,7 +35,13 @@
 	<!--wrapper-->
 	<div class="wrapper">
         <!--navigation-->
-        @include("layouts.navambassadrice")
+        @auth
+        @if (auth()->user()->is_admin==2)
+            @include("layouts.navambassadrice")
+        @elseif (auth()->user()->is_admin==4)
+            @include("layouts.navpartenaire")
+        @endif
+      @endauth
         <!--end navigation-->
         
 		<!--start header -->
