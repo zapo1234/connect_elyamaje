@@ -202,9 +202,19 @@ class UserRepository implements UserInterface
         ->join('users', 'users.id', '=', 'codelives.id_ambassadrice')
          ->get();
 
+        
           // transformer les retour objets en tableau
-         $list = json_encode($customer);
-          $lists = json_decode($customer,true);
+          $list = json_encode($customer);
+          $listd = json_decode($customer,true);
+
+          foreach($listd as $val){
+             if($val['is_invite']==""){
+                  $lists[] = $val;
+              }
+          }
+           
+
+        return $lists;
 
         return $lists;
   }
