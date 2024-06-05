@@ -1292,7 +1292,7 @@ public function caisselist()
      }
 
 
-     public function getEventCalendarLive(Request $request){
+     public function getEventCalendarLives(Request $request){
 
        if(Auth()->user()->is_admin == 3){
 
