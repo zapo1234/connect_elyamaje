@@ -84,7 +84,8 @@
                         
                         <li> <a href="{{ route('utilisateurs.paliercadeaux') }}"><i class="bx bx-right-arrow-alt"></i>Paliers live</a>
                         
-                        
+                        <li>  <a href="{{ route('utilisateurs.calendar') }}"><i class="bx bx-right-arrow-alt"></i>Agendas des lives</a>
+
                         
                     </ul>
                 </li>

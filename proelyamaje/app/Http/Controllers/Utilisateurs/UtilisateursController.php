@@ -38,13 +38,13 @@ use App\Repository\Ambassadrice\AccountambassadriceRepository;
 use App\Repository\Ambassadrice\HistoriquePanierLiveRepository;
 use App\Repository\Ambassadrice\OrdercodepromoaffichageRepository;
 use App\Repository\Ambassadrice\Ordercustomer\OrderambassadricecustomsRepository;
-
+use App\Repository\PanierLive\ChoixPanierLiveRepository;
 
 
 
 class UtilisateursController extends Controller
 {
-
+      private $choixpanierlive;
       private $coupons;
       private $orders;
       private $order;
@@ -75,7 +75,8 @@ class UtilisateursController extends Controller
          FaqRepository $faq,
          HistoriquePanierLiveRepository $historique,
          PointCodepromo $codeleve,
-         Creategiftcard $creategift
+         Creategiftcard $creategift,
+         ChoixPanierLiveRepository $choixpanierlive
 
      )
 
@@ -93,6 +94,7 @@ class UtilisateursController extends Controller
              $this->historique = $historique;
              $this->codeleve = $codeleve;
              $this->creategift = $creategift;
+             $this->choixpanierlive = $choixpanierlive;
       }
 
      public function getDonnees(): array
@@ -104,6 +106,12 @@ class UtilisateursController extends Controller
      {
          $this->donnees = $donnees;
          return $this;
+     }
+
+
+     public function views()
+     {
+       return view('livewire.calendars');
      }
 
       public function list()
@@ -1276,6 +1284,76 @@ public function caisselist()
 
 
       }
+
+
+      public function viewcalendars(){
+
+        return view('utilisateurs.calendar');
+     }
+
+
+     public function getEventCalendarLive(Request $request){
+
+       if(Auth()->user()->is_admin == 3){
+
+           $id_live = $request->get('id_live');
+
+         if($id_live){
+
+           $data_live = $this->choixpanierlive->getByIdLive($id_live);
+           if($data_live){
+               $live = $data_live;
+           } else {
+               $live = $this->historiquelive->getByIdLive($id_live);
+           }
+           
+           $tokens = explode(',', $live[0]['token_datas']);
+           $list_products = $this->panierlive->getByTokens($tokens, ['libelle', 'panier_title', 'panier_title', 'mont_mini']);
+           $products = [];
+
+           foreach($list_products as $product){
+               if(isset($products[$product['panier_title']])){
+                 array_push($products[$product['panier_title']], $product);
+               } else {
+                 $products[$product['panier_title']] =  [$product];
+               }
+           }
+               echo json_encode($products);  
+         }
+       } 
+     }
+
+
+     public function getEventCalendar(){
+       // Adrien
+      if(Auth()->user()->is_admin == 3){
+          $lives_incoming = DB::table('codelives')->select('name as title','date_expire as start', 'choix_panier_lives.id_live as id')->join('users', 'users.id', '=', 'codelives.id_ambassadrice')
+          ->join('choix_panier_lives', 'choix_panier_lives.code_live', '=', 'codelives.code_live')->where('css', 'activecode')->get()->toArray();
+          $lives_past = DB::table('historique_panier_lives')->select('name as title','date_live as start','historique_panier_lives.id_live as id' )->join('users', 'users.code_live', '=', 'historique_panier_lives.code_live')->get()->toArray();
+          
+          $lives = array_merge($lives_incoming, $lives_past);
+          $values_unique = array_unique($lives, SORT_REGULAR);
+
+          $list = []; 
+          foreach($values_unique as $value){
+              $list [] = $value;
+          }
+
+          return $list;
+      } else if(Auth()->user()->is_admin == 2){
+          $lives_incoming = DB::table('codelives')->select('name as title','date_expire as start', 'choix_panier_lives.id_live as id', 'img_select as img')->join('users', 'users.id', '=', 'codelives.id_ambassadrice')
+          ->join('choix_panier_lives', 'choix_panier_lives.code_live', '=', 'codelives.code_live')->where('css', 'activecode')->get()->toArray();
+      
+          $values_unique = array_unique($lives_incoming, SORT_REGULAR);
+
+          $list = []; 
+          foreach($values_unique as $value){
+              $list [] = $value;
+          }
+          return $list;
+      }
+    }
+
       
  }
 

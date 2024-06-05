@@ -521,6 +521,16 @@ Route::get('/ambassadrice/customer/cards', [GestionControlController::class, 'ge
 Route::get('/ambassadrice/code/control', [GestionControlController::class, 'getcontrols'])->name('gestion.controls');
 
 
+// rdv live utilisateur internes
+Route::get('/gestion/calendar/lives', [UtilisateursController::class, 'viewcalendars'])->name('utilisateurs.calendar');
+//rdv live utilisateur 
+Route::get('/gestion/calendar/getEventCalendars', [UtilisaterusController::class, 'getEventCalendar'])->name('utilisateurs.getEventCalendar');
+
+Route::get('/gestion/calendar/getEventCalendarLives', [UtilisateursController::class, 'getEventCalendarLive'])->name('utilisateurs.getEventCalendarLive');
+Route::get('/gestion/livewire/lives', [UtilisateursController::class, 'views'])->name('livewire.calendar');
+
+
+
 // gestion calendar rdv lives 
 Route::get('/gestion/calendar/live', [GestionControlController::class, 'viewcalendar'])->name('gestion.calendar');
 
