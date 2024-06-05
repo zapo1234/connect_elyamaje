@@ -77,7 +77,7 @@
 			},
 			initialView: 'timeGridWeek',
 			eventSources: [{
-				url: '{{ route("gestion.getEventCalendar")}}',
+				url: '{{ route("utilisateurs.getEventCalendar")}}',
 				method: 'GET',
 				failure: function() {
 					alert('there was an error while fetching events!');
@@ -108,7 +108,7 @@
 				// Show modal with paniers live
 				if(info.event.id){
 					$.ajax({
-						url: "{{ route('gestion.getEventCalendarLive') }}",
+						url: "{{ route('utilisateurs.getEventCalendarLive') }}",
 						data: {id_live: info.event.id},
 						method: 'GET'
 					}).done(function(data) {
