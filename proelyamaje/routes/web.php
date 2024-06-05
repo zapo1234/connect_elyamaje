@@ -521,10 +521,10 @@ Route::get('/ambassadrice/customer/cards', [GestionControlController::class, 'ge
 Route::get('/ambassadrice/code/control', [GestionControlController::class, 'getcontrols'])->name('gestion.controls');
 
 
-// rdv live utilisateur internes
+// gestion live utilisateur internes
 Route::get('/gestion/calendar/lives', [UtilisateursController::class, 'viewcalendars'])->name('utilisateurs.calendar');
 //rdv live utilisateur 
-Route::get('/gestion/calendar/getEventCalendars', [UtilisaterusController::class, 'getEventCalendar'])->name('utilisateurs.getEventCalendars');
+Route::get('/gestion/calendar/getEventCalendars', [UtilisateursController::class, 'getEventCalendar'])->name('utilisateurs.getEventCalendars');
 
 Route::get('/gestion/calendar/getEventCalendarLives', [UtilisateursController::class, 'getEventCalendarLive'])->name('utilisateurs.getEventCalendarLives');
 Route::get('/gestion/livewire/lives', [UtilisateursController::class, 'views'])->name('livewire.calendar');

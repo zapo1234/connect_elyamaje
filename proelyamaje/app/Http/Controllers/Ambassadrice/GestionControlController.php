@@ -1530,7 +1530,7 @@ class GestionControlController extends Controller
     
       public function getEventCalendarLive(Request $request){
 
-        if(Auth()->user()->is_admin == 1){
+        if(Auth()->user()->is_admin == 1 OR Auth()->user()->is_admin == 3){
 
             $id_live = $request->get('id_live');
 
@@ -1561,7 +1561,7 @@ class GestionControlController extends Controller
 
       public function getEventCalendar(){
          // Adrien
-        if(Auth()->user()->is_admin == 1){
+        if(Auth()->user()->is_admin == 1 OR Auth()->user()->is_admin == 3){
             $lives_incoming = DB::table('codelives')->select('name as title','date_expire as start', 'choix_panier_lives.id_live as id')->join('users', 'users.id', '=', 'codelives.id_ambassadrice')
             ->join('choix_panier_lives', 'choix_panier_lives.code_live', '=', 'codelives.code_live')->where('css', 'activecode')->get()->toArray();
             $lives_past = DB::table('historique_panier_lives')->select('name as title','date_live as start','historique_panier_lives.id_live as id' )->join('users', 'users.code_live', '=', 'historique_panier_lives.code_live')->get()->toArray();
