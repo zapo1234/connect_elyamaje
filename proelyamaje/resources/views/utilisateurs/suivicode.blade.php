@@ -37,34 +37,6 @@
 
 				<div class="card card_table_mobile_responsive">
 
-				<div style="font-size:15px;margin-top:30px;margin-left:3%"> Export csv Historique menseul pour les  codes élèves <br/></div>
-				   <div>
-                     <form method="post" id="stat_vente" action="{{ route('superadmin.postcventeslive') }}">
-					 @csrf
-				     <select  name="ambassadrice"  id="ambassadrice" class="form-select" aria-label="Default select example" style="width:250px;float:left;margin-left:2%" required>
-				     <option value="">Chosir l'ambassadrice </option>
-				     @foreach($result_name as $key => $name)  
-				     <option value="{{ $key }}"> {{ $name  }} </option>
-				     @endforeach
-					 <option value="37">charlene</option>
-                    </select>
-
-                     <select  name="annee"  id="annee" class="form-select" aria-label="Default select example" style="width:250px;float:left;margin-left:2%" required>
-				     <option value="">Chosir Année </option>
-					 <option selected>Choisir l'année</option>
-					 <option value="2022">2022</option>
-                      <option value="2023">2023</option>
-                      <option value="2024">2024</option>
-                      <option value="2025">2025</option>
-                      <option value="2026">2026</option>
-				     </select>
-
-
-				       <button id="class" type="submit" style="margin-left:2%;background-color:black;width:250px;height:40px;color:white;border-radius:5px;border:2px solid black"> Export csv </button>
-				      </form>
-
-				     </div>
-
 						<div class="table-responsive p-3">
 
 						<div class="d-flex justify-content-center w-100 loading"> 
