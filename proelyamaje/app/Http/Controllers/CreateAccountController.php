@@ -479,7 +479,8 @@ class CreateAccountController
                 
                  $img_active ='<i class="fa fa-circle" style="font-size:24px; style="color:red"></i>';
                  // definir le role permission adapte
-                 $role = 5;
+                 
+                 $is_invite=1;
                  
                  
             }
@@ -542,7 +543,8 @@ class CreateAccountController
 		            $accounts->addresse = $request->input('account_address');
 		            $accounts->ville = $request->input('account_ville');
 		            $accounts->telephone = $request->input('account_phone');
-		            $accounts->is_admin = $role;
+		            //$accounts->is_admin = $role;
+                    $accounts->is_invite = $is_invite;
 		            $accounts->code_live = $request->input('code_live');
 		     
 		            //insert
