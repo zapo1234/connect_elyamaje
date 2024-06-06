@@ -36,12 +36,17 @@
 	<div class="wrapper">
         <!--navigation-->
         @auth
-        @if (auth()->user()->is_admin==2)
+        @if (auth()->user()->is_admin==2  && auth()->user()->is_invite=="")
             @include("layouts.navambassadrice")
-        @elseif (auth()->user()->is_admin==4)
+        @elseif (auth()->user()->is_admin==4 && auth()->user()->is_invite=="")
             @include("layouts.navpartenaire")
+        @elseif (auth()->user()->is_admin==2 && auth()->user()->is_invite==1)
+         @include("layouts.navambassadriceinvite")
+        @elseif (auth()->user()->is_admin==4 && auth()->user()->is_invite==1)
+         @include("layouts.navambassadriceinvite")
+
         @endif
-      @endauth
+    @endauth
         <!--end navigation-->
         
 		<!--start header -->
