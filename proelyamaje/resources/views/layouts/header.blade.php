@@ -115,7 +115,7 @@
                                 </a>
                             </li>
 
-                            @if(Auth()->user()->is_admin == 2 || Auth()->user()->is_admin == 4)
+                              @if(Auth()->user()->is_invite =="")
                                 <li class="nav-item dropdown dropdown-large">
                                     <a class="nav_icon_{{ Auth()->user()->is_admin }} nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <i class='bx bx-category'></i>
                                     </a>
