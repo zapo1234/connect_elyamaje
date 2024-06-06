@@ -121,7 +121,7 @@
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-end" id="header-affich{{ Auth()->user()->is_admin }}">
                                         <div class="row row-cols-3 g-3 p-3">
-                                        @if(Auth()->user()->id!=38  && Auth()->user()->id!=132 && Auth()->user()->id!=82 && Auth()->user()->id!=111)
+                                        @if(Auth()->user()->id!=38  && Auth()->user()->id!=132 && Auth()->user()->id!=82 && Auth()->user()->id!=111 && Auth()->user()->id!=68)
                                             <div class="col text-center" id="f{{ Auth()->user()->is_admin}}">
                                                 <a href="{{ route('ambassadrice.account') }}">
                                                 <div class="app-box mx-auto bg-gradient-cosmic text-white"><i class='bx bx-group'></i>
