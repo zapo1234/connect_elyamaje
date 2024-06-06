@@ -51,7 +51,7 @@ class NotificationLiveservice
             }
             
 
-          // je veux cibler tous les live en cours dont l'ambassadrice n'a pas cliquer le bouton après 1h du live prévu
+          // je veux cibler tous les live en cours dont l'ambassadrice n'a pas cliquer le bouton après 2h du live prévu
             $array_accept_condition =[];
             $code_live_notification =[];
             $code_live =[];
@@ -66,7 +66,7 @@ class NotificationLiveservice
                 $heure_fixe = (int)$heure_chaine[0];
                 
                 // je veux descativé le live après 3h max.si l'ambassadrice n'a pas valider son live.
-                if($date_live==$date && $date_heure - $heure_fixe >= 3){
+                if($date_live==$date && $date_heure - $heure_fixe >= 2){
                      // recupérer les id live et code live
                      // et léver la restriction souhaités à 6 jours
                      $code_live_notification[] = $values['id_live'];
@@ -111,8 +111,7 @@ class NotificationLiveservice
               }
 
             }
-
-
+            
             dd('pas de live notive');
          
       }

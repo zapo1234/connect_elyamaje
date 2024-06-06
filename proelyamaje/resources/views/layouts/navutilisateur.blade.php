@@ -100,6 +100,7 @@
                     </a>
                     <ul>
                         <li> <a href="{{ route('utilisateurs.codecreateleve') }}"><i class="bx bx-right-arrow-alt"></i>Les codes Élèves</a>
+                        <li> <a href="{{ route('utilisateurs.suivicode') }}"><i class="bx bx-right-arrow-alt"></i>Taux de transformation(code élève)</a>
                         
                         </li>
                         
