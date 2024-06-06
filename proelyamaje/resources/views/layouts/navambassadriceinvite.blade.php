@@ -77,18 +77,7 @@
                     </ul>
                 </li>
                
-
-                <li>
-                    <a href="{{ route('ambassadrice.models') }}">
-                        <div class="parent-icon"><i class='bx bx-message-detail'></i>
-                        </div>
-                        <div class="menu-title">Modèle de messages</div>
-                    </a>
-                
-                </li>
-                
-                
-                 <!-- <li>
+               <!-- <li>
                     <a href="javascript:;" class="has-arrow">
                         <div class="parent-icon"><i class='bx bx-chevron-right-circle'></i>
                         </div>
@@ -100,26 +89,6 @@
                         
                     </ul>
                 </li> -->
-               
-                <li>
-                    <a href="{{ route('ambassadrice.aideforms') }}">
-                        <div class="parent-icon"><i class='bx bx-help-circle'></i>
-                        </div>
-                        <div class="menu-title">Aide</div>
-                    </a>
-                
-                </li>
-               
-               
-
-                <li>
-                    <a href="{{ route('ambassadrice.getFaqs') }}">
-                        <div class="parent-icon"><i class='bx bx-help-circle'></i>
-                        </div>
-                        <div class="menu-title">Règles d'utilisation</div>
-                    </a>
-                
-                </li>
                
                 
                 <li>
