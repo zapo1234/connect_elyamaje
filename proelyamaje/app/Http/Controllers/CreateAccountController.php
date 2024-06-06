@@ -442,6 +442,7 @@ class CreateAccountController
             
             if($request->input('compte')=="" OR $request->input('compte')=='actif'){
                 $compte = "actif";
+                $is_invite="";
                  $img_active ='<i class="fa fa-circle" style="font-size:24px; style="color:green"></i>';
                  // definit les roles
                  if($request->input('account_type') =='Admin'){
