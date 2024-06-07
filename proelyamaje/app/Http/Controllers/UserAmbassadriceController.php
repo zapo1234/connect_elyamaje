@@ -129,16 +129,18 @@ class UserAmbassadriceController
                 $donnees = " Gain live(%) : $pr_live% ; Gain élève(%) : $pr_eleve%";
                 // recupérer le nom de l'ambassadrice.
                 $chaine_name = array_search($val['id_ambassadrice'],$users);
+                if($chaine_name!=false){
                 $name = explode(',',$chaine_name);
                 $result_data[] =[
                     'periode'=> $val['mois'].'  '.$val['annee'],
-                    'name' =>'Ambassadrice',
+                    'name' =>$name[1],
                     'commission_live'=> $montant_live,
                     'commission_eleve'=>$montant_eleve,
                     'pourcentage'=> $donnees
             
                 ];
             }
+           }
            }
           }
          return view('utilisateurs.statsdatauser',['result_data'=>$result_data,'result_datas'=>$result_datas,'result_name'=>$result_name]);
