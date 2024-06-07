@@ -305,16 +305,24 @@ class UserAmbassadriceController
             $partenaire  = $this->users->getParts();
 
             // tableau d'affichage des partenaire
-            $result_name =[];
+            $result_names =[];
 
             foreach($partenaire as $key => $vals){
                   $chaine_key = explode(',',$key);
 
-                  $result_name[$chaine_key[0]] = $chaine_key[1];
+                  $result_names[$chaine_key[0]] = $chaine_key[1];
             }
 
-            
-            dd($result_name);
+            $values = array_values($result_names);
+            // Trier les valeurs en ordre alphabétique croissant
+             sort($values);
+
+            $result_name =[];
+    
+             foreach($values as $key =>$val){
+                
+                $result_name[$key] = $val;
+             }
 
             $data = $this->point->getAllfactures();
         
