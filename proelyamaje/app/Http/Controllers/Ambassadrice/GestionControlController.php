@@ -962,22 +962,19 @@ class GestionControlController extends Controller
                     $donnees = " Gain live(%) : $pr_live% ; Gain élève(%) : $pr_eleve%";
                     // recupérer le nom de l'ambassadrice.
                     $chaine_name = array_search($val['id_ambassadrice'],$users);
-
-                    $name = explode(',',$chaine_name);
-                    if($name!=""){
-                    $result_data[] =[
+                    if($chaine!=false){
+                      $name = explode(',',$chaine_name);
+                      $result_data[] =[
                         'periode'=> $val['mois'].'  '.$val['annee'],
-                        'name' =>'Ambassadrice',
+                        'name' =>$name[1],
                         'commission_live'=> $montant_live,
                         'commission_eleve'=>$montant_eleve,
                         'pourcentage'=> $donnees
                 
-                    ];
-                 }
-                 }
-                   
-                    
-                     $result_somme_eleve[] = $val['somme_eleve'];
+                     ];
+                  }
+                 
+                    $result_somme_eleve[] = $val['somme_eleve'];
                      $result_somme_live[] = $val['somme_live'];
                }
               }
