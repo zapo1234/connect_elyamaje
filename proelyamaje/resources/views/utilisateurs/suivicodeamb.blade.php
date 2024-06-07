@@ -46,7 +46,7 @@
 				     @foreach($result_name as $key => $name)  
 				     <option value="{{ $key }}"> {{ $name  }} </option>
 				     @endforeach
-					 <option value="37">charlene</option>
+					 
                     </select>
 
                      <select  name="annee"  id="annee" class="form-select" aria-label="Default select example" style="width:250px;float:left;margin-left:2%" required>
@@ -57,6 +57,8 @@
                       <option value="2024">2024</option>
                       <option value="2025">2025</option>
                       <option value="2026">2026</option>
+					  <option value="2027">2027</option>
+                      <option value="2028">2028</option>
 				     </select>
 
 
