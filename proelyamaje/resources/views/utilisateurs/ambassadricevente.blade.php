@@ -62,8 +62,7 @@ th{text-align:center}
 				       </select>
 
                      <select  name="annee"  id="annee" class="form-select" aria-label="Default select example" style="width:250px;float:left;margin-left:2%" required>
-				     <option value="">Chosir Année </option>
-					 <option selected>Choisir l'année</option>
+				     <option value="">Choisir Année </option>
                       <option value="2023">2023</option>
                       <option value="2024">2024</option>
                       <option value="2025">2025</option>
