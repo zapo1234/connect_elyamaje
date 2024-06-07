@@ -947,6 +947,7 @@ class GestionControlController extends Controller
              foreach($list as $val){
 
                // recupérer les montant...
+                if($val['somme_live']!=0 OR $val['somme_eleve']!=0){
                    if($val['is_admin']==2){
                     $total = $val['somme_live']+$val['somme_eleve'];
                     $pourcentageeleve = $val['somme_eleve']*100/$total;
@@ -969,12 +970,13 @@ class GestionControlController extends Controller
                         'pourcentage'=> $donnees
                 
                     ];
-                }
-              }
+                 }
+                 }
                    
-                    $result_somme_eleve[] = $val['somme_eleve'];
+                    
+                     $result_somme_eleve[] = $val['somme_eleve'];
                      $result_somme_live[] = $val['somme_live'];
-               
+               }
               }
 
                
