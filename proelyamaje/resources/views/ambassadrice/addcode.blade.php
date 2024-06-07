@@ -97,7 +97,7 @@
                                     
                                         
                                         <div class="col-12 d-flex justify-content-center">
-                                             <button type="submit" id="" class="btn" style="margin-left:2%;background-color:black;color:white;border:2px solid #eee;width:250px;height:45px;border:2px solid black;margin-top:20px;border-radius:5px;">Ajouter un code promo</button>
+                                             <button type="submit" id="" class="btn" style="margin-left:2%;background-color:black;color:white;border:2px solid #eee;width:250px;height:45px;border:2px solid black;margin-top:20px;border-radius:5px;">Envoyer un code promo</button>
                                     </form>
                                 </div>
                             </div>
