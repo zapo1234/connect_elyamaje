@@ -151,27 +151,27 @@
                     <a href="javascript:;" class="has-arrow">
                         <div class="parent-icon"><i class="bx bx-file"></i>
                         </div>
-                        <div class="menu-title">Gestion des  Ambassadrices</div>
+                        <div class="menu-title">Rapport sur les  Ambassadrices</div>
                     </a>
                     <ul>
                         
                         
                         </li>
 
-                        <li> <a href="{{  route('utilisateurs.statsdatauser') }}"><i class="bx bx-right-arrow-alt"></i>Rapport de vente(commission)</a>
+                        <li> <a href="{{  route('utilisateurs.statsdatauser') }}"><i class="bx bx-right-arrow-alt"></i>Vente(commission)</a>
                         
                         </li>
 
-                        <li> <a href="{{  route('utilisateurs.suivicode') }}"><i class="bx bx-right-arrow-alt"></i>Rapport code élève(transformation)</a>
+                        <li> <a href="{{  route('utilisateurs.suivicode') }}"><i class="bx bx-right-arrow-alt"></i> code élève(transformation)</a>
                         
                         </li>
 
-                        <li> <a href="{{  route('utilisateurs.ambassadricevente') }}"><i class="bx bx-right-arrow-alt"></i>Rapport de vente lives( historique mensuel)</a>
+                        <li> <a href="{{  route('utilisateurs.ambassadricevente') }}"><i class="bx bx-right-arrow-alt"></i>Vente lives( historique mensuel)</a>
                         
                         </li>
 
 
-                        <li> <a href="{{  route('utilisateurs.suivicodeamb') }}"><i class="bx bx-right-arrow-alt"></i>Rapport vente  élève(historique mensuel)</a>
+                        <li> <a href="{{  route('utilisateurs.suivicodeamb') }}"><i class="bx bx-right-arrow-alt"></i> Vente  élève(historique mensuel)</a>
                         
                         </li>
                         
@@ -189,11 +189,11 @@
                     <a href="javascript:;" class="has-arrow">
                         <div class="parent-icon"><i class="bx bx-file"></i>
                         </div>
-                        <div class="menu-title">Gestion des  Partenaire</div>
+                        <div class="menu-title">Rapport sur les  Partenaire</div>
                     </a>
                     <ul>
                         
-                      <li> <a href="{{  route('utilisateurs.suivicodepart') }}"><i class="bx bx-right-arrow-alt"></i>Rapport mensuel code lève(transformation)</a>
+                      <li> <a href="{{  route('utilisateurs.suivicodepart') }}"><i class="bx bx-right-arrow-alt"></i>code lève(transformation)</a>
                         
                         </li>
                         
