@@ -34,19 +34,11 @@
 			  
 
 				<div class="card card_table_mobile_responsive" style="width:80%;margin-left:18%;margin-top:20px;">
-				<div style="font-size:15px;margin-top:30px;margin-left:5%"> Export csv Historique live Rapport vente(%) <br/>DE Mai 2022 à Juillet 2023<br/>Si vous selectionnez pas l'ambassadrice vous aurez le rapport global annuel.<br/></div>
+				<div style="font-size:15px;margin-top:30px;margin-left:5%"> Export csv Historique live Rapport vente(%) <br/>DE Mai 2022 à Juillet 2023<br/>Vous avez tous les chiffres annuels réalisés.<br/></div>
 				  <form method="post" id="stat_vente" action="{{ route('gestion.postcsvstats') }}" style="margin-left:15%">
 					 @csrf
 				   
-					 <select  name="ambassadrice"  id="ambassadrice" class="form-select" aria-label="Default select example" style="width:250px;float:left;margin-left:2%">
-				     <option value="">Chosir l'ambassadrice </option>
-				     @foreach($result_name as $key => $name)  
-				     <option value="{{ $key }}"> {{ $name  }} </option>
-				     @endforeach
-                    </select>
-
-					
-					 <select  name="annee"  id="annee" class="form-select" aria-label="Default select example" style="width:250px;float:left;margin-left:2%" required>
+				<select  name="annee"  id="annee" class="form-select" aria-label="Default select example" style="width:250px;float:left;margin-left:2%" required>
 				     <option value="">Chosir Année </option>
 					 <option selected>Choisir l'année</option>
                       <option value="2022">2022</option>
