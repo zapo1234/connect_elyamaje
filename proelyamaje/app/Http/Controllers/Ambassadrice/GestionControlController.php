@@ -963,7 +963,7 @@ class GestionControlController extends Controller
                     $name = explode(',',$chaine_name);
                     $result_data[] =[
                         'periode'=> $val['mois'].'  '.$val['annee'],
-                        'name' =>'Ambassadrice',
+                        'name' =>$name[1],
                         'commission_live'=> $montant_live,
                         'commission_eleve'=>$montant_eleve,
                         'pourcentage'=> $donnees
