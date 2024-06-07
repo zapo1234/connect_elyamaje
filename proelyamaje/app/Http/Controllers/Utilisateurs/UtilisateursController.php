@@ -1252,7 +1252,18 @@ public function caisselist()
   
          }
           $result_data = $this->historique->gethistorique();
-         $result_name = $this->historique->getData();
+          $result_names = $this->historique->getDataid();
+          // Extraire les valeurs du tableau associatif
+          $values = array_values($result_names);
+          // Trier les valeurs en ordre alphabétique croissant
+          sort($values);
+         $result_name =[];
+          foreach($values as $key =>$val){
+            
+            $result_name[$key] = $val;
+         }
+
+
          return view('utilisateurs.ambassadricevente',['result_data'=>$result_data,'result_name'=>$result_name]);
       }
 
