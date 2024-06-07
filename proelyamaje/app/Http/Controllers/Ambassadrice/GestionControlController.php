@@ -940,7 +940,7 @@ class GestionControlController extends Controller
              $list = json_decode($data,true);
              $result_data =[];
               
-              dd($users);
+              dump($users);
               dd($list);
              // 
              // recupérer les chiffre 
