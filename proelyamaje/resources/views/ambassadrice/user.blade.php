@@ -173,7 +173,7 @@
 									<div class="flex-grow-1">
 										<p class="mb-0">Ventes par code parrainage (live)</p>
 										<h4 class="font-weight-bold">{{ $nbrs }}</h4>
-										<!-- <p class="text-success mb-0 font-13">Analytics for last week</p> -->
+										<!-- <p class="text-success mb-0 font-13">Analytics for last .week</p> -->
 									</div>
 									<div class="widgets-icons bg-gradient-cosmic text-white"><i class="fadeIn animated bx bx-camera font-30"></i>
 									</div>
