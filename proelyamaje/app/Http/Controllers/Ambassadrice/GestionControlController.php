@@ -977,6 +977,8 @@ class GestionControlController extends Controller
                }
               }
 
+             }
+
                
              return view('gestion.statsdata',['result_data'=>$result_data,'result_datas'=>$result_datas,'result_name'=>$result_name]);
         }
