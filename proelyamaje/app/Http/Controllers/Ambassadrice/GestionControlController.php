@@ -959,7 +959,9 @@ class GestionControlController extends Controller
                     $donnees = " Gain live(%) : $pr_live% ; Gain élève(%) : $pr_eleve%";
                     // recupérer le nom de l'ambassadrice.
                     $chaine_name = array_search($val['id_ambassadrice'],$users);
+
                     $name = explode(',',$chaine_name);
+                    if($name!=""){
                     $result_data[] =[
                         'periode'=> $val['mois'].'  '.$val['annee'],
                         'name' =>$name[1],
@@ -969,6 +971,7 @@ class GestionControlController extends Controller
                 
                     ];
                 }
+              }
                    
                     
                     $result_somme_eleve[] = $val['somme_eleve'];
