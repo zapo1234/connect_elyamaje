@@ -34,7 +34,9 @@
 							</div>
 						</div>
 					</div>
+					@if(Auth()->user()->is_admin==2)
 					<div class="col">
+						
 						<div class="card radius-10">
 							<div class="card-body p-4">
 								<div class="d-flex align-items-center">
@@ -49,7 +51,7 @@
 							</div>
 						</div>
 					</div>
-
+                   @endif
 					<div class="col">
 						<div class="card radius-10">
 							<div class="card-body p-4">
