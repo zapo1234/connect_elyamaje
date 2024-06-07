@@ -743,25 +743,24 @@ class HistoriquePanierLiveRepository implements HistoriquePanierLiveInterface
            foreach($name_lists as $values){
                $chaine_y = array_search($values['code_mois'],$result_mois);
                if($chaine_y!==false){
-               $montant_live = explode(',',$chaine_y);
-               $mont_live = $montant_live[0];
-               $montant_true = $mont_live + $values['total'];
-               $gain_pourcent_live =   number_format($mont_live*100/$montant_true,2,".","");
-               $gain_pourcent_eleve =   number_format($values['total']*100/$montant_true,2,".","");
-               $montant_live = number_format($mont_live,2,".","");
-               $montant_eleve = number_format($values['total'],2,".","");
-
-               // regarde le chiffre affaire genere
+                 $montant_live = explode(',',$chaine_y);
+                 $mont_live = $montant_live[0];
+                 $montant_true = $mont_live + $values['total'];
+                 $gain_pourcent_live =   number_format($mont_live*100/$montant_true,2,".","");
+                 $gain_pourcent_eleve =   number_format($values['total']*100/$montant_true,2,".","");
+                 $montant_live = number_format($mont_live,2,".","");
+                 $montant_eleve = number_format($values['total'],2,".","");
+                 // regarde le chiffre affaire genere
                 $chiffre_genere = $montant_true*80/20;
                 $montant_genere = number_format($chiffre_genere,2,".","");
                
-               // recupérer le array plus haut
+                 // recupérer le array plus haut
                  $result_data_final[]=[
                  'Ambassadrice'=> array_search($id,$list_users),
                  'periode' => $this->getmois($values['code_mois']).' '.$annee,
-                 //'commission_live' => 'xxxx',
-                 //'commission_eleve'=>'xxxx',
-                // 'commission_total (€)' => 'xxxxx',
+                 'commission_live' => $mont_live,
+                 'commission_eleve'=>'xxxx',
+                 'commission_total (€)' => 'xxxxx',
                  'chiffre_affaire_generé (HT)'=>$montant_genere.'€.',
                  'live(%)'   =>  $gain_pourcent_live.'%',
                  'eleve(%)' =>   $gain_pourcent_eleve.'%'

@@ -130,8 +130,8 @@ class UserAmbassadriceController
                 // recupérer le nom de l'ambassadrice.
                 $chaine_name = array_search($val['id_ambassadrice'],$users);
                 if($chaine_name!=false){
-                $name = explode(',',$chaine_name);
-                $result_data[] =[
+                    $name = explode(',',$chaine_name);
+                    $result_data[] =[
                     'periode'=> $val['mois'].'  '.$val['annee'],
                     'name' =>$name[1],
                     'commission_live'=> $montant_live,
