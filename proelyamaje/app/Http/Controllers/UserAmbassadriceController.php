@@ -231,7 +231,6 @@ class UserAmbassadriceController
             // recuper les infos des ambassadrice.....
             $result_datas = $this->historique->gethistorique();
             $result_names = $this->historique->getDataid();
-            dd($result_names);
             // Extraire les valeurs du tableau associatif
              $values = array_values($result_names);
             // Trier les valeurs en ordre alphabétique croissant
