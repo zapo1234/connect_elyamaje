@@ -939,9 +939,7 @@ class GestionControlController extends Controller
              $lis = json_encode($data);
              $list = json_decode($data,true);
              $result_data =[];
-              
-              dump($users);
-              dd($list);
+            
              // 
              // recupérer les chiffre 
              $result_somme_eleve =[];
