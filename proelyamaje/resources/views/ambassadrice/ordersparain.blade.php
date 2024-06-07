@@ -31,11 +31,11 @@
 					</nav>
 				</div>
 
-					<div class="responsive_button ms-auto d-flex justify-content-end">
+					<!--<div class="responsive_button ms-auto d-flex justify-content-end">
 						<a href="{{ route('ambassadrice.account') }}" class="btn btn-primary radius-5 mt-2 mt-lg-0" >
 							<i class="bx bxs-plus-square"></i><span class="responsive_button_text">Créer un code promo élève</span>
 						</a>
-					</div>
+					</div><-->
 
 				</div>
 
