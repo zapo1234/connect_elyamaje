@@ -758,7 +758,7 @@ class HistoriquePanierLiveRepository implements HistoriquePanierLiveInterface
                  $result_data_final[]=[
                  'Ambassadrice'=> array_search($id,$list_users),
                  'periode' => $this->getmois($values['code_mois']).' '.$annee,
-                 'commission_live' => $mont_live,
+                 'commission_live' =>'xxxx',
                  'commission_eleve'=>'xxxx',
                  'commission_total (€)' => 'xxxxx',
                  'chiffre_affaire_generé (HT)'=>$montant_genere.'€.',
