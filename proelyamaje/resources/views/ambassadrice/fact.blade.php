@@ -280,7 +280,7 @@
 
                         <td data-label="Nombre ventes/lives" class="">{{ $resultat['nbrslive']  }} </td>
 
-                        <td data-label="Nombre ventes/code élève" class="">{{ $resultat['nbrseleve'] }}</td>
+                         <td data-label="Nombre ventes/code élève" class="">{{ $resultat['nbrseleve'] }}</td>
 
                            <td data-label="Nombre live/mesuel" class="">{{ $resultat['nbrsfois'] }}</td>
 

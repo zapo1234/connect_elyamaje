@@ -146,20 +146,15 @@
                                                 </div>
                                                 <div class="app-title">Factures</a></div>
                                             </div>
-                                            @if(Auth()->user()->id!=38)
                                             <div class="col text-center">
                                                 <a href ="{{ route('ambassadrice.liveforms')}}">
+                                                @if(Auth()->user()->is_admin!=4 && Auth()->user()->is_admin!=3 && Auth()->user()->is_admin!=1)
                                                 <div class="app-box mx-auto bg-gradient-moonlit text-white"><i class='lni lni-timer'></i>
                                                 </div>
                                                 <div class="app-title"> Programmer un live </a> </div>
-                                                 @else
-                                             <div> <a href="{{ route('error') }}"><i class="bx bx-right-arrow-alt"></i>Créer des codes</a>
-                            
-                                              </div>
-                                               @endif
-
-                            
-                                            </div>
+                                                @endif
+                                               
+                                                </div>
 
                                             <!-- <div class="col text-center">
                                                 <a href ="{{ route('ambassadrice.activate_live')}}">
