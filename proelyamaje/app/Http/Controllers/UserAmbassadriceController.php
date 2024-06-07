@@ -96,9 +96,9 @@ class UserAmbassadriceController
          }
 
         $result_datas = $this->historique->gethistorique();
-        $result_name = $this->historique->getDataid();
+        $result_names = $this->historique->getDataid();
 
-        dd($result_name);
+        $result_name = asort($result_names);
         
       // recupérer les données 
         // recuper les infos des ambassadrice.....
