@@ -1381,7 +1381,7 @@ class AmbassadriceController extends Controller
                    else{
                        
                            $message_lecture="";
-                           $message_lectures="Vous avez ajouté un code promo à cet élève";
+                           $message_lectures="L'envoi du code promo a bien été effectué";
                             $message_type="success";
                        
                             if(Auth::check()){
