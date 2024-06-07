@@ -935,6 +935,7 @@ class GestionControlController extends Controller
             //..............recupérer les données ...........
              $this->users->getUser();
              $users = $this->users->getUsrs();
+             dd($users);
              $data = $this->point->getAllfactures();
              $lis = json_encode($data);
              $list = json_decode($data,true);

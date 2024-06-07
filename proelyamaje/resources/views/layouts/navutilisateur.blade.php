@@ -73,14 +73,9 @@
                         <div class="menu-title">Lives</div>
                     </a>
                     <ul>
-                        <li> <a href="{{ route('utilisateurs.codelive') }}"><i class="bx bx-right-arrow-alt"></i>Programmer des lives</a>
+                        <li> <a href="{{ route('utilisateurs.codelive') }}"><i class="bx bx-right-arrow-alt"></i>Programmer des lives</a></li>
                         
-                        </li>
-                        
-                        
-                        <li> <a href="{{ route('utilisateurs.historiquelive')  }}"><i class="bx bx-right-arrow-alt"></i>Historique des lives</a>
-                        
-                        </li>
+                        <li> <a href="{{ route('utilisateurs.historiquelive')  }}"><i class="bx bx-right-arrow-alt"></i>Historique des lives</a></li>
                         
                         <li> <a href="{{ route('utilisateurs.paliercadeaux') }}"><i class="bx bx-right-arrow-alt"></i>Paliers live</a>
                         
