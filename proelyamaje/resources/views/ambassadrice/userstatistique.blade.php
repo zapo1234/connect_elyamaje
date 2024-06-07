@@ -72,8 +72,9 @@
 	
 			      
 
-			    
+		 
 		<div class="row">
+			@if(Auth()->user()->is_admin==2)
 			<div class="col-12 col-xl-6 d-flex">
 					<div class="card radius-10 w-100 ">
 						<div class="card-body">
@@ -106,7 +107,7 @@
 					</div>
 					
 				 </div>
-
+                 @endif
 
 				 <div class="col-12 col-xl-6 d-flex">
 					<div class="card radius-10 w-100 ">
