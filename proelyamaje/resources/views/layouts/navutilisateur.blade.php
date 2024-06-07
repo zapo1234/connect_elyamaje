@@ -73,7 +73,7 @@
                         <div class="menu-title">Lives</div>
                     </a>
                     <ul>
-                        <li> <a href="{{ route('utilisateurs.codelive') }}"><i class="bx bx-right-arrow-alt"></i>Activer des lives</a>
+                        <li> <a href="{{ route('utilisateurs.codelive') }}"><i class="bx bx-right-arrow-alt"></i>Programmer des lives</a>
                         
                         </li>
                         
