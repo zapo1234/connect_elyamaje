@@ -130,7 +130,7 @@ class UserAmbassadriceController
              if($val['name']!=""){
                 $result_data[] =[
                  'periode'=> $val['mois'].'  '.$val['annee'],
-                 'name' =>$name[1],
+                 'name' =>$val['name'],
                  'commission_live'=> $montant_live,
                  'commission_eleve'=>$montant_eleve,
                  'pourcentage'=> $donnees
