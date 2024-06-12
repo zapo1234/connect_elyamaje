@@ -298,7 +298,7 @@ class UserAmbassadriceController
             
             $this->users->getUser();
             $users = $this->users->getUsrs();// ambassadrice
-            $partenaire  = $this->users->getParts();
+           // $partenaire  = $this->users->getParts();
 
             // tableau d'affichage des partenaire
             $result_name =[];
@@ -321,14 +321,14 @@ class UserAmbassadriceController
                
                   if($val['is_admin']==4 && $val['somme_eleve']!=0){
                   // recupérer le nom de l'ambassadrice.
-                   $chaine_name = array_search($val['id_ambassadrice'],$partenaire);
-                   if($chaine_name!=false){
-                   $name = explode(',',$chaine_name);
-                   $result[] =[
-                    'periode'=> $val['mois'].'  '.$val['annee'],
-                    'name' =>$name[1],
-                    'nombre'=> $val['code_create'],
-                    'use'=>$val['nbrseleve']
+                  // $chaine_name = array_search($val['id_ambassadrice'],$partenaire);
+                   if($val['name']!=""){
+                   // $name = explode(',',$chaine_name);
+                     $result[] =[
+                     'periode'=> $val['mois'].'  '.$val['annee'],
+                     'name' =>$val['name'],
+                     'nombre'=> $val['code_create'],
+                     'use'=>$val['nbrseleve']
             
                    ];
                   }
