@@ -105,6 +105,8 @@ class UserAmbassadriceController
       $data = $this->point->getAllfactures();
       $lis = json_encode($data);
       $list = json_decode($data,true);
+
+      dd($list);
       $result_data =[];
      
         // 
