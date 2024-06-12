@@ -101,7 +101,7 @@ class UserAmbassadriceController
         
       // recupérer les données 
       $this->users->getUser();
-      //$users = $this->users->getUsrs();
+      $users = $this->users->getUsrs();
       $data = $this->point->getAllfactures();
       $lis = json_encode($data);
       $list = json_decode($data,true);
