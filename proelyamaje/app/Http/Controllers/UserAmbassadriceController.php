@@ -294,22 +294,7 @@ class UserAmbassadriceController
            // recupérer les données 
             // recuper les infos des ambassadrice.....
            // $result_datas = $this->historique->gethistorique();
-           // $result_name = $this->historique->getDataid();
-            
-            $this->users->getUser();
-            $users = $this->users->getUsrs();// ambassadrice
-            $partenaire  = $this->users->getParts();
-
-            // tableau d'affichage des partenaire
-            $result_name =[];
-
-            foreach($partenaire as $key => $vals){
-                  $chaine_key = explode(',',$key);
-
-                  $result_name[$chaine_key[0]] = $chaine_key[1];
-            }
-
-            $result_name =[];
+           // $result_name = $this->historique->getDataid()
 
             $data = $this->point->getAllfactures();
         
@@ -338,8 +323,6 @@ class UserAmbassadriceController
                     $result_name[$val['id_ambassadrice']]=$val['name'];
                 }
             }
-
-            dd($result_name);
             
 
             return view('utilisateurs.suivicodepart',['result'=>$result,'result_name'=>$result_name]);
