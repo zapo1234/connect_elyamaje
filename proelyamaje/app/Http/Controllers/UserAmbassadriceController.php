@@ -103,6 +103,7 @@ class UserAmbassadriceController
       $this->users->getUser();
       //$users = $this->users->getUsrs();
       $data = $this->point->getAllfactures();
+      dd($data);
       $lis = json_encode($data);
       $list = json_decode($data,true);
       $result_data =[];
