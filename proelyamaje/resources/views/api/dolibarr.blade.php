@@ -525,7 +525,7 @@
                             <div id="error_code"></div>
                         </div>
                         <div class="p-2 d-flex justify-content-center">
-                            <div class="spinner-border d-none text-dark" role="status"> <span class="visually-hidden">Loading...</span></div>
+                           
                             <button type="button"  data-bs-dismiss="modal" class="button_form annuler" style="width:100px;background-color:#eee;color:black;border:2px solid #eee;border-radius:15px;">Annuler</button>
                             <button type="button" class="button_form validate" style="width:100px;margin-left:10px;border-radius:15px;font-weight:bold">Oui</button>
                         </div>

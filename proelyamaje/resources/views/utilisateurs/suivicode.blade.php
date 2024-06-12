@@ -39,10 +39,6 @@
 
 						<div class="table-responsive p-3">
 
-						<div class="d-flex justify-content-center w-100 loading"> 
-							<div class="spinner-border text-dark" role="status"> <span class="visually-hidden">Loading...</span></div>
-						</div>
-
 							<table id="example"  class="d-none table_mobile_responsive table table-striped table-bordered" style="width:100%;text-align:center">
 
 								<thead>
