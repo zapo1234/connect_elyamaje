@@ -83,6 +83,10 @@
 				<div class="card card_table_mobile_responsive">
 					<div class="card-body">
 
+                  <div class="d-flex justify-content-center w-100 loading"> 
+                     <div class="spinner-border text-dark" role="status"> <span class="visually-hidden">Loading...</span></div>
+                  </div>
+
                   <div class="table-responsive">
                      <div class="d-flex flex-wrap">
                         <!-- Form recherche par type utilisateur -->
