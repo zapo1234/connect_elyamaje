@@ -296,20 +296,8 @@ class UserAmbassadriceController
            // $result_datas = $this->historique->gethistorique();
            // $result_name = $this->historique->getDataid();
             
-            $this->users->getUser();
-            $users = $this->users->getUsrs();// ambassadrice
-            $partenaire  = $this->users->getParts();
-
-            // tableau d'affichage des partenaire
-            $result_name =[];
-
-            foreach($partenaire as $key => $vals){
-                  $chaine_key = explode(',',$key);
-
-                  $result_name[$chaine_key[0]] = $chaine_key[1];
-            }
-
-            $data = $this->point->getAllfactures();
+        
+           $data = $this->point->getAllfactures();
         
             $lis = json_encode($data);
             $list = json_decode($data,true);
@@ -317,6 +305,7 @@ class UserAmbassadriceController
             $result_data =[];
           
             $result =[];
+            $result_name =[];
             foreach($list as $val){
                
                   if($val['is_admin']==4 && $val['somme_eleve']!=0){
@@ -331,6 +320,8 @@ class UserAmbassadriceController
                      'use'=>$val['nbrseleve']
             
                    ];
+                     // je recupere
+                     $result_name[$val['id']] = $val['name'];
                   }
                 }
             }
