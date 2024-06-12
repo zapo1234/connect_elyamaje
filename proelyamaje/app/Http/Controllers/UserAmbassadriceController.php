@@ -132,9 +132,6 @@ class UserAmbassadriceController
                 ];
              
          }
-
-         dump($result_data);
-         dd($result_datas);
          return view('utilisateurs.statsdatauser',['result_data'=>$result_data,'result_datas'=>$result_datas,'result_name'=>$result_name]);
     }
    }
