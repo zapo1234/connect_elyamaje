@@ -96,17 +96,8 @@ class UserAmbassadriceController
          }
 
         $result_datas = $this->historique->gethistorique();
-        $result_names = $this->historique->getDataid();
+        $result_name = $this->historique->getDataid();
         // Extraire les valeurs du tableau associatif
-         $values = array_values($result_names);
-        // Trier les valeurs en ordre alphabétique croissant
-         sort($values);
-         $result_name =[];
-
-         foreach($values as $key =>$val){
-            
-            $result_name[$key] = $val;
-         }
         
       // recupérer les données 
         // recuper les infos des ambassadrice.....
@@ -133,7 +124,7 @@ class UserAmbassadriceController
                     $name = explode(',',$chaine_name);
                     $result_data[] =[
                     'periode'=> $val['mois'].'  '.$val['annee'],
-                    'name' =>$name[1],
+                    'name' =>'Ambassadrice',
                     'commission_live'=> $montant_live,
                     'commission_eleve'=>$montant_eleve,
                     'pourcentage'=> $donnees
