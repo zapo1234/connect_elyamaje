@@ -296,8 +296,20 @@ class UserAmbassadriceController
            // $result_datas = $this->historique->gethistorique();
            // $result_name = $this->historique->getDataid();
             
-        
-           $data = $this->point->getAllfactures();
+            $this->users->getUser();
+            $users = $this->users->getUsrs();// ambassadrice
+            $partenaire  = $this->users->getParts();
+
+            // tableau d'affichage des partenaire
+            $result_name =[];
+
+            foreach($partenaire as $key => $vals){
+                  $chaine_key = explode(',',$key);
+
+                  $result_name[$chaine_key[0]] = $chaine_key[1];
+            }
+
+            $data = $this->point->getAllfactures();
         
             $lis = json_encode($data);
             $list = json_decode($data,true);
@@ -321,7 +333,6 @@ class UserAmbassadriceController
             
                    ];
                      // je recupere
-                     $result_name[$val['id']] = $val['name'];
                   }
                 }
             }
