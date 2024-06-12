@@ -673,6 +673,7 @@ class AmbassadricecustomerRepository implements AmbassadricecustomerInterface
     public function  getcodeleve($id,$annee)
     {
         
+      
          $data =  DB::table('ambassadricecustomers')->select('email','date','code_promo')->where('id_ambassadrice','=',$id)->get();
          $name_list = json_encode($data);
          $name_list = json_decode($data,true);

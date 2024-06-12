@@ -108,7 +108,7 @@ class UserAmbassadriceController
          $list = json_decode($data,true);
          $result_data =[];
          foreach($list as $val){
-            if($val['somme_live']!=0 OR $val['somme_eleve']!=0){
+            
                if($val['is_admin']==2){
                 $total = $val['somme_live']+$val['somme_eleve'];
                 $pourcentageeleve = $val['somme_eleve']*100/$total;
@@ -130,7 +130,7 @@ class UserAmbassadriceController
                     'pourcentage'=> $donnees
             
                 ];
-             }
+             
          }
 
          dump($result_data);
