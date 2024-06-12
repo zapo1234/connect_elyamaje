@@ -100,38 +100,52 @@ class UserAmbassadriceController
         // Extraire les valeurs du tableau associatif
         
       // recupérer les données 
-        // recuper les infos des ambassadrice.....
-         $this->users->getUser();
-         $users = $this->users->getUsrs();
-         $data = $this->point->getAllfactures();
-         $lis = json_encode($data);
-         $list = json_decode($data,true);
-         $result_data =[];
-         foreach($list as $val){
-            
-               if($val['is_admin']==2){
-                $total = $val['somme_live']+$val['somme_eleve'];
-                $pourcentageeleve = $val['somme_eleve']*100/$total;
-                $pourcentagelive = $val['somme_live']*100/$total;
-                $montant_live = number_format($val['somme_live'],2,',',' ');
-                $montant_eleve = number_format($val['somme_eleve'],2,',',' ');
-                $pr_eleve = number_format($pourcentageeleve, 2, ',', ' ');
-                $pr_live = number_format($pourcentagelive, 2, ',',' ');
-                $donnees = " Gain live(%) : $pr_live% ; Gain élève(%) : $pr_eleve%";
-                // recupérer le nom de l'ambassadrice.
-                $chaine_name = array_search($val['id_ambassadrice'],$users);
-                
-                    $name = explode(',',$chaine_name);
-                    $result_data[] =[
-                    'periode'=> $val['mois'].'  '.$val['annee'],
-                    'name' =>$name[1],
-                    'commission_live'=> $montant_live,
-                    'commission_eleve'=>$montant_eleve,
-                    'pourcentage'=> $donnees
-            
-                ];
-             
-         }
+      $this->users->getUser();
+      $users = $this->users->getUsrs();
+      $data = $this->point->getAllfactures();
+      $lis = json_encode($data);
+      $list = json_decode($data,true);
+      $result_data =[];
+     
+        // 
+        // recupérer les chiffre 
+        $result_somme_eleve =[];
+        $result_somme_live =[];
+        $result_data_mois =[];
+        foreach($list as $val){
+
+        // recupérer les montant...
+         if($val['somme_live']!=0 OR $val['somme_eleve']!=0){
+              if($val['is_admin']==2){
+              $total = $val['somme_live']+$val['somme_eleve'];
+              $pourcentageeleve = $val['somme_eleve']*100/$total;
+              $pourcentagelive = $val['somme_live']*100/$total;
+              $montant_live = number_format($val['somme_live'],2,',',' ');
+              $montant_eleve = number_format($val['somme_eleve'],2,',',' ');
+              $pr_eleve = number_format($pourcentageeleve, 2, ',', ' ');
+              $pr_live = number_format($pourcentagelive, 2, ',',' ');
+              $donnees = " Gain live(%) : $pr_live% ; Gain élève(%) : $pr_eleve%";
+              // recupérer le nom de l'ambassadrice.
+               $chaine_name = array_search($val['id_ambassadrice'],$users);
+             if($chaine_name!=false){
+               $name = explode(',',$chaine_name);
+               $result_data[] =[
+                 'periode'=> $val['mois'].'  '.$val['annee'],
+                 'name' =>$name[1],
+                 'commission_live'=> $montant_live,
+                 'commission_eleve'=>$montant_eleve,
+                 'pourcentage'=> $donnees
+         
+              ];
+           }
+          
+             $result_somme_eleve[] = $val['somme_eleve'];
+              $result_somme_live[] = $val['somme_live'];
+        }
+       }
+
+      }
+
          return view('utilisateurs.statsdatauser',['result_data'=>$result_data,'result_datas'=>$result_datas,'result_name'=>$result_name]);
     }
    }
