@@ -296,6 +296,8 @@ class UserAmbassadriceController
            // $result_datas = $this->historique->gethistorique();
            // $result_name = $this->historique->getDataid();
             
+            $this->users->getUser();
+            $users = $this->users->getUsrs();// ambassadrice
             $partenaire  = $this->users->getParts();
 
             // tableau d'affichage des partenaire
