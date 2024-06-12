@@ -103,10 +103,8 @@ class UserAmbassadriceController
       $this->users->getUser();
       //$users = $this->users->getUsrs();
       $data = $this->point->getAllfactures();
-      
       $lis = json_encode($data);
       $list = json_decode($data,true);
-      dd($list);
       $result_data =[];
      
         // 
@@ -128,11 +126,12 @@ class UserAmbassadriceController
               $pr_live = number_format($pourcentagelive, 2, ',',' ');
               $donnees = " Gain live(%) : $pr_live% ; Gain élève(%) : $pr_eleve%";
               // recupérer le nom de l'ambassadrice.
-               //$chaine_name = array_search($val['id_ambassadrice'],$users);
-             if($val['name']!=""){
-                $result_data[] =[
+               $chaine_name = array_search($val['id_ambassadrice'],$users);
+             if($chaine_name!=false){
+               $name = explode(',',$chaine_name);
+               $result_data[] =[
                  'periode'=> $val['mois'].'  '.$val['annee'],
-                 'name' =>$val['name'],
+                 'name' =>$name[1],
                  'commission_live'=> $montant_live,
                  'commission_eleve'=>$montant_eleve,
                  'pourcentage'=> $donnees
