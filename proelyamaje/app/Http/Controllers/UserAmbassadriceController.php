@@ -240,19 +240,19 @@ class UserAmbassadriceController
                if($val['somme_live']!=0){
                   if($val['is_admin']==2){
                 
-                  // recupérer le nom de l'ambassadrice.
+                   // recupérer le nom de l'ambassadrice.
                    $chaine_name = array_search($val['id_ambassadrice'],$users);
                    if($chaine_name!=false){
                       $name = explode(',',$chaine_name);
                        $result[] =[
                        'periode'=> $val['mois'].'  '.$val['annee'],
-                       'name' =>'ambassadrice',
+                       'name' =>$chaine_name,
                        'nombre'=> $val['code_create'],
                        'use'=>$val['nbrseleve']
                
                    ];
                   }
-               }
+                }
               }
                
             }
