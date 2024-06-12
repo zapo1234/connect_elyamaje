@@ -105,8 +105,6 @@ class UserAmbassadriceController
       $data = $this->point->getAllfactures();
       $lis = json_encode($data);
       $list = json_decode($data,true);
-
-      dd($list);
       $result_data =[];
      
         // 
@@ -130,8 +128,8 @@ class UserAmbassadriceController
               // recupérer le nom de l'ambassadrice.
                $chaine_name = array_search($val['id_ambassadrice'],$users);
              if($chaine_name!=false){
-               $name = explode(',',$chaine_name);
-               $result_data[] =[
+                $name = explode(',',$chaine_name);
+                $result_data[] =[
                  'periode'=> $val['mois'].'  '.$val['annee'],
                  'name' =>$name[1],
                  'commission_live'=> $montant_live,
