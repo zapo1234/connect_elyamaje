@@ -1252,7 +1252,7 @@ public function caisselist()
   
          }
           $result_data = $this->historique->gethistorique();
-          $result_name = $this->historique->getDataid();
+          $result_name = $this->historique->getData();
           // Extraire les valeurs du tableau associatif
         
            return view('utilisateurs.ambassadricevente',['result_data'=>$result_data,'result_name'=>$result_name]);
