@@ -317,7 +317,6 @@ class UserAmbassadriceController
             $result_data =[];
           
             $result =[];
-            $result_name =[];
             foreach($list as $val){
                
                   if($val['is_admin']==4 && $val['somme_eleve']!=0){
@@ -332,7 +331,6 @@ class UserAmbassadriceController
                      'use'=>$val['nbrseleve']
             
                    ];
-                     // je recupere
                   }
                 }
             }
