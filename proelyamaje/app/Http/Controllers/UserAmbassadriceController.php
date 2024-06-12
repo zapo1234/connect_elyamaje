@@ -298,7 +298,7 @@ class UserAmbassadriceController
             
             $this->users->getUser();
             $users = $this->users->getUsrs();// ambassadrice
-           // $partenaire  = $this->users->getParts();
+            $partenaire  = $this->users->getParts();
 
             // tableau d'affichage des partenaire
             $result_name =[];
