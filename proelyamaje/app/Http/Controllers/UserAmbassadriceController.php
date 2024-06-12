@@ -233,17 +233,8 @@ class UserAmbassadriceController
              // recupérer les données 
             // recuper les infos des ambassadrice.....
             $result_datas = $this->historique->gethistorique();
-            $result_names = $this->historique->getDataid();
+            $result_name = $this->historique->getDataid();
             // Extraire les valeurs du tableau associatif
-             $values = array_values($result_names);
-            // Trier les valeurs en ordre alphabétique croissant
-             sort($values);
-             $result_name =[];
-    
-             foreach($values as $key =>$val){
-                
-                $result_name[$key] = $val;
-             }
             $this->users->getUser();
             $users = $this->users->getUsrs();
         
@@ -308,24 +299,13 @@ class UserAmbassadriceController
             $partenaire  = $this->users->getParts();
 
             // tableau d'affichage des partenaire
-            $result_names =[];
+            $result_name =[];
 
             foreach($partenaire as $key => $vals){
                   $chaine_key = explode(',',$key);
 
-                  $result_names[$chaine_key[0]] = $chaine_key[1];
+                  $result_name[$chaine_key[0]] = $chaine_key[1];
             }
-
-            $values = array_values($result_names);
-            // Trier les valeurs en ordre alphabétique croissant
-             sort($values);
-
-            $result_name =[];
-    
-             foreach($values as $key =>$val){
-                
-                $result_name[$key] = $val;
-             }
 
             $data = $this->point->getAllfactures();
         
