@@ -251,7 +251,7 @@ class UserAmbassadriceController
                 
                    // recupérer le nom de l'ambassadrice.
                    //$chaine_name = array_search($val['id_ambassadrice'],$users);
-                   if($val['name']==""){
+                   if($val['name']!=""){
                       //$name = explode(',',$chaine_name);
                        $result[] =[
                        'periode'=> $val['mois'].'  '.$val['annee'],
