@@ -96,7 +96,7 @@ class UserAmbassadriceController
          }
 
         $result_datas = $this->historique->gethistorique();
-        $result_name = $this->historique->getDataid();
+        $result_name = $this->historique->getData();
         // Extraire les valeurs du tableau associatif
         
       // recupérer les données 
