@@ -309,6 +309,8 @@ class UserAmbassadriceController
                   $result_name[$chaine_key[0]] = $chaine_key[1];
             }
 
+            $result_name =[];
+
             $data = $this->point->getAllfactures();
         
             $lis = json_encode($data);
@@ -332,9 +334,12 @@ class UserAmbassadriceController
             
                    ];
                   }
+
+                    $result_name[$val['id']]=$val['name'];
                 }
             }
 
+            dd($result_name);
             
 
             return view('utilisateurs.suivicodepart',['result'=>$result,'result_name'=>$result_name]);
