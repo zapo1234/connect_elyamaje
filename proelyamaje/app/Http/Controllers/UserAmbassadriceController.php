@@ -238,12 +238,10 @@ class UserAmbassadriceController
             $result_name = $this->historique->getDataid();
             // Extraire les valeurs du tableau associatif
             $this->users->getUser();
-            $users = $this->users->getUsrs();
+           // $users = $this->users->getUsrs();
         
             $data = $this->point->getAllfactures();
-
-            
-            $lis = json_encode($data);
+             $lis = json_encode($data);
             $list = json_decode($data,true);
             
             $result_data =[];
@@ -252,12 +250,12 @@ class UserAmbassadriceController
                   if($val['is_admin']==2){
                 
                    // recupérer le nom de l'ambassadrice.
-                   $chaine_name = array_search($val['id_ambassadrice'],$users);
-                   if($chaine_name!=false){
-                      $name = explode(',',$chaine_name);
+                   //$chaine_name = array_search($val['id_ambassadrice'],$users);
+                   if($val['name']==""){
+                      //$name = explode(',',$chaine_name);
                        $result[] =[
                        'periode'=> $val['mois'].'  '.$val['annee'],
-                       'name' =>$name[1],
+                       'name' =>$val['name'],
                        'nombre'=> $val['code_create'],
                        'use'=>$val['nbrseleve']
                
