@@ -335,7 +335,7 @@ class UserAmbassadriceController
                    ];
                   }
 
-                    $result_name[$val['id']]=$val['name'];
+                    $result_name[$val['id_ambassadrice']]=$val['name'];
                 }
             }
 
