@@ -285,7 +285,7 @@ class UtilisateursController extends Controller
           }
 
            // mettre a jour le tableau de bord pur les id
-            $new_status ="";
+          /*  $new_status ="";
             $csss="";
             $nombre_fois=0;
             DB::table('codelives')
@@ -294,6 +294,7 @@ class UtilisateursController extends Controller
                'css'=> $csss,
                 'nombre_fois'=>$nombre_fois
                 ));
+            */
 
            return view('utilisateurs.codelive', ['userlives'=>$userlives,'error'=>$error, 'message'=>$message,'message_error'=>$message_error,'css'=>$css]);
 
