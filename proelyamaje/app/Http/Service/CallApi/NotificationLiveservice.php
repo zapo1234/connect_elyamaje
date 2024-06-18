@@ -21,7 +21,7 @@ class NotificationLiveservice
 
        public function getLives()
        {
-            // recupérer les lives dela date encurs de delenchement
+          /*   // recupérer les lives dela date encurs de delenchement
             // recupérer tous les live nom declenche de live 
             $result = DB::table('choix_panier_lives')->select('id_live','date_live','code_live')->get();
             $list = json_encode($result);
@@ -111,6 +111,8 @@ class NotificationLiveservice
               }
 
             }
+
+          */
             
             dd('pas de live notive');
          
