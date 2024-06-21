@@ -33,7 +33,7 @@ class Colliship
                 $date_true = $date->format('Y-m-d');
                 $date_trues = $date->format('Y-m-d H:i:s');
                 $date_tru = $date1->format('Y-m-d H:i:s');
-                $array_montant =  array('59.60','55.62','55.60','67.60');
+                $array_montant =  array('59.60','55.62','55.60','67.60','54.60');
                 $array_montants = implode(',',$array_montant);
                 $datas_facture = DB::connection('mysql2')->select("SELECT rowid ,datec FROM llxyq_facture WHERE total_ttc IN (".$array_montants.") AND  datef > '$date_true' AND fk_mode_reglement=54  AND paye=1");
                 $datas = json_encode($datas_facture);
