@@ -198,7 +198,7 @@
                    
                  </li>
 
-                   @if(Auth()->user()->id == 91 OR Auth()->user()->id == 100)
+                   @if(Auth()->user()->id == 100 OR Auth()->user()->id == 140)
                  <li>
                     <a href="javascript:;" class="has-arrow">
                         <div class="parent-icon"><i class="fadeIn animated bx bx-store-alt"></i>
