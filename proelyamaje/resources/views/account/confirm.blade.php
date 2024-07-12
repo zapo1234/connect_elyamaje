@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>elyamaje confirm </title>
      <!-- Custom fonts for this template-->
-    <link href="https://erp.elyamaje.com/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://connect.elyamaje.com/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 	<link rel="icon" type="image/png" href="https://prodev.elyamaje.com/admin/img/Logo_elyamaje.png" />
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
@@ -31,7 +31,7 @@
   <body>
     <div class="response"> 
       <!-- Sidebar - Brand -->
-    <div class="imc" style="margin-top:100px"><img id="imj" src="https://erp.elyamaje.com/admin/img/Logo_elyamaje.png" width="105px";
+    <div class="imc" style="margin-top:100px"><img id="imj" src="https://connect.elyamaje.com/admin/img/Logo_elyamaje.png" width="105px";
 					height="auto";></div>
 
      <div class="h2">Vous avez bien ajouté un nouveau compte utilisateur ! </div>
@@ -62,7 +62,7 @@
     
     <script type="text/javascript">
       function redirection() {
-        window.location.replace("https://connect.elyamaje.com/account/list");
+        window.location.replace("https://www.connect.elyamaje.com/account/list");
       }      
       setTimeout("redirection()", 3000);
     </script>

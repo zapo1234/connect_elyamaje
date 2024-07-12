@@ -62,7 +62,7 @@
     
     <script type="text/javascript">
       function redirection() {
-        window.location.replace("https://connect.elyamaje.com/ambassadrice/customer/list");
+        window.location.replace("https://www.connect.elyamaje.com/ambassadrice/customer/list");
       }      
       setTimeout("redirection()", 3000);
     </script>
