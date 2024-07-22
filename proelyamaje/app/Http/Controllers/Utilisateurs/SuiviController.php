@@ -290,9 +290,9 @@ class SuiviController extends Controller
                foreach($datas as $values){
                     $resultat[] = [
 
-                     'fk_categorie'=>$datas['fk_categorie'],
-                     'fk_product' => $datas['fk_product'],
-                     'import_key'=> $datas['import_key']
+                     'fk_categorie'=>$values['fk_categorie'],
+                     'fk_product' => $values['fk_product'],
+                     'import_key'=> $values['import_key']
                   ];
 
                }
