@@ -282,8 +282,8 @@ class SuiviController extends Controller
               // recuperer les données api dolibar propers prod tous les clients.
 
               dd('zapo');
-            
-              // actualisation de la table categorie-products...
+
+               // actualisation de la table categorie-products...
                $datas_facture = DB::connection('mysql2')->select("SELECT fk_categorie,fk_product,import_key  FROM llxyq_categorie_product");
                $datas = json_encode($datas_facture);
                $datas = json_decode($datas,true);
@@ -300,29 +300,26 @@ class SuiviController extends Controller
 
                }
 
-                // recupérer de la datas ....
+               dd($resultat);
 
-                dd($resultat);
-
-
-             /*   $method = "GET";
+            /*   $method = "GET";
                $apiKey = env('KEY_API_DOLIBAR_PROD');
                $apiUrl ="https://www.poserp.elyamaje.com/api/index.php/";
                //Recuperer les ref et id product dans un tableau
                $produitParam = ["limit" => 10000, "sortfield" => "rowid","sortorder" => "DESC"];
                 $data = $this->diffproduct->getFacturedol2();
                // taitement des doublons
-                // recupérer les données créer un tableau associatives entre les ids client et le montant,et ref facture
-               $data_customer =[]; // recupérer ids avec le montant de la facture.
-                $data_customer_ref_facture =[];// recupérer ids client et la ref facture
+              // recupérer les données créer un tableau associatives entre les ids client et le montant,et ref facture
+                $data_customer =[]; // recupérer ids avec le montant de la facture.
+               $data_customer_ref_facture =[];// recupérer ids client et la ref facture
             
                $data_date =[];// recupérer les date des facture pour les socids;
             
-               $facture ="TC4-";
-               $facture1 ="TC1-";
-                $facture2 ="PROV";
+              $facture ="TC4-";
+              $facture1 ="TC1-";
+              $facture2 ="PROV";
 
-              foreach($data as $key => $values){
+             foreach($data as $key => $values){
                 
                 if(strpos($values['ref'],$facture)==false OR strpos($values['ref'],$facture1)==false  OR strpos($values['ref'],$facture2)==false) {
 
@@ -432,9 +429,8 @@ class SuiviController extends Controller
             } 
        // recupérer les données $tab1
        
-       
+       */
         // return view('api.doublonsfact');
-      */
     }
 
 
