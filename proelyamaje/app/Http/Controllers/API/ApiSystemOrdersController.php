@@ -430,8 +430,9 @@ class ApiSystemOrdersController extends Controller
       public function postdistributeur(Request $request)
       {
           
-          if(Auth()->user()->is_admin ==1)
-          {
+          if(Auth()->user()->is_admin ==1) {
+
+            dd('zapo');
             if($request->from_cron){
               $request->from_cron == "false" ? $from_cron = false : $from_cron = true;
             } else {
