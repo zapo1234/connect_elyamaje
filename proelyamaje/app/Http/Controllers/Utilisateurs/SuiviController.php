@@ -280,6 +280,8 @@ class SuiviController extends Controller
     {
         try{
               // recuperer les données api dolibar propers prod tous les clients.
+
+              dd('zapo');
               $method = "GET";
                $apiKey = env('KEY_API_DOLIBAR_PROD');
                $apiUrl ="https://www.poserp.elyamaje.com/api/index.php/";
