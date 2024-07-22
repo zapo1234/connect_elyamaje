@@ -300,7 +300,13 @@ class SuiviController extends Controller
 
                }
 
+               catch (Exception $e) {
+        
+                    
+                }
+
                dd($resultat);
+          }
 
             /*   $method = "GET";
                $apiKey = env('KEY_API_DOLIBAR_PROD');
