@@ -278,17 +278,14 @@ class SuiviController extends Controller
     
     public function doublonsfact(Request $request)
     {
-        try{
+        
               // recuperer les données api dolibar propers prod tous les clients.
-
-              dd('zapo');
 
                // actualisation de la table categorie-products...
                $datas_facture = DB::connection('mysql2')->select("SELECT fk_categorie,fk_product,import_key  FROM llxyq_categorie_product");
                $datas = json_encode($datas_facture);
                $datas = json_decode($datas,true);
-
-               $resultat =[];
+                $resultat =[];
 
                foreach($datas as $values){
                     $resultat[] = [
@@ -300,13 +297,8 @@ class SuiviController extends Controller
 
                }
 
-               catch (Exception $e) {
-        
-                    
-                }
+             dd($resultat);
 
-               dd($resultat);
-          }
 
             /*   $method = "GET";
                $apiKey = env('KEY_API_DOLIBAR_PROD');
