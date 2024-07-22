@@ -1492,13 +1492,14 @@ class AmbassadriceController extends Controller
                                                     'amount' => $som,
                                                     'date_created' => $current,
                                                     'date_created_gmt'=> $current,
-                                                   'date_modified' => $current,
-                                                   'date_modified_gmt' => $current,
-                                                   'description'=>$description,
+                                                     'date_modified' => $current,
+                                                    'date_modified_gmt' => $current,
+                                                     'description'=>$description,
                                                      'discount_type' => 'percent',
                                                       'usage_limit' => '1',
                                                        'exclude_sale_items' =>true,
                                                        'individual_use' => true,
+                                                       'exclude_product_ids' => [160265],
                 
                                                 ];
               
