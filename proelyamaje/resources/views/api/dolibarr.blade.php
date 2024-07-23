@@ -125,7 +125,7 @@
                                         <th colspan="5">Commandes</th>
                                     </tr>
                                     <tr id="detect_double_dolibarr">
-                                        <td data-label="Nom">Mise a jours des categoris/products(table categoris Id)</td>
+                                        <td data-label="Nom">Mise a jours des categoris/products(stocks entrepot) NB : au cas ou y'a eu des changement dans dolibar produit dans des categoris</td>
                                         <td class="last_execution" data-label="Dernière exécution">{{ isset($cron['detect_double_dolibarr']) ? $cron['detect_double_dolibarr']['updated_at'] : ''}}</td>
                                         <td class="status" data-label="Status">  
                                             @if($cron)
