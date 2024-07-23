@@ -280,8 +280,7 @@ class SuiviController extends Controller
     {
         
               // recuperer les données api dolibar propers prod tous les clients.
-
-               // actualisation de la table categorie-products...
+              // actualisation de la table categorie-products...
                $datas_facture = DB::connection('mysql2')->select("SELECT fk_categorie,fk_product,import_key  FROM llxyq_categorie_product");
                $datas = json_encode($datas_facture);
                $datas = json_decode($datas,true);
@@ -297,8 +296,14 @@ class SuiviController extends Controller
 
                }
 
-             dd($resultat);
+                // suprimer la table .
+                DB::table('categorie_products')->truncate();
 
+               // la remplie par les nouveaux.
+                DB::table('categorie_products')->insert($resultat);
+
+                dd('ok');
+              
 
             /*   $method = "GET";
                $apiKey = env('KEY_API_DOLIBAR_PROD');
