@@ -300,8 +300,6 @@ class SuiviController extends Controller
 
                // la remplie par les nouveaux.
                 DB::table('categorie_products')->insert($resultat);
-
-                dd('ok');
               
 
             /*   $method = "GET";
