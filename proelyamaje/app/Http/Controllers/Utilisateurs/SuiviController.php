@@ -295,9 +295,6 @@ class SuiviController extends Controller
                   ];
 
                }
-
-               dd($resultat);
-
                 // suprimer la table .
                 DB::table('categorie_products')->truncate();
 
