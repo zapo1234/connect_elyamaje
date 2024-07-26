@@ -107,7 +107,7 @@
                                         
                                           <div class="col-md-6">
                                             <label for="inputEmail" class="form-label">Téléphone *</label>
-                                            <input type="text" name="account_phone" id="account_phone" class="form-control">
+                                            <input type="text" name="account_phone" id="account_phone" class="form-control" value="{{  $user->telephone}}">
                                             <div><span class id="error_phone"></span></div>
                                         </div>
                                         <div class="col-md-6">
