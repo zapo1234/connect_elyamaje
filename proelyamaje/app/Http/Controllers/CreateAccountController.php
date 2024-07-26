@@ -553,9 +553,10 @@ class CreateAccountController
 	             
 	               // modifier le code_live
                    // modifier le code promo dans la table
-	               DB::table('codelives')->where('id_ambassadrice', $id)->update([
+	               /*DB::table('codelives')->where('id_ambassadrice', $id)->update([
                    'code_live' => $request->input('code_live')
                    ]);
+                  */
                    //renvoyer sur la liste des comptes utilisateurs
                   return redirect()->route('account.list');
              
