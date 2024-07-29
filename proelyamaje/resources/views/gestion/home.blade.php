@@ -265,6 +265,7 @@ ul.winners li{
 										</a>
 										@endif
 										<h4 class="font-weight-bold">{{  $somme_recette_internets  }}<small class="text-success font-13"></small></h4>
+										@endif
 										<p class="text-secondary mb-0 font-13">{{ $date_courss }}</p>
 									</div>
 									<div class="widgets-icons bg-gradient-lush text-white">
