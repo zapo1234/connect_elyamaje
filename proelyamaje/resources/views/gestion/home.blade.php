@@ -263,7 +263,7 @@ ul.winners li{
 										<a style="color: #525f7f;position:absolute; bottom:15px; left:45%;font-weight:bold" class="100 show_more_dashboard" href="{{ route('gestion.recettesinternets') }}">
 											<span>Voir +</span>
 										</a>
-										@endif
+									
 										<h4 class="font-weight-bold">{{  $somme_recette_internets  }}<small class="text-success font-13"></small></h4>
 										@endif
 										<p class="text-secondary mb-0 font-13">{{ $date_courss }}</p>
