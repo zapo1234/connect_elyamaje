@@ -1101,6 +1101,8 @@ class AmbassadriceOrdercustomsController extends Controller
                             // recupérer id du code carte cadeau et faire un update.
                              $urss ="https://www.elyamaje.com/wp-json/wc-pimwick/v1/pw-gift-cards?number=$code";
                             $result_number = $this->api->getDataApiWoocommerce($urss);
+
+                            dd($result_number);
                             
                              $codecards = $code;
                             // $infos_cards= $this->getcard->getCodecards($codecards);
