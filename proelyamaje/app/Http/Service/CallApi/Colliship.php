@@ -26,7 +26,7 @@ class Colliship
           
                 $date = new DateTime();
                 $date1 = new DateTime();
-                // Soustrait un jour à la date actuelle
+                // Soustrait un jour à la date actuelle....
                 $date->modify('-10 day');
                  $date1->modify('-180');
                 
