@@ -15,6 +15,7 @@
                         L'Ambassadrice Elyamaje vous a attribué un code promotionnel. Grâce à ce code, vous avez accès à 10% de reduction sur tous les produits du site <a href="https://www.elyamaje.com">elyamaje.com</a>.<br/><br/>
                         Voici votre code élève <strong>{{ $code }}</strong> pour effectuer vos achats. <br><br>
                         Ce code est valable une seule fois lors de votre première commande.<br><br>
+                        <a href="{{ asset('admin/uploads/code_image_eleve.jpeg')}}" data-lightbox="on"><img i src="{{ asset('admin/uploads/code_image_eleve.jpeg')}}" width="100%" height="auto" style="margin-top:20px;margin:auto;max-width:450px;"></a>
                     </td>
                 </tr>
             </table>
