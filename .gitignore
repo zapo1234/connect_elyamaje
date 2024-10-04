@@ -1,5 +1,4 @@
 .htaccess
-index.php
 # -----------
 proelyamaje/public/hot
 proelyamaje/node_modules/
@@ -19,3 +18,4 @@ proelyamaje/.vscode
 admin/uploads/
 admin/Upload/
 proelyamaje/composer.lock
+node_modules
