@@ -1,0 +1,69 @@
+name: Déploiement en prod
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupération du code
+        uses: actions/checkout@v4
+        continue-on-error: false
+        if: success()
+
+      - name: "Installation des dépendances NodeJS"
+        uses: actions/setup-node@v4.0.3
+        with:
+          node-version: "lts/*"
+        continue-on-error: false
+        if: success()
+
+      - run: |
+          cd proelyamaje/
+          npm install
+          echo "Dépendances NodeJS installées"
+        shell: bash
+        continue-on-error: false
+        if: success()
+
+      - name: "Déploiement de la branche de release dans le serveur de staging"
+        if: ${{ github.ref == 'refs/heads/release' }}
+        uses: easingthemes/ssh-deploy@main
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-rlgoDzvc -i --exclude='/proelyamaje/.env'  --exclude='.htaccess' --exclude='admin/uploads/*'"
+          SOURCE: "./"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST_PROD }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER_PROD }}
+          REMOTE_PORT: 3522
+          TARGET: ${{ secrets.REMOTE_TARGET_PROD }}
+          EXCLUDE: "/proelyamaje/vendor/"
+        continue-on-error: false
+
+      - name: "Installation des dépendances PHP"
+        shell: bash
+        run: |
+          set -e
+          {
+            echo "Démarrage de l'installation des dépendances PHP..."
+            mkdir -p ~/.ssh
+            echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+            chmod 600 ~/.ssh/deploy_key
+            ssh -o StrictHostKeyChecking=no -i ~/.ssh/deploy_key -p 3522 ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST_RELEASE }} << EOF
+              cd ${{ secrets.REMOTE_TARGET }}/proelyamaje
+              echo "Connexion réussie, installation des dépendances PHP..."
+              composer install || { echo "Erreur lors de l'installation des dépendances PHP"; exit 1; }
+              composer update || { echo "Erreur lors de la mise à jour des dépendances PHP"; exit 1; }
+              echo "Installation des dépendances PHP terminée"
+          EOF
+            echo "Succès du déploiement des dépendances PHP."
+          } || {
+            echo "Erreur : Échec du déploiement ou de l'installation des dépendances PHP."
+            exit 1
+          }
+        continue-on-error: false
+
+      - name: "Fin du workflow de déploiement"
+        run: echo "Workflow terminé avec succès."
+        if: success()
