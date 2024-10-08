@@ -28,7 +28,7 @@ jobs:
         if: success()
 
       - name: "Déploiement de la branche de release dans le serveur de staging"
-        if: ${{ github.ref == 'refs/heads/release' }}
+        if: ${{ github.ref == 'refs/heads/main' }}
         uses: easingthemes/ssh-deploy@main
         with:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
