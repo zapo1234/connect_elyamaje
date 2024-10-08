@@ -1,0 +1,20 @@
+name: Protection des branches
+
+on:
+  push:
+    branches:
+      - main
+      - release
+      - develop
+
+jobs:
+  block-direct-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Vérification de l'origine du push
+        run: |
+          if [[ "${{ github.event.pusher.name }}" != "GitHub Actions" ]]; then
+            echo "Les push directs sur les branches protégées sont interdits."
+            echo "Veuillez créer une pull request pour proposer des modifications."
+            exit 1
+          fi
