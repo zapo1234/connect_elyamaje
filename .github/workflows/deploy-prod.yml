@@ -50,8 +50,8 @@ jobs:
             mkdir -p ~/.ssh
             echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
             chmod 600 ~/.ssh/deploy_key
-            ssh -o StrictHostKeyChecking=no -i ~/.ssh/deploy_key -p 3522 ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST_RELEASE }} << EOF
-              cd ${{ secrets.REMOTE_TARGET }}/proelyamaje
+            ssh -o StrictHostKeyChecking=no -i ~/.ssh/deploy_key -p 3522 ${{ secrets.REMOTE_USER_PROD }}@${{ secrets.REMOTE_HOST_PROD }} << EOF
+              cd ${{ secrets.REMOTE_TARGET_PROD }}/proelyamaje
               echo "Connexion réussie, installation des dépendances PHP..."
               composer install || { echo "Erreur lors de l'installation des dépendances PHP"; exit 1; }
               composer update || { echo "Erreur lors de la mise à jour des dépendances PHP"; exit 1; }
