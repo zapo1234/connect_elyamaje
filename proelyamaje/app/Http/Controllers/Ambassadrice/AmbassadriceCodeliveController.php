@@ -250,8 +250,7 @@ class AmbassadriceCodeliveController extends Controller
           $this->users->getUser();
           $userlives = $this->users->getdatausercodelive();
           
-          // recupérer le nombre de live
-          
+          // recupérer le nombre de live...
           // créer une date actuel
           $date_actuel = date('Y-m-d H:i:s');
           // recupérer les id_ambassadrice
