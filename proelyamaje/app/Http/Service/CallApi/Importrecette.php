@@ -44,24 +44,27 @@ class Importrecette
          $internet = [];
          $chaine1 ="TC1-";
          $chaine2 ="TC6-";
+         $chaine3 = "TC2-";
+         $chaine4 = "TC3-";
+         $chaine5="TC5";
+         $chaine6 ="FA-";
 
           $y =[];
 
        if($list_id){
         foreach($list_id as $k=>$vals) {
             $y[] = $vals['ref'];
-           if($vals['mode_reglement_code']=="CB" OR $vals['mode_reglement_code']=="LIQ" OR $vals['mode_reglement_code']=="PRE" OR $vals['mode_reglement_code']=="PAYP" OR $vals['mode_reglement_code']=="STRIP") {
+           if($vals['mode_reglement_code']=="CB" OR $vals['mode_reglement_code']=="LIQ" OR $vals['mode_reglement_code']=="PRE" OR $vals['mode_reglement_code']=="PAYP" OR $vals['mode_reglement_code']=="STRIP" OR
+             $vals['mode_reglement_code']=="SCALA" OR $vals['mode_reglement_code']=="REVPAY" OR  $vals['mode_reglement_code']=="REVCC" OR $vals['mode_reglement_code']=="PayPX4") {
                   $date_actuel = date('Y-m-d');
                  $x = date('d-m-Y', $vals['datem']);
                 // ajouter un jour $x
                  $x1  = date("Y-m-d", strtotime($x.'+ 0 days'));
-                 if(strpos($vals['ref'],$chaine) !==false){
-                     $data_nice[] = $vals['ref'].','.$vals['total_ht'].','.$x1;
+                 if(strpos($vals['ref'],$chaine1) !==false OR strpos($vals['ref'],$chaine3) !==false OR strpos($vals['ref'],$chaine4) !==false OR strpos($vals['ref'],$chaine5) !==false){
+                     $data_marseille[] = $vals['ref'].','.$vals['total_ht'].','.$x1;
                  }
-                 elseif(strpos($vals['ref'],$chaine1) !==false){
-                    $data_marseille[] = $vals['ref'].','.$vals['total_ht'].','.$x1;
-                  }
-                  else{
+                 
+                  if(strpos($vals['ref'],$chaine6) !==false){
                      $data_internet[] = $vals['ref'].','.$vals['total_ht'].','.$x1;
                   }
              }
