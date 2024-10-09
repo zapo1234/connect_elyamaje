@@ -33,10 +33,9 @@ class Importrecette
           //Recuperer les ref_client existant dans dolibar
           //verifié l'unicité
           $list_id_order = [];
-          $produitParam = ["limit" =>150, "sortfield" => "rowid", "sortorder" => "DESC", ];
+          $produitParam = ["limit" =>350, "sortfield" => "rowid", "sortorder" => "DESC", ];
           $listorders_id = $this->api->CallAPI("GET", $apiKey, $apiUrl."invoices", $produitParam);//
           $list_id = json_decode($listorders_id,true);
-         // recupérer toutes les ref commeançant par tc4
          $chaine="TC4-";
          $data_nice =[];
          $data_marseille =[];
@@ -47,7 +46,7 @@ class Importrecette
          $chaine3 = "TC2-";
          $chaine4 = "TC3-";
          $chaine5="TC5";
-         $chaine6 ="FA-";
+         $chaine6 ="FA";
 
           $y =[];
 
