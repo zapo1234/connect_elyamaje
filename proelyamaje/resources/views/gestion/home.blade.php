@@ -138,11 +138,11 @@ ul.winners li{
 	
 										<p class="mb-0">Recette Internet journalière (TOTAL HT)</p>
 										<h4 class="font-weight-bold">{{ $somme_recette_internet}} €</h4>
-										@if(Auth::user()->email!="fmajeri@elyamaje.com")
+										
 										<a style="color: #525f7f;position:absolute; bottom:15px; left:45%;font-weight:bold" class="100 show_more_dashboard" href="{{ route('gestion.internetrecette')}}">
 											<span>Voir +  </span>
 										</a>
-                                        @endif
+                                        
 										<a style="color: #525f7f;position:absolute; bottom:15px; left:55%;font-weight:bold" class="100 show_more_dashboard" href="{{ route('gestion.recettesinternets')}}">
 											<span></span>
 										</a>
@@ -164,11 +164,11 @@ ul.winners li{
 								
 										<p class="mb-0">Recette Marseille journalière (TOTAL HT)</p>
 										<h4 class="font-weight-bold">{{ $somme_recette_marseille }} €<small class="text-danger font-13"></small></h4>
-										@if(Auth::user()->email!="fmajeri@elyamaje.com")
+										
 										<a style="color: #525f7f;position:absolute; bottom:15px; left:45%;font-weight:bold" class="100 show_more_dashboard" href="{{ route('gestion.marseillerecette')}}">
 											<span>Voir +  </span>
 										</a>
-                                        @endif
+                                        
 										<a style="color: #525f7f;position:absolute; bottom:15px; left:55%;font-weight:bold" class="100 show_more_dashboard" href="{{ route('gestion.recettesmarseilles')}}">
 											<span></span>
 										</a>
@@ -188,11 +188,11 @@ ul.winners li{
 									<div class="flex-grow-1">
 										<p class="mb-0">Recette Nice journalière (TOTAL HT)</p>
 										<h4 class="font-weight-bold">{{ $somme_recette }} € <small class="text-success font-13"></small></h4>
-										@if(Auth::user()->email!="fmajeri@elyamaje.com")
+									
 										<a style="color: #525f7f;position:absolute; bottom:15px; left:45%;font-weight:bold" class="100 show_more_dashboard" href="{{ route('gestion.nicerecette')}}">
 											<span>Voir +  </span>
 										</a>
-										@endif
+										
 
 										<a style="color: #525f7f;position:absolute; bottom:15px; left:55%;font-weight:bold" class="100 show_more_dashboard" href="{{ route('gestion.nicerecette')}}">
 											<span> </span>
@@ -212,11 +212,11 @@ ul.winners li{
 								<div class="d-flex align-items-center">
 									<div class="flex-grow-1">
 										<p class="mb-0">Recette Nice mensuelle (TOTAL HT)</p>
-										@if(Auth::user()->email!="fmajeri@elyamaje.com")
+										
 										<a style="color: #525f7f;position:absolute; bottom:15px; left:45%;font-weight:bold" class="100 show_more_dashboard" href="{{ route('gestion.recettesnice')}}">
 											<span>Voir +  </span>
 										</a>
-										@endif
+										
 										<h4 class="font-weight-bold">{{ $somme_recettes }} € <small class="text-success font-13"></small></h4>
 										<p class="text-secondary mb-0 font-13">{{ $date_courss }}</p>
 									</div>
@@ -235,11 +235,11 @@ ul.winners li{
 									<div class="flex-grow-1">
 										<p class="mb-0">Recette Marseille Mensuelle (TOTAL HT)</p>
 										<h4 class="font-weight-bold">{{ $somme_recette_marseilles  }}<small class="text-success font-13"></small></h4>
-										@if(Auth::user()->email!="fmajeri@elyamaje.com")
+										
 										<a style="color: #525f7f;position:absolute; bottom:15px; left:45%;font-weight:bold" class="100 show_more_dashboard" href="{{ route('gestion.recettesmarseilles')  }}">
 											<span>Voir +</span>
 										</a>
-										@endif
+										
 
 										<a style="color: #525f7f;position:absolute; bottom:15px; left:55%;font-weight:bold" class="100 show_more_dashboard" href="">
 											<span> </span>
@@ -259,13 +259,13 @@ ul.winners li{
 								<div class="d-flex align-items-center">
 									<div class="flex-grow-1">
 										<p class="mb-0">Recette Inernet Mensuelle (TOTAL HT)</p>
-										@if(Auth::user()->email!="fmajeri@elyamaje.com")
+									
 										<a style="color: #525f7f;position:absolute; bottom:15px; left:45%;font-weight:bold" class="100 show_more_dashboard" href="{{ route('gestion.recettesinternets') }}">
 											<span>Voir +</span>
 										</a>
 									
 										<h4 class="font-weight-bold">{{  $somme_recette_internets  }}<small class="text-success font-13"></small></h4>
-										@endif
+										
 										<p class="text-secondary mb-0 font-13">{{ $date_courss }}</p>
 									</div>
 									<div class="widgets-icons bg-gradient-lush text-white">
@@ -282,13 +282,13 @@ ul.winners li{
 								<div class="d-flex align-items-center">
 									<div class="flex-grow-1">
 										<p class="mb-0">Activité Ambassadrice & Partenaire <br/> Recette Mensuelle généré (TOTAL HT)</p>
-										@if(Auth::user()->email!="fmajeri@elyamaje.com")
+										
 										<a style="color: #525f7f;position:absolute; bottom:15px; left:45%;font-weight:bold" class="100 show_more_dashboard" href="{{ route('gestion.recettesinternets') }}">
 											<span>Voir +</span>
 										</a>
 										
 										<h4 class="font-weight-bold">{{  $montant_activite }}  €<small class="text-success font-13"></small></h4>
-										@endif
+										
 										<p class="text-secondary mb-0 font-13">{{ $date_courss }}</p>
 									</div>
 									<div class="widgets-icons bg-gradient-lush text-white">
